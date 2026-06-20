@@ -36,10 +36,18 @@ void main() {
       await tester.pumpWidget(createTestWidget(const LoginScreen()));
       await tester.pumpAndSettle();
 
+      // Transition to Login Form
+      final loginTransitionFinder = find.text("Login");
+      expect(loginTransitionFinder, findsOneWidget);
+      await tester.ensureVisible(loginTransitionFinder);
+      await tester.tap(loginTransitionFinder);
+      await tester.pumpAndSettle();
+
       // 1. Trigger login without inputs -> expect validation errors
       final loginBtnFinder = find.text("LOGIN");
       expect(loginBtnFinder, findsOneWidget);
 
+      await tester.ensureVisible(loginBtnFinder);
       await tester.tap(loginBtnFinder);
       await tester.pumpAndSettle();
 
@@ -48,7 +56,9 @@ void main() {
 
       // 2. Input invalid email formatting -> expect format error
       final emailFieldFinder = find.widgetWithText(TextFormField, "Email Address");
+      await tester.ensureVisible(emailFieldFinder);
       await tester.enterText(emailFieldFinder, "invalid_email_no_at");
+      await tester.ensureVisible(loginBtnFinder);
       await tester.tap(loginBtnFinder);
       await tester.pumpAndSettle();
 

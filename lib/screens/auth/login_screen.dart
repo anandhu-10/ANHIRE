@@ -16,6 +16,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
   bool _obscurePassword = true;
+  bool _isWelcomeView = true;
 
   @override
   void dispose() {
@@ -56,6 +57,156 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
     });
   }
 
+  Widget _buildRocketIllustration() {
+    return Center(
+      child: Container(
+        width: 240,
+        height: 240,
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          gradient: RadialGradient(
+            colors: [
+              const Color(0xFF7C3AED).withOpacity(0.2), // Glowing purple center
+              const Color(0xFF0F1015).withOpacity(0.0), // Fades to background
+            ],
+            radius: 0.8,
+          ),
+        ),
+        child: Stack(
+          alignment: Alignment.center,
+          children: [
+            // Orbiting stars
+            Positioned(
+              top: 40,
+              left: 60,
+              child: Icon(Icons.star, size: 8, color: Colors.indigo.shade300.withOpacity(0.4)),
+            ),
+            Positioned(
+              bottom: 50,
+              right: 60,
+              child: Icon(Icons.star, size: 10, color: Colors.purple.shade300.withOpacity(0.4)),
+            ),
+            Positioned(
+              top: 100,
+              right: 40,
+              child: Icon(Icons.star, size: 6, color: Colors.teal.shade300.withOpacity(0.4)),
+            ),
+            // Floating checkmark card decoration
+            Positioned(
+              left: 30,
+              top: 90,
+              child: Container(
+                width: 24,
+                height: 18,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(4),
+                  border: Border.all(color: Colors.white.withOpacity(0.15), width: 1),
+                ),
+                child: const Icon(Icons.check, size: 8, color: Colors.greenAccent),
+              ),
+            ),
+            // Floating graph decoration
+            Positioned(
+              right: 30,
+              bottom: 90,
+              child: Container(
+                width: 24,
+                height: 32,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(4),
+                  border: Border.all(color: Colors.white.withOpacity(0.15), width: 1),
+                ),
+                child: const Icon(Icons.bar_chart_outlined, size: 12, color: Colors.blueAccent),
+              ),
+            ),
+            // Open book at base
+            Positioned(
+              bottom: 65,
+              child: Icon(
+                Icons.menu_book,
+                size: 64,
+                color: Colors.purple.shade400.withOpacity(0.35),
+              ),
+            ),
+            // Rocket lifting off
+            Positioned(
+              top: 50,
+              child: ShaderMask(
+                shaderCallback: (bounds) => const LinearGradient(
+                  colors: [Colors.white, Color(0xFFA78BFA)],
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                ).createShader(bounds),
+                child: const Icon(
+                  Icons.rocket_launch,
+                  size: 80,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildGraduationIllustration() {
+    return Container(
+      width: 120,
+      height: 120,
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        gradient: RadialGradient(
+          colors: [
+            const Color(0xFF7C3AED).withOpacity(0.18),
+            const Color(0xFF0F1015).withOpacity(0.0),
+          ],
+          radius: 0.8,
+        ),
+      ),
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          Positioned(
+            top: 20,
+            left: 20,
+            child: Icon(Icons.star, size: 6, color: Colors.purple.shade300.withOpacity(0.4)),
+          ),
+          Positioned(
+            bottom: 20,
+            right: 20,
+            child: Icon(Icons.star, size: 8, color: Colors.indigo.shade300.withOpacity(0.4)),
+          ),
+          // Book stack base
+          Positioned(
+            bottom: 24,
+            child: Icon(
+              Icons.book,
+              size: 42,
+              color: Colors.indigo.shade400.withOpacity(0.5),
+            ),
+          ),
+          // Graduation Cap
+          Positioned(
+            top: 24,
+            child: ShaderMask(
+              shaderCallback: (bounds) => const LinearGradient(
+                colors: [Colors.white, Color(0xFFA78BFA)],
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+              ).createShader(bounds),
+              child: const Icon(
+                Icons.school,
+                size: 48,
+                color: Colors.white,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final authState = ref.watch(authProvider);
@@ -68,12 +219,12 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
           gradient: RadialGradient(
             colors: isDark
                 ? [
-                    const Color(0xFF1E1B4B), // Deep indigo
-                    const Color(0xFF0F172A), // Slate-900
+                    const Color(0xFF13141F), // Deep space grey/navy
+                    const Color(0xFF0F1015), // Midnight
                   ]
                 : [
-                    const Color(0xFFEEF2FF), // Very soft blue
-                    const Color(0xFFF8FAFC), // Slate-50
+                    const Color(0xFFEEF2FF),
+                    const Color(0xFFF8FAFC),
                   ],
             radius: 1.5,
             center: Alignment.center,
@@ -82,260 +233,447 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
         child: Center(
           child: SingleChildScrollView(
             padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 32),
-            child: Column(
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 480),
+              child: _isWelcomeView ? _buildWelcomeLayout(context) : _buildLoginFormLayout(context, isLoading),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildWelcomeLayout(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        // Rocket Illustration
+        _buildRocketIllustration(),
+        const SizedBox(height: 36),
+
+        // Welcome Header
+        Wrap(
+          alignment: WrapAlignment.center,
+          crossAxisAlignment: WrapCrossAlignment.center,
+          children: [
+            const Text(
+              "Welcome to ",
+              style: TextStyle(
+                fontSize: 28,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+            ShaderMask(
+              shaderCallback: (bounds) => const LinearGradient(
+                colors: [Color(0xFF6366F1), Color(0xFFA78BFA)],
+              ).createShader(bounds),
+              child: const Text(
+                "ANHIRE",
+                style: TextStyle(
+                  fontSize: 28,
+                  fontWeight: FontWeight.w900,
+                  color: Colors.white,
+                  letterSpacing: 0.5,
+                ),
+              ),
+            ),
+          ],
+        ),
+        const SizedBox(height: 16),
+
+        // Subtext
+        Text(
+          "Create a student account to unlock mock interviews, aptitude questions, and learning roadmaps tailored for your success.",
+          style: TextStyle(
+            fontSize: 13,
+            color: Colors.white.withOpacity(0.6),
+            height: 1.5,
+          ),
+          textAlign: TextAlign.center,
+        ),
+        const SizedBox(height: 48),
+
+        // Create Account Button (Indigo/Purple Gradient)
+        Container(
+          decoration: BoxDecoration(
+            gradient: const LinearGradient(
+              colors: [Color(0xFF4F46E5), Color(0xFF7C3AED)],
+              begin: Alignment.centerLeft,
+              end: Alignment.centerRight,
+            ),
+            borderRadius: const BorderRadius.all(Radius.circular(12)),
+            boxShadow: [
+              BoxShadow(
+                color: const Color(0xFF4F46E5).withOpacity(0.3),
+                blurRadius: 15,
+                offset: const Offset(0, 5),
+              ),
+            ],
+          ),
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.transparent,
+              shadowColor: Colors.transparent,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+              minimumSize: const Size(double.infinity, 52),
+            ),
+            onPressed: () => context.push('/register'),
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                // Title/Logo
-                Icon(
-                  Icons.radar_outlined,
-                  size: 72,
-                  color: Theme.of(context).colorScheme.primary,
-                ),
-                const SizedBox(height: 12),
-                Text(
-                  "ANHIRE",
+                const Spacer(),
+                const Text(
+                  "Create Account",
                   style: TextStyle(
-                    fontSize: 38,
-                    fontWeight: FontWeight.w900,
-                    color: Theme.of(context).colorScheme.onBackground,
-                    letterSpacing: 3,
-                  ),
-                  textAlign: TextAlign.center,
-                ),
-                Text(
-                  "AI-Powered Placement Preparation Platform",
-                  style: TextStyle(
-                    fontSize: 13,
-                    color: Theme.of(context).colorScheme.onBackground.withOpacity(0.6),
-                    fontWeight: FontWeight.w500,
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
                     letterSpacing: 0.5,
                   ),
-                  textAlign: TextAlign.center,
                 ),
-                const SizedBox(height: 36),
+                const Spacer(),
+                Container(
+                  width: 24,
+                  height: 24,
+                  decoration: const BoxDecoration(
+                    color: Colors.white,
+                    shape: BoxShape.circle,
+                  ),
+                  child: const Icon(
+                    Icons.arrow_forward,
+                    size: 14,
+                    color: Color(0xFF4F46E5),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+        const SizedBox(height: 24),
 
-                // Glassmorphic Card Form
-                ClipRRect(
-                  borderRadius: const BorderRadius.all(Radius.circular(24)),
-                  child: BackdropFilter(
-                    filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
-                    child: Container(
-                      padding: const EdgeInsets.all(28.0),
+        // Toggle link
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              "Already have an account? ",
+              style: TextStyle(color: Colors.white.withOpacity(0.6)),
+            ),
+            GestureDetector(
+              onTap: () {
+                setState(() {
+                  _isWelcomeView = false;
+                });
+              },
+              child: const Text(
+                "Login",
+                style: TextStyle(
+                  color: Color(0xFFA78BFA),
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+
+  Widget _buildLoginFormLayout(BuildContext context, bool isLoading) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        // Back Navigation Arrow
+        Align(
+          alignment: Alignment.centerLeft,
+          child: IconButton(
+            icon: const Icon(Icons.arrow_back, color: Colors.white),
+            onPressed: () {
+              setState(() {
+                _isWelcomeView = true;
+              });
+            },
+          ),
+        ),
+        const SizedBox(height: 12),
+
+        // Split Row for Welcome text & illustration
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    "Welcome back! 👋",
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                  const SizedBox(height: 8),
+                  Text(
+                    "Sign in to resume your preparation journey.",
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: Colors.white.withOpacity(0.6),
+                      height: 1.4,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            _buildGraduationIllustration(),
+          ],
+        ),
+        const SizedBox(height: 28),
+
+        // Login Form
+        Form(
+          key: _formKey,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              TextFormField(
+                controller: _emailController,
+                keyboardType: TextInputType.emailAddress,
+                decoration: const InputDecoration(
+                  labelText: "Email Address",
+                  prefixIcon: Icon(Icons.email_outlined),
+                ),
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return "Enter your email address";
+                  }
+                  if (!value.contains("@")) {
+                    return "Enter a valid email address";
+                  }
+                  return null;
+                },
+              ),
+              const SizedBox(height: 18),
+              TextFormField(
+                controller: _passwordController,
+                obscureText: _obscurePassword,
+                decoration: InputDecoration(
+                  labelText: "Password",
+                  prefixIcon: const Icon(Icons.lock_outline),
+                  suffixIcon: IconButton(
+                    icon: Icon(
+                      _obscurePassword ? Icons.visibility_off_outlined : Icons.visibility_outlined,
+                    ),
+                    onPressed: () {
+                      setState(() {
+                        _obscurePassword = !_obscurePassword;
+                      });
+                    },
+                  ),
+                ),
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return "Enter your password";
+                  }
+                  if (value.length < 6) {
+                    return "Password must be at least 6 characters";
+                  }
+                  return null;
+                },
+              ),
+              const SizedBox(height: 8),
+
+              // Forgot Password link
+              Align(
+                alignment: Alignment.centerRight,
+                child: TextButton(
+                  onPressed: () => context.push('/forgot-password'),
+                  style: TextButton.styleFrom(
+                    padding: EdgeInsets.zero,
+                    minimumSize: const Size(0, 36),
+                  ),
+                  child: const Text(
+                    "Forgot Password?",
+                    style: TextStyle(
+                      color: Color(0xFFA78BFA),
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 16),
+
+              // Login Button with Arrow
+              isLoading
+                  ? const Center(child: CircularProgressIndicator())
+                  : Container(
                       decoration: BoxDecoration(
-                        color: (Theme.of(context).cardTheme.color ?? Theme.of(context).colorScheme.surface).withOpacity(isDark ? 0.7 : 0.85),
-                        borderRadius: const BorderRadius.all(Radius.circular(24)),
-                        border: Border.all(
-                          color: Theme.of(context).colorScheme.onSurface.withOpacity(0.08),
-                          width: 1.5,
+                        gradient: const LinearGradient(
+                          colors: [Color(0xFF4F46E5), Color(0xFF7C3AED)],
+                          begin: Alignment.centerLeft,
+                          end: Alignment.centerRight,
                         ),
+                        borderRadius: const BorderRadius.all(Radius.circular(12)),
                       ),
-                      child: Form(
-                        key: _formKey,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.transparent,
+                          shadowColor: Colors.transparent,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          minimumSize: const Size(double.infinity, 50),
+                        ),
+                        onPressed: _handleLogin,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text(
-                              "Sign In",
+                            const Spacer(),
+                            const Text(
+                              "LOGIN",
                               style: TextStyle(
-                                fontSize: 20,
+                                fontSize: 15,
                                 fontWeight: FontWeight.bold,
-                                color: Theme.of(context).colorScheme.onSurface,
+                                color: Colors.white,
+                                letterSpacing: 0.5,
                               ),
                             ),
-                            const SizedBox(height: 20),
-                            TextFormField(
-                              controller: _emailController,
-                              keyboardType: TextInputType.emailAddress,
-                              decoration: const InputDecoration(
-                                labelText: "Email Address",
-                                prefixIcon: Icon(Icons.email_outlined),
+                            const Spacer(),
+                            Container(
+                              width: 24,
+                              height: 24,
+                              decoration: const BoxDecoration(
+                                color: Colors.white,
+                                shape: BoxShape.circle,
                               ),
-                              validator: (value) {
-                                if (value == null || value.isEmpty) {
-                                  return "Enter your email address";
-                                }
-                                if (!value.contains("@")) {
-                                  return "Enter a valid email address";
-                                }
-                                return null;
-                              },
-                            ),
-                            const SizedBox(height: 18),
-                            TextFormField(
-                              controller: _passwordController,
-                              obscureText: _obscurePassword,
-                              decoration: InputDecoration(
-                                labelText: "Password",
-                                prefixIcon: const Icon(Icons.lock_outline),
-                                suffixIcon: IconButton(
-                                  icon: Icon(
-                                    _obscurePassword
-                                        ? Icons.visibility_off_outlined
-                                        : Icons.visibility_outlined,
-                                  ),
-                                  onPressed: () {
-                                    setState(() {
-                                      _obscurePassword = !_obscurePassword;
-                                    });
-                                  },
-                                ),
+                              child: const Icon(
+                                Icons.arrow_forward,
+                                size: 14,
+                                color: Color(0xFF4F46E5),
                               ),
-                              validator: (value) {
-                                if (value == null || value.isEmpty) {
-                                  return "Enter your password";
-                                }
-                                if (value.length < 6) {
-                                  return "Password must be at least 6 characters";
-                                }
-                                return null;
-                              },
-                            ),
-                            const SizedBox(height: 8),
-
-                            // Forgot Password link
-                            Align(
-                              alignment: Alignment.centerRight,
-                              child: TextButton(
-                                onPressed: () => context.push('/forgot-password'),
-                                style: TextButton.styleFrom(
-                                  padding: EdgeInsets.zero,
-                                  minimumSize: const Size(0, 36),
-                                ),
-                                child: Text(
-                                  "Forgot Password?",
-                                  style: TextStyle(
-                                    color: Theme.of(context).colorScheme.primary,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            const SizedBox(height: 16),
-
-                            // Login Button
-                            isLoading
-                                ? const Center(child: CircularProgressIndicator())
-                                : ElevatedButton(
-                                    onPressed: _handleLogin,
-                                    child: const Text("LOGIN"),
-                                  ),
-                            const SizedBox(height: 16),
-
-                            // Google Sign-In
-                            OutlinedButton.icon(
-                              icon: const Icon(Icons.g_mobiledata, size: 28),
-                              label: const Text("Sign in with Google"),
-                              onPressed: isLoading
-                                  ? null
-                                  : () async {
-                                      await ref.read(authProvider.notifier).loginWithGoogle();
-                                      final state = ref.read(authProvider);
-                                      if (state.status == AuthStatus.authenticated) {
-                                        context.go('/student-dashboard');
-                                      }
-                                    },
                             ),
                           ],
                         ),
                       ),
                     ),
-                  ),
-                ),
-                const SizedBox(height: 24),
+              const SizedBox(height: 16),
 
-                // Quick Demo Account Buttons
-                Container(
-                  padding: const EdgeInsets.all(16),
-                  decoration: BoxDecoration(
-                    color: Theme.of(context).colorScheme.primary.withOpacity(0.06),
-                    borderRadius: const BorderRadius.all(Radius.circular(16)),
-                    border: Border.all(
-                      color: Theme.of(context).colorScheme.primary.withOpacity(0.12),
-                      width: 1,
-                    ),
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Demo Quick Logins (One-Tap):",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 13,
-                          color: Theme.of(context).colorScheme.onBackground.withOpacity(0.7),
-                        ),
-                      ),
-                      const SizedBox(height: 12),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: ElevatedButton.icon(
-                              icon: const Icon(Icons.school_outlined, size: 16),
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: Theme.of(context).colorScheme.primary.withOpacity(0.12),
-                                foregroundColor: Theme.of(context).colorScheme.primary,
-                                elevation: 0,
-                                minimumSize: const Size(0, 42),
-                                shape: const RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.all(Radius.circular(10)),
-                                ),
-                              ),
-                              onPressed: () => _fillDemo("student@placementpro.com", "123456"),
-                              label: const Text("Student", style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
-                            ),
-                          ),
-                          const SizedBox(width: 10),
-                          Expanded(
-                            child: ElevatedButton.icon(
-                              icon: const Icon(Icons.admin_panel_settings_outlined, size: 16),
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: Theme.of(context).colorScheme.tertiary.withOpacity(0.12),
-                                foregroundColor: Theme.of(context).colorScheme.tertiary,
-                                elevation: 0,
-                                minimumSize: const Size(0, 42),
-                                shape: const RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.all(Radius.circular(10)),
-                                ),
-                              ),
-                              onPressed: () => _fillDemo("admin@placementpro.com", "anandhu@123"),
-                              label: const Text("Admin", style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
+              // Google Sign-In button
+              OutlinedButton.icon(
+                style: OutlinedButton.styleFrom(
+                  minimumSize: const Size(double.infinity, 48),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
                   ),
                 ),
-
-                const SizedBox(height: 32),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      "New student? ",
-                      style: TextStyle(
-                        color: Theme.of(context).colorScheme.onBackground.withOpacity(0.7),
-                      ),
-                    ),
-                    GestureDetector(
-                      onTap: () => context.push('/register'),
-                      child: Text(
-                        "Create account",
-                        style: TextStyle(
-                          color: Theme.of(context).colorScheme.primary,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 24),
-              ],
-            ),
+                icon: const Icon(Icons.g_mobiledata, size: 28),
+                label: const Text("Continue with Google"),
+                onPressed: isLoading
+                    ? null
+                    : () async {
+                        await ref.read(authProvider.notifier).loginWithGoogle();
+                        final state = ref.read(authProvider);
+                        if (state.status == AuthStatus.authenticated) {
+                          context.go('/student-dashboard');
+                        }
+                      },
+              ),
+            ],
           ),
         ),
-      ),
+        const SizedBox(height: 24),
+
+        // Quick Demo Account Buttons
+        Container(
+          padding: const EdgeInsets.all(16),
+          decoration: BoxDecoration(
+            color: const Color(0xFF4F46E5).withOpacity(0.06),
+            borderRadius: const BorderRadius.all(Radius.circular(16)),
+            border: Border.all(
+              color: const Color(0xFF4F46E5).withOpacity(0.12),
+              width: 1,
+            ),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "Demo Quick Logins (One-Tap):",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 13,
+                  color: Colors.white.withOpacity(0.7),
+                ),
+              ),
+              const SizedBox(height: 12),
+              Row(
+                children: [
+                  Expanded(
+                    child: ElevatedButton.icon(
+                      icon: const Icon(Icons.school_outlined, size: 16),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color(0xFF4F46E5).withOpacity(0.12),
+                        foregroundColor: const Color(0xFFA78BFA),
+                        elevation: 0,
+                        minimumSize: const Size(0, 42),
+                        shape: const RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                        ),
+                      ),
+                      onPressed: () => _fillDemo("student@placementpro.com", "123456"),
+                      label: const Text("Student", style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+                  Expanded(
+                    child: ElevatedButton.icon(
+                      icon: const Icon(Icons.admin_panel_settings_outlined, size: 16),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color(0xFFFBBF24).withOpacity(0.12),
+                        foregroundColor: const Color(0xFFFBBF24),
+                        elevation: 0,
+                        minimumSize: const Size(0, 42),
+                        shape: const RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                        ),
+                      ),
+                      onPressed: () => _fillDemo("admin@placementpro.com", "anandhu@123"),
+                      label: const Text("Admin", style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(height: 28),
+
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              "New student? ",
+              style: TextStyle(color: Colors.white.withOpacity(0.7)),
+            ),
+            GestureDetector(
+              onTap: () => context.push('/register'),
+              child: const Text(
+                "Create account",
+                style: TextStyle(
+                  color: Color(0xFFA78BFA),
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ],
+        ),
+        const SizedBox(height: 24),
+      ],
     );
   }
 }

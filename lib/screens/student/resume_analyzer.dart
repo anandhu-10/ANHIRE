@@ -1,5 +1,6 @@
 import 'dart:io' show File;
 import 'dart:typed_data';
+import 'dart:ui' show PathMetric;
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -146,98 +147,169 @@ class _ResumeAnalyzerScreenState extends ConsumerState<ResumeAnalyzerScreen> {
       body: isLoading
           ? const Center(child: CircularProgressIndicator())
           : SingleChildScrollView(
-              padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 20.0),
+              padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 24.0),
               child: Center(
                 child: ConstrainedBox(
                   constraints: const BoxConstraints(maxWidth: 800),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
+                      // Header & Subtext
                       Text(
                         "Resume Audit Engine",
                         style: TextStyle(
-                          fontSize: 16,
+                          fontSize: 20,
                           fontWeight: FontWeight.bold,
                           color: Theme.of(context).colorScheme.onSurface,
                         ),
                       ),
                       const SizedBox(height: 6),
                       Text(
-                        "Upload your resume PDF to Cloudinary and paste the text contents below to compute your recruiter matching index.",
+                        "Upload your resume and get AI-powered feedback to improve your ATS score.",
                         style: TextStyle(
                           fontSize: 12,
                           color: Theme.of(context).colorScheme.onSurface.withOpacity(0.6),
-                          height: 1.4,
+                        ),
+                      ),
+                      const SizedBox(height: 24),
+
+                      // Drag & Drop File Upload card with Dashed Border
+                      CustomPaint(
+                        painter: DashedBorderPainter(
+                          color: Theme.of(context).colorScheme.primary.withOpacity(0.3),
+                          borderRadius: 16,
+                          strokeWidth: 1.5,
+                        ),
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(vertical: 36, horizontal: 24),
+                          decoration: BoxDecoration(
+                            color: Theme.of(context).cardTheme.color?.withOpacity(0.4) ?? Theme.of(context).colorScheme.surface.withOpacity(0.4),
+                            borderRadius: const BorderRadius.all(Radius.circular(16)),
+                          ),
+                          child: Column(
+                            children: [
+                              CircleAvatar(
+                                radius: 24,
+                                backgroundColor: Theme.of(context).colorScheme.primary.withOpacity(0.1),
+                                child: Icon(
+                                  Icons.cloud_upload_outlined,
+                                  size: 24,
+                                  color: Theme.of(context).colorScheme.primary,
+                                ),
+                              ),
+                              const SizedBox(height: 16),
+                              const Text(
+                                "Drag & drop your file here",
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              const SizedBox(height: 4),
+                              Text(
+                                "PDF, DOCX up to 10MB",
+                                style: TextStyle(
+                                  fontSize: 11,
+                                  color: Theme.of(context).colorScheme.onSurface.withOpacity(0.5),
+                                ),
+                              ),
+                              const SizedBox(height: 16),
+                              ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Theme.of(context).colorScheme.primary,
+                                  foregroundColor: Colors.white,
+                                  padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                                  minimumSize: const Size(140, 36),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                ),
+                                onPressed: _pickResumeFile,
+                                child: const Text(
+                                  "Choose PDF / DOCX",
+                                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+                                ),
+                              ),
+                              if (_fileName.isNotEmpty) ...[
+                                const SizedBox(height: 12),
+                                Container(
+                                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                                  decoration: BoxDecoration(
+                                    color: Theme.of(context).colorScheme.primary.withOpacity(0.1),
+                                    borderRadius: BorderRadius.circular(8),
+                                  ),
+                                  child: Text(
+                                    "Selected: $_fileName",
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.bold,
+                                      color: Theme.of(context).colorScheme.primary,
+                                    ),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ),
+                              ]
+                            ],
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 24),
+
+                      // Resume Plain Text Card
+                      Card(
+                        child: Padding(
+                          padding: const EdgeInsets.all(20.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const Text(
+                                "Resume Plain Text",
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              const SizedBox(height: 4),
+                              Text(
+                                "Your resume text will appear here after upload...",
+                                style: TextStyle(
+                                  fontSize: 11,
+                                  color: Theme.of(context).colorScheme.onSurface.withOpacity(0.5),
+                                ),
+                              ),
+                              const SizedBox(height: 16),
+                              TextFormField(
+                                controller: _textController,
+                                maxLines: 6,
+                                decoration: const InputDecoration(
+                                  hintText: "Or paste your resume plain text here to run check...",
+                                  filled: true,
+                                  fillColor: Color(0xFF0F1015),
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                       const SizedBox(height: 20),
 
-                      // File Picker Block
-                      Container(
-                        padding: const EdgeInsets.all(24),
-                        decoration: BoxDecoration(
-                          color: Theme.of(context).cardTheme.color?.withOpacity(0.5) ?? Theme.of(context).colorScheme.surface.withOpacity(0.5),
-                          borderRadius: const BorderRadius.all(Radius.circular(16)),
-                          border: Border.all(
-                            color: Theme.of(context).colorScheme.primary.withOpacity(0.15),
-                            width: 1.5,
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Theme.of(context).colorScheme.primary,
+                          minimumSize: const Size(double.infinity, 50),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12),
                           ),
                         ),
-                        child: Column(
-                          children: [
-                            Icon(
-                              Icons.cloud_upload_outlined,
-                              size: 36,
-                              color: Theme.of(context).colorScheme.primary,
-                            ),
-                            const SizedBox(height: 10),
-                            ElevatedButton.icon(
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: Theme.of(context).colorScheme.primary.withOpacity(0.1),
-                                foregroundColor: Theme.of(context).colorScheme.primary,
-                                minimumSize: const Size(180, 40),
-                                elevation: 0,
-                              ),
-                              icon: const Icon(Icons.attach_file, size: 16),
-                              label: const Text("Choose PDF / DOCX", style: TextStyle(fontSize: 13)),
-                              onPressed: _pickResumeFile,
-                            ),
-                            if (_fileName.isNotEmpty) ...[
-                              const SizedBox(height: 8),
-                              Text(
-                                "Selected: $_fileName",
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.bold,
-                                  color: Theme.of(context).colorScheme.onSurface,
-                                ),
-                                textAlign: TextAlign.center,
-                              ),
-                            ]
-                          ],
+                        onPressed: _triggerAnalysis,
+                        child: const Text(
+                          "ANALYZE RESUME",
+                          style: TextStyle(fontWeight: FontWeight.bold, letterSpacing: 0.5),
                         ),
                       ),
-                  const SizedBox(height: 20),
+                      const SizedBox(height: 28),
 
-                  // Paste Text Area
-                  TextFormField(
-                    controller: _textController,
-                    maxLines: 6,
-                    decoration: const InputDecoration(
-                      hintText: "Paste your resume plain text here to run rule check...",
-                      labelText: "Resume Plain Text",
-                      alignLabelWithHint: true,
-                    ),
-                  ),
-                  const SizedBox(height: 16),
-
-                  ElevatedButton(
-                    onPressed: _triggerAnalysis,
-                    child: const Text("ANALYZE RESUME"),
-                  ),
-                  const SizedBox(height: 28),
-
-                  if (report != null) ...[
+                      if (report != null) ...[
                     const Divider(),
                     const SizedBox(height: 20),
                     Text(
@@ -402,4 +474,51 @@ class _ResumeAnalyzerScreenState extends ConsumerState<ResumeAnalyzerScreen> {
       ),
     );
   }
+}
+
+class DashedBorderPainter extends CustomPainter {
+  final Color color;
+  final double strokeWidth;
+  final double gap;
+  final double dash;
+  final double borderRadius;
+
+  DashedBorderPainter({
+    this.color = const Color(0xFF6366F1),
+    this.strokeWidth = 1.5,
+    this.gap = 5.0,
+    this.dash = 5.0,
+    this.borderRadius = 16.0,
+  });
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final paint = Paint()
+      ..color = color
+      ..strokeWidth = strokeWidth
+      ..style = PaintingStyle.stroke;
+
+    final RRect rrect = RRect.fromRectAndRadius(
+      Rect.fromLTWH(0, 0, size.width, size.height),
+      Radius.circular(borderRadius),
+    );
+
+    final Path path = Path()..addRRect(rrect);
+    final Path dashPath = Path();
+
+    double distance = 0.0;
+    for (PathMetric measurePath in path.computeMetrics()) {
+      while (distance < measurePath.length) {
+        dashPath.addPath(
+          measurePath.extractPath(distance, distance + dash),
+          Offset.zero,
+        );
+        distance += dash + gap;
+      }
+    }
+    canvas.drawPath(dashPath, paint);
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
 }

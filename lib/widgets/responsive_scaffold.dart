@@ -52,34 +52,40 @@ class ResponsiveScaffold extends ConsumerWidget {
         activeIcon: Icons.grid_view_rounded,
       ),
       _NavRouteItem(
-        label: "Modules",
-        route: "/roadmap",
-        icon: Icons.view_module_outlined,
-        activeIcon: Icons.view_module,
-      ),
-      _NavRouteItem(
-        label: "Profile",
+        label: "My Profile",
         route: "/profile",
         icon: Icons.person_outline,
         activeIcon: Icons.person,
       ),
       _NavRouteItem(
-        label: "Mentors",
-        route: "/mock-interview",
-        icon: Icons.people_outline,
-        activeIcon: Icons.people,
-      ),
-      _NavRouteItem(
-        label: "Job Alerts",
+        label: "Resume Analyzer",
         route: "/resume-analyzer",
-        icon: Icons.notifications_none_outlined,
-        activeIcon: Icons.notifications,
+        icon: Icons.description_outlined,
+        activeIcon: Icons.description,
       ),
       _NavRouteItem(
-        label: "Settings",
-        route: "/profile",
-        icon: Icons.settings_outlined,
-        activeIcon: Icons.settings,
+        label: "Aptitude Tests",
+        route: "/aptitude",
+        icon: Icons.quiz_outlined,
+        activeIcon: Icons.quiz,
+      ),
+      _NavRouteItem(
+        label: "Mock Interviews",
+        route: "/mock-interview",
+        icon: Icons.chat_bubble_outline_outlined,
+        activeIcon: Icons.chat_bubble,
+      ),
+      _NavRouteItem(
+        label: "Learning Roadmap",
+        route: "/roadmap",
+        icon: Icons.map_outlined,
+        activeIcon: Icons.map,
+      ),
+      _NavRouteItem(
+        label: "Leaderboard",
+        route: "/leaderboard",
+        icon: Icons.emoji_events_outlined,
+        activeIcon: Icons.emoji_events,
       ),
     ];
 
@@ -106,7 +112,7 @@ class ResponsiveScaffold extends ConsumerWidget {
               children: [
                 // Header / Brand
                 Padding(
-                  padding: const EdgeInsets.only(top: 36.0, bottom: 28.0, left: 24.0, right: 24.0),
+                  padding: const EdgeInsets.only(top: 24.0, bottom: 12.0, left: 24.0, right: 24.0),
                   child: Row(
                     children: [
                       Container(
@@ -120,9 +126,9 @@ class ResponsiveScaffold extends ConsumerWidget {
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: const Icon(
-                          Icons.school,
+                          Icons.radar_outlined,
                           color: Colors.white,
-                          size: 24,
+                          size: 20,
                         ),
                       ),
                       const SizedBox(width: 14),
@@ -134,7 +140,7 @@ class ResponsiveScaffold extends ConsumerWidget {
                           child: const Text(
                             'ANHIRE',
                             style: TextStyle(
-                              fontSize: 22,
+                              fontSize: 20,
                               fontWeight: FontWeight.bold,
                               color: Colors.white,
                               letterSpacing: 0.8,
@@ -146,8 +152,95 @@ class ResponsiveScaffold extends ConsumerWidget {
                   ),
                 ),
 
+                // User Snapshot Card (Under logo)
+                Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 20.0),
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    gradient: const LinearGradient(
+                      colors: [
+                        Color(0xFF4F46E5), // Indigo
+                        Color(0xFF7C3AED), // Purple
+                      ],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ),
+                    borderRadius: BorderRadius.circular(16),
+                    boxShadow: [
+                      BoxShadow(
+                        color: const Color(0xFF4F46E5).withOpacity(0.2),
+                        blurRadius: 10,
+                        offset: const Offset(0, 4),
+                      ),
+                    ],
+                  ),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      CircleAvatar(
+                        radius: 26,
+                        backgroundColor: Colors.white,
+                        child: CircleAvatar(
+                          radius: 24,
+                          backgroundColor: Colors.white.withOpacity(0.2),
+                          backgroundImage: profile != null && profile.profileImageUrl.isNotEmpty
+                              ? NetworkImage(profile.profileImageUrl)
+                              : null,
+                          child: profile == null || profile.profileImageUrl.isEmpty
+                              ? const Icon(Icons.person, size: 24, color: Colors.white)
+                              : null,
+                        ),
+                      ),
+                      const SizedBox(height: 12),
+                      Text(
+                        profile?.fullName.isNotEmpty == true ? profile!.fullName : "Alex Johnson",
+                        style: const TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                        textAlign: TextAlign.center,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                      const SizedBox(height: 8),
+                      // Beginner Badge
+                      Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+                        decoration: BoxDecoration(
+                          color: const Color(0xFFF59E0B).withOpacity(0.25),
+                          borderRadius: BorderRadius.circular(20),
+                          border: Border.all(
+                            color: const Color(0xFFFBBF24),
+                            width: 1,
+                          ),
+                        ),
+                        child: const Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Icon(
+                              Icons.star,
+                              size: 10,
+                              color: Color(0xFFFBBF24),
+                            ),
+                            SizedBox(width: 4),
+                            Text(
+                              "Beginner",
+                              style: TextStyle(
+                                fontSize: 9,
+                                fontWeight: FontWeight.bold,
+                                color: Color(0xFFFBBF24),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 8),
                 const Divider(height: 1),
-                const SizedBox(height: 16),
+                const SizedBox(height: 8),
 
                 // Navigation Items
                 Expanded(
@@ -161,21 +254,22 @@ class ResponsiveScaffold extends ConsumerWidget {
                           (item.route != '/student-dashboard' && currentPath.startsWith(item.route));
 
                       return Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 3.0),
+                        padding: const EdgeInsets.symmetric(vertical: 2.0),
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
                           child: ListTile(
+                            dense: true,
                             leading: Icon(
                               isSelected ? item.activeIcon : item.icon,
                               color: isSelected 
                                   ? (Theme.of(context).brightness == Brightness.dark ? Colors.white : primaryColor)
                                   : onSurfaceColor.withOpacity(0.55),
-                              size: 22,
+                              size: 20,
                             ),
                             title: Text(
                               item.label,
                               style: TextStyle(
-                                fontSize: 13.5,
+                                fontSize: 13,
                                 fontWeight: isSelected ? FontWeight.bold : FontWeight.w500,
                                 color: isSelected 
                                     ? (Theme.of(context).brightness == Brightness.dark ? Colors.white : primaryColor)
@@ -196,56 +290,56 @@ class ResponsiveScaffold extends ConsumerWidget {
 
                 const Divider(height: 1),
 
-                // Profile card & Logout at the bottom
+                // Settings & Logout at the bottom (pinned)
                 Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: Row(
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
                     children: [
-                      CircleAvatar(
-                        radius: 20,
-                        backgroundColor: primaryColor.withOpacity(0.1),
-                        backgroundImage: profile != null && profile.profileImageUrl.isNotEmpty
-                            ? NetworkImage(profile.profileImageUrl)
-                            : null,
-                        child: profile == null || profile.profileImageUrl.isEmpty
-                            ? Icon(Icons.person, size: 20, color: primaryColor)
-                            : null,
-                      ),
-                      const SizedBox(width: 10),
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Text(
-                              profile?.fullName.isNotEmpty == true ? profile!.fullName : "Student",
-                              style: TextStyle(
-                                fontSize: 13,
-                                fontWeight: FontWeight.bold,
-                                color: onSurfaceColor,
-                              ),
-                              overflow: TextOverflow.ellipsis,
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: ListTile(
+                          dense: true,
+                          leading: Icon(
+                            Icons.settings_outlined,
+                            size: 20,
+                            color: onSurfaceColor.withOpacity(0.55),
+                          ),
+                          title: Text(
+                            "Settings",
+                            style: TextStyle(
+                              fontSize: 13,
+                              fontWeight: FontWeight.w500,
+                              color: onSurfaceColor.withOpacity(0.7),
                             ),
-                            Text(
-                              profile?.email ?? authState.email ?? "",
-                              style: TextStyle(
-                                fontSize: 10,
-                                color: onSurfaceColor.withOpacity(0.5),
-                              ),
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                          ],
+                          ),
+                          onTap: () => context.go("/profile"),
                         ),
                       ),
-                      IconButton(
-                        icon: const Icon(Icons.logout, color: Colors.redAccent, size: 20),
-                        tooltip: "Logout",
-                        onPressed: () async {
-                          await ref.read(authProvider.notifier).logout();
-                          if (context.mounted) {
-                            context.go("/login");
-                          }
-                        },
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: ListTile(
+                          dense: true,
+                          leading: const Icon(
+                            Icons.logout,
+                            size: 20,
+                            color: Colors.redAccent,
+                          ),
+                          title: const Text(
+                            "Logout",
+                            style: TextStyle(
+                              fontSize: 13,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.redAccent,
+                            ),
+                          ),
+                          onTap: () async {
+                            await ref.read(authProvider.notifier).logout();
+                            if (context.mounted) {
+                              context.go("/login");
+                            }
+                          },
+                        ),
                       ),
                     ],
                   ),
