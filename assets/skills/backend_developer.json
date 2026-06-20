@@ -1,0 +1,20 @@
+{
+  "targetRole": "Backend Developer",
+  "requiredSkills": [
+    "NodeJS",
+    "Python",
+    "PostgreSQL",
+    "MongoDB",
+    "Docker",
+    "REST APIs"
+  ],
+  "missingSkills": [
+    "Docker",
+    "PostgreSQL"
+  ],
+  "recommendations": [
+    "Create multi-container configurations using Docker Compose",
+    "Learn SQL indexing and isolation levels"
+  ],
+  "estimatedLearningTimeHours": 90
+}

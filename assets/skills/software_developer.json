@@ -1,0 +1,20 @@
+{
+  "targetRole": "Software Developer",
+  "requiredSkills": [
+    "Java",
+    "Python",
+    "Data Structures",
+    "Algorithms",
+    "DBMS",
+    "Software Engineering"
+  ],
+  "missingSkills": [
+    "Algorithms",
+    "DBMS"
+  ],
+  "recommendations": [
+    "Study basic sorting and searching algorithms",
+    "Learn database normalization and SQL joins"
+  ],
+  "estimatedLearningTimeHours": 80
+}

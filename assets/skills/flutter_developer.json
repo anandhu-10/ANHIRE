@@ -1,0 +1,20 @@
+{
+  "targetRole": "Flutter Developer",
+  "requiredSkills": [
+    "Dart",
+    "Flutter SDK",
+    "Riverpod",
+    "Go Router",
+    "SQLite",
+    "Firebase Core"
+  ],
+  "missingSkills": [
+    "Riverpod",
+    "Go Router"
+  ],
+  "recommendations": [
+    "Watch the Riverpod 2.0 architecture guides",
+    "Practice defining paths and guards with GoRouter"
+  ],
+  "estimatedLearningTimeHours": 60
+}

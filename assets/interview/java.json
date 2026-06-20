@@ -1,0 +1,1322 @@
+[
+  {
+    "id": "interview_java_1",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is JVM and how does it work? (Variant 1)",
+    "idealKeywords": [
+      "jvm",
+      "bytecode",
+      "virtual machine",
+      "compile"
+    ],
+    "suggestedAnswer": "JVM (Java Virtual Machine) compiles java code to bytecode, which is then interpreted/JIT compiled into machine-dependent native CPU instructions."
+  },
+  {
+    "id": "interview_java_2",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "Explain the difference between Abstract Class and Interface. (Variant 2)",
+    "idealKeywords": [
+      "interface",
+      "abstract",
+      "multiple inheritance",
+      "default methods"
+    ],
+    "suggestedAnswer": "Abstract classes can have state and constructor, and support partial implementation. Interfaces only specify behavior (until Java 8/9 static/default methods) and support multiple inheritance."
+  },
+  {
+    "id": "interview_java_3",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is the collections framework in Java? (Variant 3)",
+    "idealKeywords": [
+      "collection",
+      "list",
+      "map",
+      "set",
+      "arraylist"
+    ],
+    "suggestedAnswer": "The collections framework is an architecture for storing and manipulating groups of objects. Major interfaces are List, Set, Queue, and Map."
+  },
+  {
+    "id": "interview_java_4",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is exception handling and what are checked vs unchecked exceptions? (Variant 4)",
+    "idealKeywords": [
+      "checked",
+      "unchecked",
+      "try-catch",
+      "runtime exception"
+    ],
+    "suggestedAnswer": "Checked exceptions are verified at compile time (e.g. IOException) and must be declared/caught. Unchecked exceptions occur at runtime (e.g. NullPointerException)."
+  },
+  {
+    "id": "interview_java_5",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is multithreading in Java? (Variant 5)",
+    "idealKeywords": [
+      "thread",
+      "runnable",
+      "concurrency",
+      "synchronization"
+    ],
+    "suggestedAnswer": "Multithreading is a feature that allows concurrent execution of two or more parts of a program to maximize CPU utilization, implemented via Thread class or Runnable interface."
+  },
+  {
+    "id": "interview_java_6",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is JVM and how does it work? (Variant 6)",
+    "idealKeywords": [
+      "jvm",
+      "bytecode",
+      "virtual machine",
+      "compile"
+    ],
+    "suggestedAnswer": "JVM (Java Virtual Machine) compiles java code to bytecode, which is then interpreted/JIT compiled into machine-dependent native CPU instructions."
+  },
+  {
+    "id": "interview_java_7",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "Explain the difference between Abstract Class and Interface. (Variant 7)",
+    "idealKeywords": [
+      "interface",
+      "abstract",
+      "multiple inheritance",
+      "default methods"
+    ],
+    "suggestedAnswer": "Abstract classes can have state and constructor, and support partial implementation. Interfaces only specify behavior (until Java 8/9 static/default methods) and support multiple inheritance."
+  },
+  {
+    "id": "interview_java_8",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is the collections framework in Java? (Variant 8)",
+    "idealKeywords": [
+      "collection",
+      "list",
+      "map",
+      "set",
+      "arraylist"
+    ],
+    "suggestedAnswer": "The collections framework is an architecture for storing and manipulating groups of objects. Major interfaces are List, Set, Queue, and Map."
+  },
+  {
+    "id": "interview_java_9",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is exception handling and what are checked vs unchecked exceptions? (Variant 9)",
+    "idealKeywords": [
+      "checked",
+      "unchecked",
+      "try-catch",
+      "runtime exception"
+    ],
+    "suggestedAnswer": "Checked exceptions are verified at compile time (e.g. IOException) and must be declared/caught. Unchecked exceptions occur at runtime (e.g. NullPointerException)."
+  },
+  {
+    "id": "interview_java_10",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is multithreading in Java? (Variant 10)",
+    "idealKeywords": [
+      "thread",
+      "runnable",
+      "concurrency",
+      "synchronization"
+    ],
+    "suggestedAnswer": "Multithreading is a feature that allows concurrent execution of two or more parts of a program to maximize CPU utilization, implemented via Thread class or Runnable interface."
+  },
+  {
+    "id": "interview_java_11",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is JVM and how does it work? (Variant 11)",
+    "idealKeywords": [
+      "jvm",
+      "bytecode",
+      "virtual machine",
+      "compile"
+    ],
+    "suggestedAnswer": "JVM (Java Virtual Machine) compiles java code to bytecode, which is then interpreted/JIT compiled into machine-dependent native CPU instructions."
+  },
+  {
+    "id": "interview_java_12",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "Explain the difference between Abstract Class and Interface. (Variant 12)",
+    "idealKeywords": [
+      "interface",
+      "abstract",
+      "multiple inheritance",
+      "default methods"
+    ],
+    "suggestedAnswer": "Abstract classes can have state and constructor, and support partial implementation. Interfaces only specify behavior (until Java 8/9 static/default methods) and support multiple inheritance."
+  },
+  {
+    "id": "interview_java_13",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is the collections framework in Java? (Variant 13)",
+    "idealKeywords": [
+      "collection",
+      "list",
+      "map",
+      "set",
+      "arraylist"
+    ],
+    "suggestedAnswer": "The collections framework is an architecture for storing and manipulating groups of objects. Major interfaces are List, Set, Queue, and Map."
+  },
+  {
+    "id": "interview_java_14",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is exception handling and what are checked vs unchecked exceptions? (Variant 14)",
+    "idealKeywords": [
+      "checked",
+      "unchecked",
+      "try-catch",
+      "runtime exception"
+    ],
+    "suggestedAnswer": "Checked exceptions are verified at compile time (e.g. IOException) and must be declared/caught. Unchecked exceptions occur at runtime (e.g. NullPointerException)."
+  },
+  {
+    "id": "interview_java_15",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is multithreading in Java? (Variant 15)",
+    "idealKeywords": [
+      "thread",
+      "runnable",
+      "concurrency",
+      "synchronization"
+    ],
+    "suggestedAnswer": "Multithreading is a feature that allows concurrent execution of two or more parts of a program to maximize CPU utilization, implemented via Thread class or Runnable interface."
+  },
+  {
+    "id": "interview_java_16",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is JVM and how does it work? (Variant 16)",
+    "idealKeywords": [
+      "jvm",
+      "bytecode",
+      "virtual machine",
+      "compile"
+    ],
+    "suggestedAnswer": "JVM (Java Virtual Machine) compiles java code to bytecode, which is then interpreted/JIT compiled into machine-dependent native CPU instructions."
+  },
+  {
+    "id": "interview_java_17",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "Explain the difference between Abstract Class and Interface. (Variant 17)",
+    "idealKeywords": [
+      "interface",
+      "abstract",
+      "multiple inheritance",
+      "default methods"
+    ],
+    "suggestedAnswer": "Abstract classes can have state and constructor, and support partial implementation. Interfaces only specify behavior (until Java 8/9 static/default methods) and support multiple inheritance."
+  },
+  {
+    "id": "interview_java_18",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is the collections framework in Java? (Variant 18)",
+    "idealKeywords": [
+      "collection",
+      "list",
+      "map",
+      "set",
+      "arraylist"
+    ],
+    "suggestedAnswer": "The collections framework is an architecture for storing and manipulating groups of objects. Major interfaces are List, Set, Queue, and Map."
+  },
+  {
+    "id": "interview_java_19",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is exception handling and what are checked vs unchecked exceptions? (Variant 19)",
+    "idealKeywords": [
+      "checked",
+      "unchecked",
+      "try-catch",
+      "runtime exception"
+    ],
+    "suggestedAnswer": "Checked exceptions are verified at compile time (e.g. IOException) and must be declared/caught. Unchecked exceptions occur at runtime (e.g. NullPointerException)."
+  },
+  {
+    "id": "interview_java_20",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is multithreading in Java? (Variant 20)",
+    "idealKeywords": [
+      "thread",
+      "runnable",
+      "concurrency",
+      "synchronization"
+    ],
+    "suggestedAnswer": "Multithreading is a feature that allows concurrent execution of two or more parts of a program to maximize CPU utilization, implemented via Thread class or Runnable interface."
+  },
+  {
+    "id": "interview_java_21",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is JVM and how does it work? (Variant 21)",
+    "idealKeywords": [
+      "jvm",
+      "bytecode",
+      "virtual machine",
+      "compile"
+    ],
+    "suggestedAnswer": "JVM (Java Virtual Machine) compiles java code to bytecode, which is then interpreted/JIT compiled into machine-dependent native CPU instructions."
+  },
+  {
+    "id": "interview_java_22",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "Explain the difference between Abstract Class and Interface. (Variant 22)",
+    "idealKeywords": [
+      "interface",
+      "abstract",
+      "multiple inheritance",
+      "default methods"
+    ],
+    "suggestedAnswer": "Abstract classes can have state and constructor, and support partial implementation. Interfaces only specify behavior (until Java 8/9 static/default methods) and support multiple inheritance."
+  },
+  {
+    "id": "interview_java_23",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is the collections framework in Java? (Variant 23)",
+    "idealKeywords": [
+      "collection",
+      "list",
+      "map",
+      "set",
+      "arraylist"
+    ],
+    "suggestedAnswer": "The collections framework is an architecture for storing and manipulating groups of objects. Major interfaces are List, Set, Queue, and Map."
+  },
+  {
+    "id": "interview_java_24",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is exception handling and what are checked vs unchecked exceptions? (Variant 24)",
+    "idealKeywords": [
+      "checked",
+      "unchecked",
+      "try-catch",
+      "runtime exception"
+    ],
+    "suggestedAnswer": "Checked exceptions are verified at compile time (e.g. IOException) and must be declared/caught. Unchecked exceptions occur at runtime (e.g. NullPointerException)."
+  },
+  {
+    "id": "interview_java_25",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is multithreading in Java? (Variant 25)",
+    "idealKeywords": [
+      "thread",
+      "runnable",
+      "concurrency",
+      "synchronization"
+    ],
+    "suggestedAnswer": "Multithreading is a feature that allows concurrent execution of two or more parts of a program to maximize CPU utilization, implemented via Thread class or Runnable interface."
+  },
+  {
+    "id": "interview_java_26",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is JVM and how does it work? (Variant 26)",
+    "idealKeywords": [
+      "jvm",
+      "bytecode",
+      "virtual machine",
+      "compile"
+    ],
+    "suggestedAnswer": "JVM (Java Virtual Machine) compiles java code to bytecode, which is then interpreted/JIT compiled into machine-dependent native CPU instructions."
+  },
+  {
+    "id": "interview_java_27",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "Explain the difference between Abstract Class and Interface. (Variant 27)",
+    "idealKeywords": [
+      "interface",
+      "abstract",
+      "multiple inheritance",
+      "default methods"
+    ],
+    "suggestedAnswer": "Abstract classes can have state and constructor, and support partial implementation. Interfaces only specify behavior (until Java 8/9 static/default methods) and support multiple inheritance."
+  },
+  {
+    "id": "interview_java_28",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is the collections framework in Java? (Variant 28)",
+    "idealKeywords": [
+      "collection",
+      "list",
+      "map",
+      "set",
+      "arraylist"
+    ],
+    "suggestedAnswer": "The collections framework is an architecture for storing and manipulating groups of objects. Major interfaces are List, Set, Queue, and Map."
+  },
+  {
+    "id": "interview_java_29",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is exception handling and what are checked vs unchecked exceptions? (Variant 29)",
+    "idealKeywords": [
+      "checked",
+      "unchecked",
+      "try-catch",
+      "runtime exception"
+    ],
+    "suggestedAnswer": "Checked exceptions are verified at compile time (e.g. IOException) and must be declared/caught. Unchecked exceptions occur at runtime (e.g. NullPointerException)."
+  },
+  {
+    "id": "interview_java_30",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is multithreading in Java? (Variant 30)",
+    "idealKeywords": [
+      "thread",
+      "runnable",
+      "concurrency",
+      "synchronization"
+    ],
+    "suggestedAnswer": "Multithreading is a feature that allows concurrent execution of two or more parts of a program to maximize CPU utilization, implemented via Thread class or Runnable interface."
+  },
+  {
+    "id": "interview_java_31",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is JVM and how does it work? (Variant 31)",
+    "idealKeywords": [
+      "jvm",
+      "bytecode",
+      "virtual machine",
+      "compile"
+    ],
+    "suggestedAnswer": "JVM (Java Virtual Machine) compiles java code to bytecode, which is then interpreted/JIT compiled into machine-dependent native CPU instructions."
+  },
+  {
+    "id": "interview_java_32",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "Explain the difference between Abstract Class and Interface. (Variant 32)",
+    "idealKeywords": [
+      "interface",
+      "abstract",
+      "multiple inheritance",
+      "default methods"
+    ],
+    "suggestedAnswer": "Abstract classes can have state and constructor, and support partial implementation. Interfaces only specify behavior (until Java 8/9 static/default methods) and support multiple inheritance."
+  },
+  {
+    "id": "interview_java_33",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is the collections framework in Java? (Variant 33)",
+    "idealKeywords": [
+      "collection",
+      "list",
+      "map",
+      "set",
+      "arraylist"
+    ],
+    "suggestedAnswer": "The collections framework is an architecture for storing and manipulating groups of objects. Major interfaces are List, Set, Queue, and Map."
+  },
+  {
+    "id": "interview_java_34",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is exception handling and what are checked vs unchecked exceptions? (Variant 34)",
+    "idealKeywords": [
+      "checked",
+      "unchecked",
+      "try-catch",
+      "runtime exception"
+    ],
+    "suggestedAnswer": "Checked exceptions are verified at compile time (e.g. IOException) and must be declared/caught. Unchecked exceptions occur at runtime (e.g. NullPointerException)."
+  },
+  {
+    "id": "interview_java_35",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is multithreading in Java? (Variant 35)",
+    "idealKeywords": [
+      "thread",
+      "runnable",
+      "concurrency",
+      "synchronization"
+    ],
+    "suggestedAnswer": "Multithreading is a feature that allows concurrent execution of two or more parts of a program to maximize CPU utilization, implemented via Thread class or Runnable interface."
+  },
+  {
+    "id": "interview_java_36",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is JVM and how does it work? (Variant 36)",
+    "idealKeywords": [
+      "jvm",
+      "bytecode",
+      "virtual machine",
+      "compile"
+    ],
+    "suggestedAnswer": "JVM (Java Virtual Machine) compiles java code to bytecode, which is then interpreted/JIT compiled into machine-dependent native CPU instructions."
+  },
+  {
+    "id": "interview_java_37",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "Explain the difference between Abstract Class and Interface. (Variant 37)",
+    "idealKeywords": [
+      "interface",
+      "abstract",
+      "multiple inheritance",
+      "default methods"
+    ],
+    "suggestedAnswer": "Abstract classes can have state and constructor, and support partial implementation. Interfaces only specify behavior (until Java 8/9 static/default methods) and support multiple inheritance."
+  },
+  {
+    "id": "interview_java_38",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is the collections framework in Java? (Variant 38)",
+    "idealKeywords": [
+      "collection",
+      "list",
+      "map",
+      "set",
+      "arraylist"
+    ],
+    "suggestedAnswer": "The collections framework is an architecture for storing and manipulating groups of objects. Major interfaces are List, Set, Queue, and Map."
+  },
+  {
+    "id": "interview_java_39",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is exception handling and what are checked vs unchecked exceptions? (Variant 39)",
+    "idealKeywords": [
+      "checked",
+      "unchecked",
+      "try-catch",
+      "runtime exception"
+    ],
+    "suggestedAnswer": "Checked exceptions are verified at compile time (e.g. IOException) and must be declared/caught. Unchecked exceptions occur at runtime (e.g. NullPointerException)."
+  },
+  {
+    "id": "interview_java_40",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is multithreading in Java? (Variant 40)",
+    "idealKeywords": [
+      "thread",
+      "runnable",
+      "concurrency",
+      "synchronization"
+    ],
+    "suggestedAnswer": "Multithreading is a feature that allows concurrent execution of two or more parts of a program to maximize CPU utilization, implemented via Thread class or Runnable interface."
+  },
+  {
+    "id": "interview_java_41",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is JVM and how does it work? (Variant 41)",
+    "idealKeywords": [
+      "jvm",
+      "bytecode",
+      "virtual machine",
+      "compile"
+    ],
+    "suggestedAnswer": "JVM (Java Virtual Machine) compiles java code to bytecode, which is then interpreted/JIT compiled into machine-dependent native CPU instructions."
+  },
+  {
+    "id": "interview_java_42",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "Explain the difference between Abstract Class and Interface. (Variant 42)",
+    "idealKeywords": [
+      "interface",
+      "abstract",
+      "multiple inheritance",
+      "default methods"
+    ],
+    "suggestedAnswer": "Abstract classes can have state and constructor, and support partial implementation. Interfaces only specify behavior (until Java 8/9 static/default methods) and support multiple inheritance."
+  },
+  {
+    "id": "interview_java_43",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is the collections framework in Java? (Variant 43)",
+    "idealKeywords": [
+      "collection",
+      "list",
+      "map",
+      "set",
+      "arraylist"
+    ],
+    "suggestedAnswer": "The collections framework is an architecture for storing and manipulating groups of objects. Major interfaces are List, Set, Queue, and Map."
+  },
+  {
+    "id": "interview_java_44",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is exception handling and what are checked vs unchecked exceptions? (Variant 44)",
+    "idealKeywords": [
+      "checked",
+      "unchecked",
+      "try-catch",
+      "runtime exception"
+    ],
+    "suggestedAnswer": "Checked exceptions are verified at compile time (e.g. IOException) and must be declared/caught. Unchecked exceptions occur at runtime (e.g. NullPointerException)."
+  },
+  {
+    "id": "interview_java_45",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is multithreading in Java? (Variant 45)",
+    "idealKeywords": [
+      "thread",
+      "runnable",
+      "concurrency",
+      "synchronization"
+    ],
+    "suggestedAnswer": "Multithreading is a feature that allows concurrent execution of two or more parts of a program to maximize CPU utilization, implemented via Thread class or Runnable interface."
+  },
+  {
+    "id": "interview_java_46",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is JVM and how does it work? (Variant 46)",
+    "idealKeywords": [
+      "jvm",
+      "bytecode",
+      "virtual machine",
+      "compile"
+    ],
+    "suggestedAnswer": "JVM (Java Virtual Machine) compiles java code to bytecode, which is then interpreted/JIT compiled into machine-dependent native CPU instructions."
+  },
+  {
+    "id": "interview_java_47",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "Explain the difference between Abstract Class and Interface. (Variant 47)",
+    "idealKeywords": [
+      "interface",
+      "abstract",
+      "multiple inheritance",
+      "default methods"
+    ],
+    "suggestedAnswer": "Abstract classes can have state and constructor, and support partial implementation. Interfaces only specify behavior (until Java 8/9 static/default methods) and support multiple inheritance."
+  },
+  {
+    "id": "interview_java_48",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is the collections framework in Java? (Variant 48)",
+    "idealKeywords": [
+      "collection",
+      "list",
+      "map",
+      "set",
+      "arraylist"
+    ],
+    "suggestedAnswer": "The collections framework is an architecture for storing and manipulating groups of objects. Major interfaces are List, Set, Queue, and Map."
+  },
+  {
+    "id": "interview_java_49",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is exception handling and what are checked vs unchecked exceptions? (Variant 49)",
+    "idealKeywords": [
+      "checked",
+      "unchecked",
+      "try-catch",
+      "runtime exception"
+    ],
+    "suggestedAnswer": "Checked exceptions are verified at compile time (e.g. IOException) and must be declared/caught. Unchecked exceptions occur at runtime (e.g. NullPointerException)."
+  },
+  {
+    "id": "interview_java_50",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is multithreading in Java? (Variant 50)",
+    "idealKeywords": [
+      "thread",
+      "runnable",
+      "concurrency",
+      "synchronization"
+    ],
+    "suggestedAnswer": "Multithreading is a feature that allows concurrent execution of two or more parts of a program to maximize CPU utilization, implemented via Thread class or Runnable interface."
+  },
+  {
+    "id": "interview_java_51",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is JVM and how does it work? (Variant 51)",
+    "idealKeywords": [
+      "jvm",
+      "bytecode",
+      "virtual machine",
+      "compile"
+    ],
+    "suggestedAnswer": "JVM (Java Virtual Machine) compiles java code to bytecode, which is then interpreted/JIT compiled into machine-dependent native CPU instructions."
+  },
+  {
+    "id": "interview_java_52",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "Explain the difference between Abstract Class and Interface. (Variant 52)",
+    "idealKeywords": [
+      "interface",
+      "abstract",
+      "multiple inheritance",
+      "default methods"
+    ],
+    "suggestedAnswer": "Abstract classes can have state and constructor, and support partial implementation. Interfaces only specify behavior (until Java 8/9 static/default methods) and support multiple inheritance."
+  },
+  {
+    "id": "interview_java_53",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is the collections framework in Java? (Variant 53)",
+    "idealKeywords": [
+      "collection",
+      "list",
+      "map",
+      "set",
+      "arraylist"
+    ],
+    "suggestedAnswer": "The collections framework is an architecture for storing and manipulating groups of objects. Major interfaces are List, Set, Queue, and Map."
+  },
+  {
+    "id": "interview_java_54",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is exception handling and what are checked vs unchecked exceptions? (Variant 54)",
+    "idealKeywords": [
+      "checked",
+      "unchecked",
+      "try-catch",
+      "runtime exception"
+    ],
+    "suggestedAnswer": "Checked exceptions are verified at compile time (e.g. IOException) and must be declared/caught. Unchecked exceptions occur at runtime (e.g. NullPointerException)."
+  },
+  {
+    "id": "interview_java_55",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is multithreading in Java? (Variant 55)",
+    "idealKeywords": [
+      "thread",
+      "runnable",
+      "concurrency",
+      "synchronization"
+    ],
+    "suggestedAnswer": "Multithreading is a feature that allows concurrent execution of two or more parts of a program to maximize CPU utilization, implemented via Thread class or Runnable interface."
+  },
+  {
+    "id": "interview_java_56",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is JVM and how does it work? (Variant 56)",
+    "idealKeywords": [
+      "jvm",
+      "bytecode",
+      "virtual machine",
+      "compile"
+    ],
+    "suggestedAnswer": "JVM (Java Virtual Machine) compiles java code to bytecode, which is then interpreted/JIT compiled into machine-dependent native CPU instructions."
+  },
+  {
+    "id": "interview_java_57",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "Explain the difference between Abstract Class and Interface. (Variant 57)",
+    "idealKeywords": [
+      "interface",
+      "abstract",
+      "multiple inheritance",
+      "default methods"
+    ],
+    "suggestedAnswer": "Abstract classes can have state and constructor, and support partial implementation. Interfaces only specify behavior (until Java 8/9 static/default methods) and support multiple inheritance."
+  },
+  {
+    "id": "interview_java_58",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is the collections framework in Java? (Variant 58)",
+    "idealKeywords": [
+      "collection",
+      "list",
+      "map",
+      "set",
+      "arraylist"
+    ],
+    "suggestedAnswer": "The collections framework is an architecture for storing and manipulating groups of objects. Major interfaces are List, Set, Queue, and Map."
+  },
+  {
+    "id": "interview_java_59",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is exception handling and what are checked vs unchecked exceptions? (Variant 59)",
+    "idealKeywords": [
+      "checked",
+      "unchecked",
+      "try-catch",
+      "runtime exception"
+    ],
+    "suggestedAnswer": "Checked exceptions are verified at compile time (e.g. IOException) and must be declared/caught. Unchecked exceptions occur at runtime (e.g. NullPointerException)."
+  },
+  {
+    "id": "interview_java_60",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is multithreading in Java? (Variant 60)",
+    "idealKeywords": [
+      "thread",
+      "runnable",
+      "concurrency",
+      "synchronization"
+    ],
+    "suggestedAnswer": "Multithreading is a feature that allows concurrent execution of two or more parts of a program to maximize CPU utilization, implemented via Thread class or Runnable interface."
+  },
+  {
+    "id": "interview_java_61",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is JVM and how does it work? (Variant 61)",
+    "idealKeywords": [
+      "jvm",
+      "bytecode",
+      "virtual machine",
+      "compile"
+    ],
+    "suggestedAnswer": "JVM (Java Virtual Machine) compiles java code to bytecode, which is then interpreted/JIT compiled into machine-dependent native CPU instructions."
+  },
+  {
+    "id": "interview_java_62",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "Explain the difference between Abstract Class and Interface. (Variant 62)",
+    "idealKeywords": [
+      "interface",
+      "abstract",
+      "multiple inheritance",
+      "default methods"
+    ],
+    "suggestedAnswer": "Abstract classes can have state and constructor, and support partial implementation. Interfaces only specify behavior (until Java 8/9 static/default methods) and support multiple inheritance."
+  },
+  {
+    "id": "interview_java_63",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is the collections framework in Java? (Variant 63)",
+    "idealKeywords": [
+      "collection",
+      "list",
+      "map",
+      "set",
+      "arraylist"
+    ],
+    "suggestedAnswer": "The collections framework is an architecture for storing and manipulating groups of objects. Major interfaces are List, Set, Queue, and Map."
+  },
+  {
+    "id": "interview_java_64",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is exception handling and what are checked vs unchecked exceptions? (Variant 64)",
+    "idealKeywords": [
+      "checked",
+      "unchecked",
+      "try-catch",
+      "runtime exception"
+    ],
+    "suggestedAnswer": "Checked exceptions are verified at compile time (e.g. IOException) and must be declared/caught. Unchecked exceptions occur at runtime (e.g. NullPointerException)."
+  },
+  {
+    "id": "interview_java_65",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is multithreading in Java? (Variant 65)",
+    "idealKeywords": [
+      "thread",
+      "runnable",
+      "concurrency",
+      "synchronization"
+    ],
+    "suggestedAnswer": "Multithreading is a feature that allows concurrent execution of two or more parts of a program to maximize CPU utilization, implemented via Thread class or Runnable interface."
+  },
+  {
+    "id": "interview_java_66",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is JVM and how does it work? (Variant 66)",
+    "idealKeywords": [
+      "jvm",
+      "bytecode",
+      "virtual machine",
+      "compile"
+    ],
+    "suggestedAnswer": "JVM (Java Virtual Machine) compiles java code to bytecode, which is then interpreted/JIT compiled into machine-dependent native CPU instructions."
+  },
+  {
+    "id": "interview_java_67",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "Explain the difference between Abstract Class and Interface. (Variant 67)",
+    "idealKeywords": [
+      "interface",
+      "abstract",
+      "multiple inheritance",
+      "default methods"
+    ],
+    "suggestedAnswer": "Abstract classes can have state and constructor, and support partial implementation. Interfaces only specify behavior (until Java 8/9 static/default methods) and support multiple inheritance."
+  },
+  {
+    "id": "interview_java_68",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is the collections framework in Java? (Variant 68)",
+    "idealKeywords": [
+      "collection",
+      "list",
+      "map",
+      "set",
+      "arraylist"
+    ],
+    "suggestedAnswer": "The collections framework is an architecture for storing and manipulating groups of objects. Major interfaces are List, Set, Queue, and Map."
+  },
+  {
+    "id": "interview_java_69",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is exception handling and what are checked vs unchecked exceptions? (Variant 69)",
+    "idealKeywords": [
+      "checked",
+      "unchecked",
+      "try-catch",
+      "runtime exception"
+    ],
+    "suggestedAnswer": "Checked exceptions are verified at compile time (e.g. IOException) and must be declared/caught. Unchecked exceptions occur at runtime (e.g. NullPointerException)."
+  },
+  {
+    "id": "interview_java_70",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is multithreading in Java? (Variant 70)",
+    "idealKeywords": [
+      "thread",
+      "runnable",
+      "concurrency",
+      "synchronization"
+    ],
+    "suggestedAnswer": "Multithreading is a feature that allows concurrent execution of two or more parts of a program to maximize CPU utilization, implemented via Thread class or Runnable interface."
+  },
+  {
+    "id": "interview_java_71",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is JVM and how does it work? (Variant 71)",
+    "idealKeywords": [
+      "jvm",
+      "bytecode",
+      "virtual machine",
+      "compile"
+    ],
+    "suggestedAnswer": "JVM (Java Virtual Machine) compiles java code to bytecode, which is then interpreted/JIT compiled into machine-dependent native CPU instructions."
+  },
+  {
+    "id": "interview_java_72",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "Explain the difference between Abstract Class and Interface. (Variant 72)",
+    "idealKeywords": [
+      "interface",
+      "abstract",
+      "multiple inheritance",
+      "default methods"
+    ],
+    "suggestedAnswer": "Abstract classes can have state and constructor, and support partial implementation. Interfaces only specify behavior (until Java 8/9 static/default methods) and support multiple inheritance."
+  },
+  {
+    "id": "interview_java_73",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is the collections framework in Java? (Variant 73)",
+    "idealKeywords": [
+      "collection",
+      "list",
+      "map",
+      "set",
+      "arraylist"
+    ],
+    "suggestedAnswer": "The collections framework is an architecture for storing and manipulating groups of objects. Major interfaces are List, Set, Queue, and Map."
+  },
+  {
+    "id": "interview_java_74",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is exception handling and what are checked vs unchecked exceptions? (Variant 74)",
+    "idealKeywords": [
+      "checked",
+      "unchecked",
+      "try-catch",
+      "runtime exception"
+    ],
+    "suggestedAnswer": "Checked exceptions are verified at compile time (e.g. IOException) and must be declared/caught. Unchecked exceptions occur at runtime (e.g. NullPointerException)."
+  },
+  {
+    "id": "interview_java_75",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is multithreading in Java? (Variant 75)",
+    "idealKeywords": [
+      "thread",
+      "runnable",
+      "concurrency",
+      "synchronization"
+    ],
+    "suggestedAnswer": "Multithreading is a feature that allows concurrent execution of two or more parts of a program to maximize CPU utilization, implemented via Thread class or Runnable interface."
+  },
+  {
+    "id": "interview_java_76",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is JVM and how does it work? (Variant 76)",
+    "idealKeywords": [
+      "jvm",
+      "bytecode",
+      "virtual machine",
+      "compile"
+    ],
+    "suggestedAnswer": "JVM (Java Virtual Machine) compiles java code to bytecode, which is then interpreted/JIT compiled into machine-dependent native CPU instructions."
+  },
+  {
+    "id": "interview_java_77",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "Explain the difference between Abstract Class and Interface. (Variant 77)",
+    "idealKeywords": [
+      "interface",
+      "abstract",
+      "multiple inheritance",
+      "default methods"
+    ],
+    "suggestedAnswer": "Abstract classes can have state and constructor, and support partial implementation. Interfaces only specify behavior (until Java 8/9 static/default methods) and support multiple inheritance."
+  },
+  {
+    "id": "interview_java_78",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is the collections framework in Java? (Variant 78)",
+    "idealKeywords": [
+      "collection",
+      "list",
+      "map",
+      "set",
+      "arraylist"
+    ],
+    "suggestedAnswer": "The collections framework is an architecture for storing and manipulating groups of objects. Major interfaces are List, Set, Queue, and Map."
+  },
+  {
+    "id": "interview_java_79",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is exception handling and what are checked vs unchecked exceptions? (Variant 79)",
+    "idealKeywords": [
+      "checked",
+      "unchecked",
+      "try-catch",
+      "runtime exception"
+    ],
+    "suggestedAnswer": "Checked exceptions are verified at compile time (e.g. IOException) and must be declared/caught. Unchecked exceptions occur at runtime (e.g. NullPointerException)."
+  },
+  {
+    "id": "interview_java_80",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is multithreading in Java? (Variant 80)",
+    "idealKeywords": [
+      "thread",
+      "runnable",
+      "concurrency",
+      "synchronization"
+    ],
+    "suggestedAnswer": "Multithreading is a feature that allows concurrent execution of two or more parts of a program to maximize CPU utilization, implemented via Thread class or Runnable interface."
+  },
+  {
+    "id": "interview_java_81",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is JVM and how does it work? (Variant 81)",
+    "idealKeywords": [
+      "jvm",
+      "bytecode",
+      "virtual machine",
+      "compile"
+    ],
+    "suggestedAnswer": "JVM (Java Virtual Machine) compiles java code to bytecode, which is then interpreted/JIT compiled into machine-dependent native CPU instructions."
+  },
+  {
+    "id": "interview_java_82",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "Explain the difference between Abstract Class and Interface. (Variant 82)",
+    "idealKeywords": [
+      "interface",
+      "abstract",
+      "multiple inheritance",
+      "default methods"
+    ],
+    "suggestedAnswer": "Abstract classes can have state and constructor, and support partial implementation. Interfaces only specify behavior (until Java 8/9 static/default methods) and support multiple inheritance."
+  },
+  {
+    "id": "interview_java_83",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is the collections framework in Java? (Variant 83)",
+    "idealKeywords": [
+      "collection",
+      "list",
+      "map",
+      "set",
+      "arraylist"
+    ],
+    "suggestedAnswer": "The collections framework is an architecture for storing and manipulating groups of objects. Major interfaces are List, Set, Queue, and Map."
+  },
+  {
+    "id": "interview_java_84",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is exception handling and what are checked vs unchecked exceptions? (Variant 84)",
+    "idealKeywords": [
+      "checked",
+      "unchecked",
+      "try-catch",
+      "runtime exception"
+    ],
+    "suggestedAnswer": "Checked exceptions are verified at compile time (e.g. IOException) and must be declared/caught. Unchecked exceptions occur at runtime (e.g. NullPointerException)."
+  },
+  {
+    "id": "interview_java_85",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is multithreading in Java? (Variant 85)",
+    "idealKeywords": [
+      "thread",
+      "runnable",
+      "concurrency",
+      "synchronization"
+    ],
+    "suggestedAnswer": "Multithreading is a feature that allows concurrent execution of two or more parts of a program to maximize CPU utilization, implemented via Thread class or Runnable interface."
+  },
+  {
+    "id": "interview_java_86",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is JVM and how does it work? (Variant 86)",
+    "idealKeywords": [
+      "jvm",
+      "bytecode",
+      "virtual machine",
+      "compile"
+    ],
+    "suggestedAnswer": "JVM (Java Virtual Machine) compiles java code to bytecode, which is then interpreted/JIT compiled into machine-dependent native CPU instructions."
+  },
+  {
+    "id": "interview_java_87",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "Explain the difference between Abstract Class and Interface. (Variant 87)",
+    "idealKeywords": [
+      "interface",
+      "abstract",
+      "multiple inheritance",
+      "default methods"
+    ],
+    "suggestedAnswer": "Abstract classes can have state and constructor, and support partial implementation. Interfaces only specify behavior (until Java 8/9 static/default methods) and support multiple inheritance."
+  },
+  {
+    "id": "interview_java_88",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is the collections framework in Java? (Variant 88)",
+    "idealKeywords": [
+      "collection",
+      "list",
+      "map",
+      "set",
+      "arraylist"
+    ],
+    "suggestedAnswer": "The collections framework is an architecture for storing and manipulating groups of objects. Major interfaces are List, Set, Queue, and Map."
+  },
+  {
+    "id": "interview_java_89",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is exception handling and what are checked vs unchecked exceptions? (Variant 89)",
+    "idealKeywords": [
+      "checked",
+      "unchecked",
+      "try-catch",
+      "runtime exception"
+    ],
+    "suggestedAnswer": "Checked exceptions are verified at compile time (e.g. IOException) and must be declared/caught. Unchecked exceptions occur at runtime (e.g. NullPointerException)."
+  },
+  {
+    "id": "interview_java_90",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is multithreading in Java? (Variant 90)",
+    "idealKeywords": [
+      "thread",
+      "runnable",
+      "concurrency",
+      "synchronization"
+    ],
+    "suggestedAnswer": "Multithreading is a feature that allows concurrent execution of two or more parts of a program to maximize CPU utilization, implemented via Thread class or Runnable interface."
+  },
+  {
+    "id": "interview_java_91",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is JVM and how does it work? (Variant 91)",
+    "idealKeywords": [
+      "jvm",
+      "bytecode",
+      "virtual machine",
+      "compile"
+    ],
+    "suggestedAnswer": "JVM (Java Virtual Machine) compiles java code to bytecode, which is then interpreted/JIT compiled into machine-dependent native CPU instructions."
+  },
+  {
+    "id": "interview_java_92",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "Explain the difference between Abstract Class and Interface. (Variant 92)",
+    "idealKeywords": [
+      "interface",
+      "abstract",
+      "multiple inheritance",
+      "default methods"
+    ],
+    "suggestedAnswer": "Abstract classes can have state and constructor, and support partial implementation. Interfaces only specify behavior (until Java 8/9 static/default methods) and support multiple inheritance."
+  },
+  {
+    "id": "interview_java_93",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is the collections framework in Java? (Variant 93)",
+    "idealKeywords": [
+      "collection",
+      "list",
+      "map",
+      "set",
+      "arraylist"
+    ],
+    "suggestedAnswer": "The collections framework is an architecture for storing and manipulating groups of objects. Major interfaces are List, Set, Queue, and Map."
+  },
+  {
+    "id": "interview_java_94",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is exception handling and what are checked vs unchecked exceptions? (Variant 94)",
+    "idealKeywords": [
+      "checked",
+      "unchecked",
+      "try-catch",
+      "runtime exception"
+    ],
+    "suggestedAnswer": "Checked exceptions are verified at compile time (e.g. IOException) and must be declared/caught. Unchecked exceptions occur at runtime (e.g. NullPointerException)."
+  },
+  {
+    "id": "interview_java_95",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is multithreading in Java? (Variant 95)",
+    "idealKeywords": [
+      "thread",
+      "runnable",
+      "concurrency",
+      "synchronization"
+    ],
+    "suggestedAnswer": "Multithreading is a feature that allows concurrent execution of two or more parts of a program to maximize CPU utilization, implemented via Thread class or Runnable interface."
+  },
+  {
+    "id": "interview_java_96",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is JVM and how does it work? (Variant 96)",
+    "idealKeywords": [
+      "jvm",
+      "bytecode",
+      "virtual machine",
+      "compile"
+    ],
+    "suggestedAnswer": "JVM (Java Virtual Machine) compiles java code to bytecode, which is then interpreted/JIT compiled into machine-dependent native CPU instructions."
+  },
+  {
+    "id": "interview_java_97",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "Explain the difference between Abstract Class and Interface. (Variant 97)",
+    "idealKeywords": [
+      "interface",
+      "abstract",
+      "multiple inheritance",
+      "default methods"
+    ],
+    "suggestedAnswer": "Abstract classes can have state and constructor, and support partial implementation. Interfaces only specify behavior (until Java 8/9 static/default methods) and support multiple inheritance."
+  },
+  {
+    "id": "interview_java_98",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is the collections framework in Java? (Variant 98)",
+    "idealKeywords": [
+      "collection",
+      "list",
+      "map",
+      "set",
+      "arraylist"
+    ],
+    "suggestedAnswer": "The collections framework is an architecture for storing and manipulating groups of objects. Major interfaces are List, Set, Queue, and Map."
+  },
+  {
+    "id": "interview_java_99",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is exception handling and what are checked vs unchecked exceptions? (Variant 99)",
+    "idealKeywords": [
+      "checked",
+      "unchecked",
+      "try-catch",
+      "runtime exception"
+    ],
+    "suggestedAnswer": "Checked exceptions are verified at compile time (e.g. IOException) and must be declared/caught. Unchecked exceptions occur at runtime (e.g. NullPointerException)."
+  },
+  {
+    "id": "interview_java_100",
+    "type": "technical",
+    "role": "Java Developer",
+    "questionText": "What is multithreading in Java? (Variant 100)",
+    "idealKeywords": [
+      "thread",
+      "runnable",
+      "concurrency",
+      "synchronization"
+    ],
+    "suggestedAnswer": "Multithreading is a feature that allows concurrent execution of two or more parts of a program to maximize CPU utilization, implemented via Thread class or Runnable interface."
+  }
+]

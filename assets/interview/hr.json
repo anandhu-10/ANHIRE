@@ -1,0 +1,1302 @@
+[
+  {
+    "id": "interview_hr_1",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Tell me about yourself. (Variant 1)",
+    "idealKeywords": [
+      "experience",
+      "background",
+      "education",
+      "passion"
+    ],
+    "suggestedAnswer": "I am an engineering student with a passion for software development. I have built multiple projects and worked on solving real-world problems. My primary goal is to grow as a professional and add value to your team."
+  },
+  {
+    "id": "interview_hr_2",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Why should we hire you? (Variant 2)",
+    "idealKeywords": [
+      "skills",
+      "motivated",
+      "quick learner",
+      "fit"
+    ],
+    "suggestedAnswer": "You should hire me because I have a solid understanding of software fundamentals, hands-on experience through project development, and I am highly adaptable. I will bring dedication and learning-agility to your team."
+  },
+  {
+    "id": "interview_hr_3",
+    "type": "hr",
+    "role": "General",
+    "questionText": "What are your strengths and weaknesses? (Variant 3)",
+    "idealKeywords": [
+      "strength",
+      "weakness",
+      "communication",
+      "improving"
+    ],
+    "suggestedAnswer": "My strengths are analytical thinking and teamwork. My weakness is that I sometimes get too detailed-oriented, but I am learning to manage time better by prioritizing tasks."
+  },
+  {
+    "id": "interview_hr_4",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Where do you see yourself in 5 years? (Variant 4)",
+    "idealKeywords": [
+      "grow",
+      "career",
+      "leadership",
+      "expert"
+    ],
+    "suggestedAnswer": "In 5 years, I see myself in a senior engineering role or technical lead position, contributing to core architectural design decisions and mentoring junior developers."
+  },
+  {
+    "id": "interview_hr_5",
+    "type": "hr",
+    "role": "General",
+    "questionText": "How do you handle conflict in a team? (Variant 5)",
+    "idealKeywords": [
+      "listen",
+      "discuss",
+      "compromise",
+      "respect"
+    ],
+    "suggestedAnswer": "I handle conflict by active listening, discussing the issue objectively with team members, focusing on what is best for the project, and aligning on a common solution."
+  },
+  {
+    "id": "interview_hr_6",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Tell me about yourself. (Variant 6)",
+    "idealKeywords": [
+      "experience",
+      "background",
+      "education",
+      "passion"
+    ],
+    "suggestedAnswer": "I am an engineering student with a passion for software development. I have built multiple projects and worked on solving real-world problems. My primary goal is to grow as a professional and add value to your team."
+  },
+  {
+    "id": "interview_hr_7",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Why should we hire you? (Variant 7)",
+    "idealKeywords": [
+      "skills",
+      "motivated",
+      "quick learner",
+      "fit"
+    ],
+    "suggestedAnswer": "You should hire me because I have a solid understanding of software fundamentals, hands-on experience through project development, and I am highly adaptable. I will bring dedication and learning-agility to your team."
+  },
+  {
+    "id": "interview_hr_8",
+    "type": "hr",
+    "role": "General",
+    "questionText": "What are your strengths and weaknesses? (Variant 8)",
+    "idealKeywords": [
+      "strength",
+      "weakness",
+      "communication",
+      "improving"
+    ],
+    "suggestedAnswer": "My strengths are analytical thinking and teamwork. My weakness is that I sometimes get too detailed-oriented, but I am learning to manage time better by prioritizing tasks."
+  },
+  {
+    "id": "interview_hr_9",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Where do you see yourself in 5 years? (Variant 9)",
+    "idealKeywords": [
+      "grow",
+      "career",
+      "leadership",
+      "expert"
+    ],
+    "suggestedAnswer": "In 5 years, I see myself in a senior engineering role or technical lead position, contributing to core architectural design decisions and mentoring junior developers."
+  },
+  {
+    "id": "interview_hr_10",
+    "type": "hr",
+    "role": "General",
+    "questionText": "How do you handle conflict in a team? (Variant 10)",
+    "idealKeywords": [
+      "listen",
+      "discuss",
+      "compromise",
+      "respect"
+    ],
+    "suggestedAnswer": "I handle conflict by active listening, discussing the issue objectively with team members, focusing on what is best for the project, and aligning on a common solution."
+  },
+  {
+    "id": "interview_hr_11",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Tell me about yourself. (Variant 11)",
+    "idealKeywords": [
+      "experience",
+      "background",
+      "education",
+      "passion"
+    ],
+    "suggestedAnswer": "I am an engineering student with a passion for software development. I have built multiple projects and worked on solving real-world problems. My primary goal is to grow as a professional and add value to your team."
+  },
+  {
+    "id": "interview_hr_12",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Why should we hire you? (Variant 12)",
+    "idealKeywords": [
+      "skills",
+      "motivated",
+      "quick learner",
+      "fit"
+    ],
+    "suggestedAnswer": "You should hire me because I have a solid understanding of software fundamentals, hands-on experience through project development, and I am highly adaptable. I will bring dedication and learning-agility to your team."
+  },
+  {
+    "id": "interview_hr_13",
+    "type": "hr",
+    "role": "General",
+    "questionText": "What are your strengths and weaknesses? (Variant 13)",
+    "idealKeywords": [
+      "strength",
+      "weakness",
+      "communication",
+      "improving"
+    ],
+    "suggestedAnswer": "My strengths are analytical thinking and teamwork. My weakness is that I sometimes get too detailed-oriented, but I am learning to manage time better by prioritizing tasks."
+  },
+  {
+    "id": "interview_hr_14",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Where do you see yourself in 5 years? (Variant 14)",
+    "idealKeywords": [
+      "grow",
+      "career",
+      "leadership",
+      "expert"
+    ],
+    "suggestedAnswer": "In 5 years, I see myself in a senior engineering role or technical lead position, contributing to core architectural design decisions and mentoring junior developers."
+  },
+  {
+    "id": "interview_hr_15",
+    "type": "hr",
+    "role": "General",
+    "questionText": "How do you handle conflict in a team? (Variant 15)",
+    "idealKeywords": [
+      "listen",
+      "discuss",
+      "compromise",
+      "respect"
+    ],
+    "suggestedAnswer": "I handle conflict by active listening, discussing the issue objectively with team members, focusing on what is best for the project, and aligning on a common solution."
+  },
+  {
+    "id": "interview_hr_16",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Tell me about yourself. (Variant 16)",
+    "idealKeywords": [
+      "experience",
+      "background",
+      "education",
+      "passion"
+    ],
+    "suggestedAnswer": "I am an engineering student with a passion for software development. I have built multiple projects and worked on solving real-world problems. My primary goal is to grow as a professional and add value to your team."
+  },
+  {
+    "id": "interview_hr_17",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Why should we hire you? (Variant 17)",
+    "idealKeywords": [
+      "skills",
+      "motivated",
+      "quick learner",
+      "fit"
+    ],
+    "suggestedAnswer": "You should hire me because I have a solid understanding of software fundamentals, hands-on experience through project development, and I am highly adaptable. I will bring dedication and learning-agility to your team."
+  },
+  {
+    "id": "interview_hr_18",
+    "type": "hr",
+    "role": "General",
+    "questionText": "What are your strengths and weaknesses? (Variant 18)",
+    "idealKeywords": [
+      "strength",
+      "weakness",
+      "communication",
+      "improving"
+    ],
+    "suggestedAnswer": "My strengths are analytical thinking and teamwork. My weakness is that I sometimes get too detailed-oriented, but I am learning to manage time better by prioritizing tasks."
+  },
+  {
+    "id": "interview_hr_19",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Where do you see yourself in 5 years? (Variant 19)",
+    "idealKeywords": [
+      "grow",
+      "career",
+      "leadership",
+      "expert"
+    ],
+    "suggestedAnswer": "In 5 years, I see myself in a senior engineering role or technical lead position, contributing to core architectural design decisions and mentoring junior developers."
+  },
+  {
+    "id": "interview_hr_20",
+    "type": "hr",
+    "role": "General",
+    "questionText": "How do you handle conflict in a team? (Variant 20)",
+    "idealKeywords": [
+      "listen",
+      "discuss",
+      "compromise",
+      "respect"
+    ],
+    "suggestedAnswer": "I handle conflict by active listening, discussing the issue objectively with team members, focusing on what is best for the project, and aligning on a common solution."
+  },
+  {
+    "id": "interview_hr_21",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Tell me about yourself. (Variant 21)",
+    "idealKeywords": [
+      "experience",
+      "background",
+      "education",
+      "passion"
+    ],
+    "suggestedAnswer": "I am an engineering student with a passion for software development. I have built multiple projects and worked on solving real-world problems. My primary goal is to grow as a professional and add value to your team."
+  },
+  {
+    "id": "interview_hr_22",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Why should we hire you? (Variant 22)",
+    "idealKeywords": [
+      "skills",
+      "motivated",
+      "quick learner",
+      "fit"
+    ],
+    "suggestedAnswer": "You should hire me because I have a solid understanding of software fundamentals, hands-on experience through project development, and I am highly adaptable. I will bring dedication and learning-agility to your team."
+  },
+  {
+    "id": "interview_hr_23",
+    "type": "hr",
+    "role": "General",
+    "questionText": "What are your strengths and weaknesses? (Variant 23)",
+    "idealKeywords": [
+      "strength",
+      "weakness",
+      "communication",
+      "improving"
+    ],
+    "suggestedAnswer": "My strengths are analytical thinking and teamwork. My weakness is that I sometimes get too detailed-oriented, but I am learning to manage time better by prioritizing tasks."
+  },
+  {
+    "id": "interview_hr_24",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Where do you see yourself in 5 years? (Variant 24)",
+    "idealKeywords": [
+      "grow",
+      "career",
+      "leadership",
+      "expert"
+    ],
+    "suggestedAnswer": "In 5 years, I see myself in a senior engineering role or technical lead position, contributing to core architectural design decisions and mentoring junior developers."
+  },
+  {
+    "id": "interview_hr_25",
+    "type": "hr",
+    "role": "General",
+    "questionText": "How do you handle conflict in a team? (Variant 25)",
+    "idealKeywords": [
+      "listen",
+      "discuss",
+      "compromise",
+      "respect"
+    ],
+    "suggestedAnswer": "I handle conflict by active listening, discussing the issue objectively with team members, focusing on what is best for the project, and aligning on a common solution."
+  },
+  {
+    "id": "interview_hr_26",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Tell me about yourself. (Variant 26)",
+    "idealKeywords": [
+      "experience",
+      "background",
+      "education",
+      "passion"
+    ],
+    "suggestedAnswer": "I am an engineering student with a passion for software development. I have built multiple projects and worked on solving real-world problems. My primary goal is to grow as a professional and add value to your team."
+  },
+  {
+    "id": "interview_hr_27",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Why should we hire you? (Variant 27)",
+    "idealKeywords": [
+      "skills",
+      "motivated",
+      "quick learner",
+      "fit"
+    ],
+    "suggestedAnswer": "You should hire me because I have a solid understanding of software fundamentals, hands-on experience through project development, and I am highly adaptable. I will bring dedication and learning-agility to your team."
+  },
+  {
+    "id": "interview_hr_28",
+    "type": "hr",
+    "role": "General",
+    "questionText": "What are your strengths and weaknesses? (Variant 28)",
+    "idealKeywords": [
+      "strength",
+      "weakness",
+      "communication",
+      "improving"
+    ],
+    "suggestedAnswer": "My strengths are analytical thinking and teamwork. My weakness is that I sometimes get too detailed-oriented, but I am learning to manage time better by prioritizing tasks."
+  },
+  {
+    "id": "interview_hr_29",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Where do you see yourself in 5 years? (Variant 29)",
+    "idealKeywords": [
+      "grow",
+      "career",
+      "leadership",
+      "expert"
+    ],
+    "suggestedAnswer": "In 5 years, I see myself in a senior engineering role or technical lead position, contributing to core architectural design decisions and mentoring junior developers."
+  },
+  {
+    "id": "interview_hr_30",
+    "type": "hr",
+    "role": "General",
+    "questionText": "How do you handle conflict in a team? (Variant 30)",
+    "idealKeywords": [
+      "listen",
+      "discuss",
+      "compromise",
+      "respect"
+    ],
+    "suggestedAnswer": "I handle conflict by active listening, discussing the issue objectively with team members, focusing on what is best for the project, and aligning on a common solution."
+  },
+  {
+    "id": "interview_hr_31",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Tell me about yourself. (Variant 31)",
+    "idealKeywords": [
+      "experience",
+      "background",
+      "education",
+      "passion"
+    ],
+    "suggestedAnswer": "I am an engineering student with a passion for software development. I have built multiple projects and worked on solving real-world problems. My primary goal is to grow as a professional and add value to your team."
+  },
+  {
+    "id": "interview_hr_32",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Why should we hire you? (Variant 32)",
+    "idealKeywords": [
+      "skills",
+      "motivated",
+      "quick learner",
+      "fit"
+    ],
+    "suggestedAnswer": "You should hire me because I have a solid understanding of software fundamentals, hands-on experience through project development, and I am highly adaptable. I will bring dedication and learning-agility to your team."
+  },
+  {
+    "id": "interview_hr_33",
+    "type": "hr",
+    "role": "General",
+    "questionText": "What are your strengths and weaknesses? (Variant 33)",
+    "idealKeywords": [
+      "strength",
+      "weakness",
+      "communication",
+      "improving"
+    ],
+    "suggestedAnswer": "My strengths are analytical thinking and teamwork. My weakness is that I sometimes get too detailed-oriented, but I am learning to manage time better by prioritizing tasks."
+  },
+  {
+    "id": "interview_hr_34",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Where do you see yourself in 5 years? (Variant 34)",
+    "idealKeywords": [
+      "grow",
+      "career",
+      "leadership",
+      "expert"
+    ],
+    "suggestedAnswer": "In 5 years, I see myself in a senior engineering role or technical lead position, contributing to core architectural design decisions and mentoring junior developers."
+  },
+  {
+    "id": "interview_hr_35",
+    "type": "hr",
+    "role": "General",
+    "questionText": "How do you handle conflict in a team? (Variant 35)",
+    "idealKeywords": [
+      "listen",
+      "discuss",
+      "compromise",
+      "respect"
+    ],
+    "suggestedAnswer": "I handle conflict by active listening, discussing the issue objectively with team members, focusing on what is best for the project, and aligning on a common solution."
+  },
+  {
+    "id": "interview_hr_36",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Tell me about yourself. (Variant 36)",
+    "idealKeywords": [
+      "experience",
+      "background",
+      "education",
+      "passion"
+    ],
+    "suggestedAnswer": "I am an engineering student with a passion for software development. I have built multiple projects and worked on solving real-world problems. My primary goal is to grow as a professional and add value to your team."
+  },
+  {
+    "id": "interview_hr_37",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Why should we hire you? (Variant 37)",
+    "idealKeywords": [
+      "skills",
+      "motivated",
+      "quick learner",
+      "fit"
+    ],
+    "suggestedAnswer": "You should hire me because I have a solid understanding of software fundamentals, hands-on experience through project development, and I am highly adaptable. I will bring dedication and learning-agility to your team."
+  },
+  {
+    "id": "interview_hr_38",
+    "type": "hr",
+    "role": "General",
+    "questionText": "What are your strengths and weaknesses? (Variant 38)",
+    "idealKeywords": [
+      "strength",
+      "weakness",
+      "communication",
+      "improving"
+    ],
+    "suggestedAnswer": "My strengths are analytical thinking and teamwork. My weakness is that I sometimes get too detailed-oriented, but I am learning to manage time better by prioritizing tasks."
+  },
+  {
+    "id": "interview_hr_39",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Where do you see yourself in 5 years? (Variant 39)",
+    "idealKeywords": [
+      "grow",
+      "career",
+      "leadership",
+      "expert"
+    ],
+    "suggestedAnswer": "In 5 years, I see myself in a senior engineering role or technical lead position, contributing to core architectural design decisions and mentoring junior developers."
+  },
+  {
+    "id": "interview_hr_40",
+    "type": "hr",
+    "role": "General",
+    "questionText": "How do you handle conflict in a team? (Variant 40)",
+    "idealKeywords": [
+      "listen",
+      "discuss",
+      "compromise",
+      "respect"
+    ],
+    "suggestedAnswer": "I handle conflict by active listening, discussing the issue objectively with team members, focusing on what is best for the project, and aligning on a common solution."
+  },
+  {
+    "id": "interview_hr_41",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Tell me about yourself. (Variant 41)",
+    "idealKeywords": [
+      "experience",
+      "background",
+      "education",
+      "passion"
+    ],
+    "suggestedAnswer": "I am an engineering student with a passion for software development. I have built multiple projects and worked on solving real-world problems. My primary goal is to grow as a professional and add value to your team."
+  },
+  {
+    "id": "interview_hr_42",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Why should we hire you? (Variant 42)",
+    "idealKeywords": [
+      "skills",
+      "motivated",
+      "quick learner",
+      "fit"
+    ],
+    "suggestedAnswer": "You should hire me because I have a solid understanding of software fundamentals, hands-on experience through project development, and I am highly adaptable. I will bring dedication and learning-agility to your team."
+  },
+  {
+    "id": "interview_hr_43",
+    "type": "hr",
+    "role": "General",
+    "questionText": "What are your strengths and weaknesses? (Variant 43)",
+    "idealKeywords": [
+      "strength",
+      "weakness",
+      "communication",
+      "improving"
+    ],
+    "suggestedAnswer": "My strengths are analytical thinking and teamwork. My weakness is that I sometimes get too detailed-oriented, but I am learning to manage time better by prioritizing tasks."
+  },
+  {
+    "id": "interview_hr_44",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Where do you see yourself in 5 years? (Variant 44)",
+    "idealKeywords": [
+      "grow",
+      "career",
+      "leadership",
+      "expert"
+    ],
+    "suggestedAnswer": "In 5 years, I see myself in a senior engineering role or technical lead position, contributing to core architectural design decisions and mentoring junior developers."
+  },
+  {
+    "id": "interview_hr_45",
+    "type": "hr",
+    "role": "General",
+    "questionText": "How do you handle conflict in a team? (Variant 45)",
+    "idealKeywords": [
+      "listen",
+      "discuss",
+      "compromise",
+      "respect"
+    ],
+    "suggestedAnswer": "I handle conflict by active listening, discussing the issue objectively with team members, focusing on what is best for the project, and aligning on a common solution."
+  },
+  {
+    "id": "interview_hr_46",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Tell me about yourself. (Variant 46)",
+    "idealKeywords": [
+      "experience",
+      "background",
+      "education",
+      "passion"
+    ],
+    "suggestedAnswer": "I am an engineering student with a passion for software development. I have built multiple projects and worked on solving real-world problems. My primary goal is to grow as a professional and add value to your team."
+  },
+  {
+    "id": "interview_hr_47",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Why should we hire you? (Variant 47)",
+    "idealKeywords": [
+      "skills",
+      "motivated",
+      "quick learner",
+      "fit"
+    ],
+    "suggestedAnswer": "You should hire me because I have a solid understanding of software fundamentals, hands-on experience through project development, and I am highly adaptable. I will bring dedication and learning-agility to your team."
+  },
+  {
+    "id": "interview_hr_48",
+    "type": "hr",
+    "role": "General",
+    "questionText": "What are your strengths and weaknesses? (Variant 48)",
+    "idealKeywords": [
+      "strength",
+      "weakness",
+      "communication",
+      "improving"
+    ],
+    "suggestedAnswer": "My strengths are analytical thinking and teamwork. My weakness is that I sometimes get too detailed-oriented, but I am learning to manage time better by prioritizing tasks."
+  },
+  {
+    "id": "interview_hr_49",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Where do you see yourself in 5 years? (Variant 49)",
+    "idealKeywords": [
+      "grow",
+      "career",
+      "leadership",
+      "expert"
+    ],
+    "suggestedAnswer": "In 5 years, I see myself in a senior engineering role or technical lead position, contributing to core architectural design decisions and mentoring junior developers."
+  },
+  {
+    "id": "interview_hr_50",
+    "type": "hr",
+    "role": "General",
+    "questionText": "How do you handle conflict in a team? (Variant 50)",
+    "idealKeywords": [
+      "listen",
+      "discuss",
+      "compromise",
+      "respect"
+    ],
+    "suggestedAnswer": "I handle conflict by active listening, discussing the issue objectively with team members, focusing on what is best for the project, and aligning on a common solution."
+  },
+  {
+    "id": "interview_hr_51",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Tell me about yourself. (Variant 51)",
+    "idealKeywords": [
+      "experience",
+      "background",
+      "education",
+      "passion"
+    ],
+    "suggestedAnswer": "I am an engineering student with a passion for software development. I have built multiple projects and worked on solving real-world problems. My primary goal is to grow as a professional and add value to your team."
+  },
+  {
+    "id": "interview_hr_52",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Why should we hire you? (Variant 52)",
+    "idealKeywords": [
+      "skills",
+      "motivated",
+      "quick learner",
+      "fit"
+    ],
+    "suggestedAnswer": "You should hire me because I have a solid understanding of software fundamentals, hands-on experience through project development, and I am highly adaptable. I will bring dedication and learning-agility to your team."
+  },
+  {
+    "id": "interview_hr_53",
+    "type": "hr",
+    "role": "General",
+    "questionText": "What are your strengths and weaknesses? (Variant 53)",
+    "idealKeywords": [
+      "strength",
+      "weakness",
+      "communication",
+      "improving"
+    ],
+    "suggestedAnswer": "My strengths are analytical thinking and teamwork. My weakness is that I sometimes get too detailed-oriented, but I am learning to manage time better by prioritizing tasks."
+  },
+  {
+    "id": "interview_hr_54",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Where do you see yourself in 5 years? (Variant 54)",
+    "idealKeywords": [
+      "grow",
+      "career",
+      "leadership",
+      "expert"
+    ],
+    "suggestedAnswer": "In 5 years, I see myself in a senior engineering role or technical lead position, contributing to core architectural design decisions and mentoring junior developers."
+  },
+  {
+    "id": "interview_hr_55",
+    "type": "hr",
+    "role": "General",
+    "questionText": "How do you handle conflict in a team? (Variant 55)",
+    "idealKeywords": [
+      "listen",
+      "discuss",
+      "compromise",
+      "respect"
+    ],
+    "suggestedAnswer": "I handle conflict by active listening, discussing the issue objectively with team members, focusing on what is best for the project, and aligning on a common solution."
+  },
+  {
+    "id": "interview_hr_56",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Tell me about yourself. (Variant 56)",
+    "idealKeywords": [
+      "experience",
+      "background",
+      "education",
+      "passion"
+    ],
+    "suggestedAnswer": "I am an engineering student with a passion for software development. I have built multiple projects and worked on solving real-world problems. My primary goal is to grow as a professional and add value to your team."
+  },
+  {
+    "id": "interview_hr_57",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Why should we hire you? (Variant 57)",
+    "idealKeywords": [
+      "skills",
+      "motivated",
+      "quick learner",
+      "fit"
+    ],
+    "suggestedAnswer": "You should hire me because I have a solid understanding of software fundamentals, hands-on experience through project development, and I am highly adaptable. I will bring dedication and learning-agility to your team."
+  },
+  {
+    "id": "interview_hr_58",
+    "type": "hr",
+    "role": "General",
+    "questionText": "What are your strengths and weaknesses? (Variant 58)",
+    "idealKeywords": [
+      "strength",
+      "weakness",
+      "communication",
+      "improving"
+    ],
+    "suggestedAnswer": "My strengths are analytical thinking and teamwork. My weakness is that I sometimes get too detailed-oriented, but I am learning to manage time better by prioritizing tasks."
+  },
+  {
+    "id": "interview_hr_59",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Where do you see yourself in 5 years? (Variant 59)",
+    "idealKeywords": [
+      "grow",
+      "career",
+      "leadership",
+      "expert"
+    ],
+    "suggestedAnswer": "In 5 years, I see myself in a senior engineering role or technical lead position, contributing to core architectural design decisions and mentoring junior developers."
+  },
+  {
+    "id": "interview_hr_60",
+    "type": "hr",
+    "role": "General",
+    "questionText": "How do you handle conflict in a team? (Variant 60)",
+    "idealKeywords": [
+      "listen",
+      "discuss",
+      "compromise",
+      "respect"
+    ],
+    "suggestedAnswer": "I handle conflict by active listening, discussing the issue objectively with team members, focusing on what is best for the project, and aligning on a common solution."
+  },
+  {
+    "id": "interview_hr_61",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Tell me about yourself. (Variant 61)",
+    "idealKeywords": [
+      "experience",
+      "background",
+      "education",
+      "passion"
+    ],
+    "suggestedAnswer": "I am an engineering student with a passion for software development. I have built multiple projects and worked on solving real-world problems. My primary goal is to grow as a professional and add value to your team."
+  },
+  {
+    "id": "interview_hr_62",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Why should we hire you? (Variant 62)",
+    "idealKeywords": [
+      "skills",
+      "motivated",
+      "quick learner",
+      "fit"
+    ],
+    "suggestedAnswer": "You should hire me because I have a solid understanding of software fundamentals, hands-on experience through project development, and I am highly adaptable. I will bring dedication and learning-agility to your team."
+  },
+  {
+    "id": "interview_hr_63",
+    "type": "hr",
+    "role": "General",
+    "questionText": "What are your strengths and weaknesses? (Variant 63)",
+    "idealKeywords": [
+      "strength",
+      "weakness",
+      "communication",
+      "improving"
+    ],
+    "suggestedAnswer": "My strengths are analytical thinking and teamwork. My weakness is that I sometimes get too detailed-oriented, but I am learning to manage time better by prioritizing tasks."
+  },
+  {
+    "id": "interview_hr_64",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Where do you see yourself in 5 years? (Variant 64)",
+    "idealKeywords": [
+      "grow",
+      "career",
+      "leadership",
+      "expert"
+    ],
+    "suggestedAnswer": "In 5 years, I see myself in a senior engineering role or technical lead position, contributing to core architectural design decisions and mentoring junior developers."
+  },
+  {
+    "id": "interview_hr_65",
+    "type": "hr",
+    "role": "General",
+    "questionText": "How do you handle conflict in a team? (Variant 65)",
+    "idealKeywords": [
+      "listen",
+      "discuss",
+      "compromise",
+      "respect"
+    ],
+    "suggestedAnswer": "I handle conflict by active listening, discussing the issue objectively with team members, focusing on what is best for the project, and aligning on a common solution."
+  },
+  {
+    "id": "interview_hr_66",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Tell me about yourself. (Variant 66)",
+    "idealKeywords": [
+      "experience",
+      "background",
+      "education",
+      "passion"
+    ],
+    "suggestedAnswer": "I am an engineering student with a passion for software development. I have built multiple projects and worked on solving real-world problems. My primary goal is to grow as a professional and add value to your team."
+  },
+  {
+    "id": "interview_hr_67",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Why should we hire you? (Variant 67)",
+    "idealKeywords": [
+      "skills",
+      "motivated",
+      "quick learner",
+      "fit"
+    ],
+    "suggestedAnswer": "You should hire me because I have a solid understanding of software fundamentals, hands-on experience through project development, and I am highly adaptable. I will bring dedication and learning-agility to your team."
+  },
+  {
+    "id": "interview_hr_68",
+    "type": "hr",
+    "role": "General",
+    "questionText": "What are your strengths and weaknesses? (Variant 68)",
+    "idealKeywords": [
+      "strength",
+      "weakness",
+      "communication",
+      "improving"
+    ],
+    "suggestedAnswer": "My strengths are analytical thinking and teamwork. My weakness is that I sometimes get too detailed-oriented, but I am learning to manage time better by prioritizing tasks."
+  },
+  {
+    "id": "interview_hr_69",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Where do you see yourself in 5 years? (Variant 69)",
+    "idealKeywords": [
+      "grow",
+      "career",
+      "leadership",
+      "expert"
+    ],
+    "suggestedAnswer": "In 5 years, I see myself in a senior engineering role or technical lead position, contributing to core architectural design decisions and mentoring junior developers."
+  },
+  {
+    "id": "interview_hr_70",
+    "type": "hr",
+    "role": "General",
+    "questionText": "How do you handle conflict in a team? (Variant 70)",
+    "idealKeywords": [
+      "listen",
+      "discuss",
+      "compromise",
+      "respect"
+    ],
+    "suggestedAnswer": "I handle conflict by active listening, discussing the issue objectively with team members, focusing on what is best for the project, and aligning on a common solution."
+  },
+  {
+    "id": "interview_hr_71",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Tell me about yourself. (Variant 71)",
+    "idealKeywords": [
+      "experience",
+      "background",
+      "education",
+      "passion"
+    ],
+    "suggestedAnswer": "I am an engineering student with a passion for software development. I have built multiple projects and worked on solving real-world problems. My primary goal is to grow as a professional and add value to your team."
+  },
+  {
+    "id": "interview_hr_72",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Why should we hire you? (Variant 72)",
+    "idealKeywords": [
+      "skills",
+      "motivated",
+      "quick learner",
+      "fit"
+    ],
+    "suggestedAnswer": "You should hire me because I have a solid understanding of software fundamentals, hands-on experience through project development, and I am highly adaptable. I will bring dedication and learning-agility to your team."
+  },
+  {
+    "id": "interview_hr_73",
+    "type": "hr",
+    "role": "General",
+    "questionText": "What are your strengths and weaknesses? (Variant 73)",
+    "idealKeywords": [
+      "strength",
+      "weakness",
+      "communication",
+      "improving"
+    ],
+    "suggestedAnswer": "My strengths are analytical thinking and teamwork. My weakness is that I sometimes get too detailed-oriented, but I am learning to manage time better by prioritizing tasks."
+  },
+  {
+    "id": "interview_hr_74",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Where do you see yourself in 5 years? (Variant 74)",
+    "idealKeywords": [
+      "grow",
+      "career",
+      "leadership",
+      "expert"
+    ],
+    "suggestedAnswer": "In 5 years, I see myself in a senior engineering role or technical lead position, contributing to core architectural design decisions and mentoring junior developers."
+  },
+  {
+    "id": "interview_hr_75",
+    "type": "hr",
+    "role": "General",
+    "questionText": "How do you handle conflict in a team? (Variant 75)",
+    "idealKeywords": [
+      "listen",
+      "discuss",
+      "compromise",
+      "respect"
+    ],
+    "suggestedAnswer": "I handle conflict by active listening, discussing the issue objectively with team members, focusing on what is best for the project, and aligning on a common solution."
+  },
+  {
+    "id": "interview_hr_76",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Tell me about yourself. (Variant 76)",
+    "idealKeywords": [
+      "experience",
+      "background",
+      "education",
+      "passion"
+    ],
+    "suggestedAnswer": "I am an engineering student with a passion for software development. I have built multiple projects and worked on solving real-world problems. My primary goal is to grow as a professional and add value to your team."
+  },
+  {
+    "id": "interview_hr_77",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Why should we hire you? (Variant 77)",
+    "idealKeywords": [
+      "skills",
+      "motivated",
+      "quick learner",
+      "fit"
+    ],
+    "suggestedAnswer": "You should hire me because I have a solid understanding of software fundamentals, hands-on experience through project development, and I am highly adaptable. I will bring dedication and learning-agility to your team."
+  },
+  {
+    "id": "interview_hr_78",
+    "type": "hr",
+    "role": "General",
+    "questionText": "What are your strengths and weaknesses? (Variant 78)",
+    "idealKeywords": [
+      "strength",
+      "weakness",
+      "communication",
+      "improving"
+    ],
+    "suggestedAnswer": "My strengths are analytical thinking and teamwork. My weakness is that I sometimes get too detailed-oriented, but I am learning to manage time better by prioritizing tasks."
+  },
+  {
+    "id": "interview_hr_79",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Where do you see yourself in 5 years? (Variant 79)",
+    "idealKeywords": [
+      "grow",
+      "career",
+      "leadership",
+      "expert"
+    ],
+    "suggestedAnswer": "In 5 years, I see myself in a senior engineering role or technical lead position, contributing to core architectural design decisions and mentoring junior developers."
+  },
+  {
+    "id": "interview_hr_80",
+    "type": "hr",
+    "role": "General",
+    "questionText": "How do you handle conflict in a team? (Variant 80)",
+    "idealKeywords": [
+      "listen",
+      "discuss",
+      "compromise",
+      "respect"
+    ],
+    "suggestedAnswer": "I handle conflict by active listening, discussing the issue objectively with team members, focusing on what is best for the project, and aligning on a common solution."
+  },
+  {
+    "id": "interview_hr_81",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Tell me about yourself. (Variant 81)",
+    "idealKeywords": [
+      "experience",
+      "background",
+      "education",
+      "passion"
+    ],
+    "suggestedAnswer": "I am an engineering student with a passion for software development. I have built multiple projects and worked on solving real-world problems. My primary goal is to grow as a professional and add value to your team."
+  },
+  {
+    "id": "interview_hr_82",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Why should we hire you? (Variant 82)",
+    "idealKeywords": [
+      "skills",
+      "motivated",
+      "quick learner",
+      "fit"
+    ],
+    "suggestedAnswer": "You should hire me because I have a solid understanding of software fundamentals, hands-on experience through project development, and I am highly adaptable. I will bring dedication and learning-agility to your team."
+  },
+  {
+    "id": "interview_hr_83",
+    "type": "hr",
+    "role": "General",
+    "questionText": "What are your strengths and weaknesses? (Variant 83)",
+    "idealKeywords": [
+      "strength",
+      "weakness",
+      "communication",
+      "improving"
+    ],
+    "suggestedAnswer": "My strengths are analytical thinking and teamwork. My weakness is that I sometimes get too detailed-oriented, but I am learning to manage time better by prioritizing tasks."
+  },
+  {
+    "id": "interview_hr_84",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Where do you see yourself in 5 years? (Variant 84)",
+    "idealKeywords": [
+      "grow",
+      "career",
+      "leadership",
+      "expert"
+    ],
+    "suggestedAnswer": "In 5 years, I see myself in a senior engineering role or technical lead position, contributing to core architectural design decisions and mentoring junior developers."
+  },
+  {
+    "id": "interview_hr_85",
+    "type": "hr",
+    "role": "General",
+    "questionText": "How do you handle conflict in a team? (Variant 85)",
+    "idealKeywords": [
+      "listen",
+      "discuss",
+      "compromise",
+      "respect"
+    ],
+    "suggestedAnswer": "I handle conflict by active listening, discussing the issue objectively with team members, focusing on what is best for the project, and aligning on a common solution."
+  },
+  {
+    "id": "interview_hr_86",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Tell me about yourself. (Variant 86)",
+    "idealKeywords": [
+      "experience",
+      "background",
+      "education",
+      "passion"
+    ],
+    "suggestedAnswer": "I am an engineering student with a passion for software development. I have built multiple projects and worked on solving real-world problems. My primary goal is to grow as a professional and add value to your team."
+  },
+  {
+    "id": "interview_hr_87",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Why should we hire you? (Variant 87)",
+    "idealKeywords": [
+      "skills",
+      "motivated",
+      "quick learner",
+      "fit"
+    ],
+    "suggestedAnswer": "You should hire me because I have a solid understanding of software fundamentals, hands-on experience through project development, and I am highly adaptable. I will bring dedication and learning-agility to your team."
+  },
+  {
+    "id": "interview_hr_88",
+    "type": "hr",
+    "role": "General",
+    "questionText": "What are your strengths and weaknesses? (Variant 88)",
+    "idealKeywords": [
+      "strength",
+      "weakness",
+      "communication",
+      "improving"
+    ],
+    "suggestedAnswer": "My strengths are analytical thinking and teamwork. My weakness is that I sometimes get too detailed-oriented, but I am learning to manage time better by prioritizing tasks."
+  },
+  {
+    "id": "interview_hr_89",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Where do you see yourself in 5 years? (Variant 89)",
+    "idealKeywords": [
+      "grow",
+      "career",
+      "leadership",
+      "expert"
+    ],
+    "suggestedAnswer": "In 5 years, I see myself in a senior engineering role or technical lead position, contributing to core architectural design decisions and mentoring junior developers."
+  },
+  {
+    "id": "interview_hr_90",
+    "type": "hr",
+    "role": "General",
+    "questionText": "How do you handle conflict in a team? (Variant 90)",
+    "idealKeywords": [
+      "listen",
+      "discuss",
+      "compromise",
+      "respect"
+    ],
+    "suggestedAnswer": "I handle conflict by active listening, discussing the issue objectively with team members, focusing on what is best for the project, and aligning on a common solution."
+  },
+  {
+    "id": "interview_hr_91",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Tell me about yourself. (Variant 91)",
+    "idealKeywords": [
+      "experience",
+      "background",
+      "education",
+      "passion"
+    ],
+    "suggestedAnswer": "I am an engineering student with a passion for software development. I have built multiple projects and worked on solving real-world problems. My primary goal is to grow as a professional and add value to your team."
+  },
+  {
+    "id": "interview_hr_92",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Why should we hire you? (Variant 92)",
+    "idealKeywords": [
+      "skills",
+      "motivated",
+      "quick learner",
+      "fit"
+    ],
+    "suggestedAnswer": "You should hire me because I have a solid understanding of software fundamentals, hands-on experience through project development, and I am highly adaptable. I will bring dedication and learning-agility to your team."
+  },
+  {
+    "id": "interview_hr_93",
+    "type": "hr",
+    "role": "General",
+    "questionText": "What are your strengths and weaknesses? (Variant 93)",
+    "idealKeywords": [
+      "strength",
+      "weakness",
+      "communication",
+      "improving"
+    ],
+    "suggestedAnswer": "My strengths are analytical thinking and teamwork. My weakness is that I sometimes get too detailed-oriented, but I am learning to manage time better by prioritizing tasks."
+  },
+  {
+    "id": "interview_hr_94",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Where do you see yourself in 5 years? (Variant 94)",
+    "idealKeywords": [
+      "grow",
+      "career",
+      "leadership",
+      "expert"
+    ],
+    "suggestedAnswer": "In 5 years, I see myself in a senior engineering role or technical lead position, contributing to core architectural design decisions and mentoring junior developers."
+  },
+  {
+    "id": "interview_hr_95",
+    "type": "hr",
+    "role": "General",
+    "questionText": "How do you handle conflict in a team? (Variant 95)",
+    "idealKeywords": [
+      "listen",
+      "discuss",
+      "compromise",
+      "respect"
+    ],
+    "suggestedAnswer": "I handle conflict by active listening, discussing the issue objectively with team members, focusing on what is best for the project, and aligning on a common solution."
+  },
+  {
+    "id": "interview_hr_96",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Tell me about yourself. (Variant 96)",
+    "idealKeywords": [
+      "experience",
+      "background",
+      "education",
+      "passion"
+    ],
+    "suggestedAnswer": "I am an engineering student with a passion for software development. I have built multiple projects and worked on solving real-world problems. My primary goal is to grow as a professional and add value to your team."
+  },
+  {
+    "id": "interview_hr_97",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Why should we hire you? (Variant 97)",
+    "idealKeywords": [
+      "skills",
+      "motivated",
+      "quick learner",
+      "fit"
+    ],
+    "suggestedAnswer": "You should hire me because I have a solid understanding of software fundamentals, hands-on experience through project development, and I am highly adaptable. I will bring dedication and learning-agility to your team."
+  },
+  {
+    "id": "interview_hr_98",
+    "type": "hr",
+    "role": "General",
+    "questionText": "What are your strengths and weaknesses? (Variant 98)",
+    "idealKeywords": [
+      "strength",
+      "weakness",
+      "communication",
+      "improving"
+    ],
+    "suggestedAnswer": "My strengths are analytical thinking and teamwork. My weakness is that I sometimes get too detailed-oriented, but I am learning to manage time better by prioritizing tasks."
+  },
+  {
+    "id": "interview_hr_99",
+    "type": "hr",
+    "role": "General",
+    "questionText": "Where do you see yourself in 5 years? (Variant 99)",
+    "idealKeywords": [
+      "grow",
+      "career",
+      "leadership",
+      "expert"
+    ],
+    "suggestedAnswer": "In 5 years, I see myself in a senior engineering role or technical lead position, contributing to core architectural design decisions and mentoring junior developers."
+  },
+  {
+    "id": "interview_hr_100",
+    "type": "hr",
+    "role": "General",
+    "questionText": "How do you handle conflict in a team? (Variant 100)",
+    "idealKeywords": [
+      "listen",
+      "discuss",
+      "compromise",
+      "respect"
+    ],
+    "suggestedAnswer": "I handle conflict by active listening, discussing the issue objectively with team members, focusing on what is best for the project, and aligning on a common solution."
+  }
+]

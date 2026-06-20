@@ -1,0 +1,1362 @@
+[
+  {
+    "id": "interview_flutter_1",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What is the difference between Stateful and Stateless widgets? (Variant 1)",
+    "idealKeywords": [
+      "state",
+      "stateless",
+      "stateful",
+      "setstate",
+      "lifecycle"
+    ],
+    "suggestedAnswer": "StatelessWidgets are immutable and build once. StatefulWidgets maintain state that can change dynamically and call setState() to trigger rebuilds."
+  },
+  {
+    "id": "interview_flutter_2",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What is BuildContext in Flutter? (Variant 2)",
+    "idealKeywords": [
+      "context",
+      "element",
+      "widget tree",
+      "position"
+    ],
+    "suggestedAnswer": "BuildContext is a reference to the location of a widget within the widget tree. It is used to look up themes, media queries, and locate elements in the tree hierarchy."
+  },
+  {
+    "id": "interview_flutter_3",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "How does state management work in Riverpod? (Variant 3)",
+    "idealKeywords": [
+      "riverpod",
+      "provider",
+      "ref",
+      "state",
+      "notifier"
+    ],
+    "suggestedAnswer": "Riverpod uses Providers that store state. Widgets access provider state using WidgetRef. Changes in provider states automatically notify listening widgets to rebuild."
+  },
+  {
+    "id": "interview_flutter_4",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What are keys in Flutter and when should we use them? (Variant 4)",
+    "idealKeywords": [
+      "keys",
+      "unique",
+      "widget state",
+      "listview",
+      "identity"
+    ],
+    "suggestedAnswer": "Keys preserve a widget's state when it moves in the widget tree. They are commonly used when modifying collections of stateful widgets like lists."
+  },
+  {
+    "id": "interview_flutter_5",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "Explain the difference between hot reload and hot restart. (Variant 5)",
+    "idealKeywords": [
+      "reload",
+      "restart",
+      "state",
+      "virtual machine"
+    ],
+    "suggestedAnswer": "Hot reload loads code changes into the VM and rebuilds the widget tree, preserving state. Hot restart loads changes but resets the app state back to defaults."
+  },
+  {
+    "id": "interview_flutter_6",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What is the difference between Stateful and Stateless widgets? (Variant 6)",
+    "idealKeywords": [
+      "state",
+      "stateless",
+      "stateful",
+      "setstate",
+      "lifecycle"
+    ],
+    "suggestedAnswer": "StatelessWidgets are immutable and build once. StatefulWidgets maintain state that can change dynamically and call setState() to trigger rebuilds."
+  },
+  {
+    "id": "interview_flutter_7",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What is BuildContext in Flutter? (Variant 7)",
+    "idealKeywords": [
+      "context",
+      "element",
+      "widget tree",
+      "position"
+    ],
+    "suggestedAnswer": "BuildContext is a reference to the location of a widget within the widget tree. It is used to look up themes, media queries, and locate elements in the tree hierarchy."
+  },
+  {
+    "id": "interview_flutter_8",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "How does state management work in Riverpod? (Variant 8)",
+    "idealKeywords": [
+      "riverpod",
+      "provider",
+      "ref",
+      "state",
+      "notifier"
+    ],
+    "suggestedAnswer": "Riverpod uses Providers that store state. Widgets access provider state using WidgetRef. Changes in provider states automatically notify listening widgets to rebuild."
+  },
+  {
+    "id": "interview_flutter_9",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What are keys in Flutter and when should we use them? (Variant 9)",
+    "idealKeywords": [
+      "keys",
+      "unique",
+      "widget state",
+      "listview",
+      "identity"
+    ],
+    "suggestedAnswer": "Keys preserve a widget's state when it moves in the widget tree. They are commonly used when modifying collections of stateful widgets like lists."
+  },
+  {
+    "id": "interview_flutter_10",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "Explain the difference between hot reload and hot restart. (Variant 10)",
+    "idealKeywords": [
+      "reload",
+      "restart",
+      "state",
+      "virtual machine"
+    ],
+    "suggestedAnswer": "Hot reload loads code changes into the VM and rebuilds the widget tree, preserving state. Hot restart loads changes but resets the app state back to defaults."
+  },
+  {
+    "id": "interview_flutter_11",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What is the difference between Stateful and Stateless widgets? (Variant 11)",
+    "idealKeywords": [
+      "state",
+      "stateless",
+      "stateful",
+      "setstate",
+      "lifecycle"
+    ],
+    "suggestedAnswer": "StatelessWidgets are immutable and build once. StatefulWidgets maintain state that can change dynamically and call setState() to trigger rebuilds."
+  },
+  {
+    "id": "interview_flutter_12",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What is BuildContext in Flutter? (Variant 12)",
+    "idealKeywords": [
+      "context",
+      "element",
+      "widget tree",
+      "position"
+    ],
+    "suggestedAnswer": "BuildContext is a reference to the location of a widget within the widget tree. It is used to look up themes, media queries, and locate elements in the tree hierarchy."
+  },
+  {
+    "id": "interview_flutter_13",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "How does state management work in Riverpod? (Variant 13)",
+    "idealKeywords": [
+      "riverpod",
+      "provider",
+      "ref",
+      "state",
+      "notifier"
+    ],
+    "suggestedAnswer": "Riverpod uses Providers that store state. Widgets access provider state using WidgetRef. Changes in provider states automatically notify listening widgets to rebuild."
+  },
+  {
+    "id": "interview_flutter_14",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What are keys in Flutter and when should we use them? (Variant 14)",
+    "idealKeywords": [
+      "keys",
+      "unique",
+      "widget state",
+      "listview",
+      "identity"
+    ],
+    "suggestedAnswer": "Keys preserve a widget's state when it moves in the widget tree. They are commonly used when modifying collections of stateful widgets like lists."
+  },
+  {
+    "id": "interview_flutter_15",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "Explain the difference between hot reload and hot restart. (Variant 15)",
+    "idealKeywords": [
+      "reload",
+      "restart",
+      "state",
+      "virtual machine"
+    ],
+    "suggestedAnswer": "Hot reload loads code changes into the VM and rebuilds the widget tree, preserving state. Hot restart loads changes but resets the app state back to defaults."
+  },
+  {
+    "id": "interview_flutter_16",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What is the difference between Stateful and Stateless widgets? (Variant 16)",
+    "idealKeywords": [
+      "state",
+      "stateless",
+      "stateful",
+      "setstate",
+      "lifecycle"
+    ],
+    "suggestedAnswer": "StatelessWidgets are immutable and build once. StatefulWidgets maintain state that can change dynamically and call setState() to trigger rebuilds."
+  },
+  {
+    "id": "interview_flutter_17",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What is BuildContext in Flutter? (Variant 17)",
+    "idealKeywords": [
+      "context",
+      "element",
+      "widget tree",
+      "position"
+    ],
+    "suggestedAnswer": "BuildContext is a reference to the location of a widget within the widget tree. It is used to look up themes, media queries, and locate elements in the tree hierarchy."
+  },
+  {
+    "id": "interview_flutter_18",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "How does state management work in Riverpod? (Variant 18)",
+    "idealKeywords": [
+      "riverpod",
+      "provider",
+      "ref",
+      "state",
+      "notifier"
+    ],
+    "suggestedAnswer": "Riverpod uses Providers that store state. Widgets access provider state using WidgetRef. Changes in provider states automatically notify listening widgets to rebuild."
+  },
+  {
+    "id": "interview_flutter_19",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What are keys in Flutter and when should we use them? (Variant 19)",
+    "idealKeywords": [
+      "keys",
+      "unique",
+      "widget state",
+      "listview",
+      "identity"
+    ],
+    "suggestedAnswer": "Keys preserve a widget's state when it moves in the widget tree. They are commonly used when modifying collections of stateful widgets like lists."
+  },
+  {
+    "id": "interview_flutter_20",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "Explain the difference between hot reload and hot restart. (Variant 20)",
+    "idealKeywords": [
+      "reload",
+      "restart",
+      "state",
+      "virtual machine"
+    ],
+    "suggestedAnswer": "Hot reload loads code changes into the VM and rebuilds the widget tree, preserving state. Hot restart loads changes but resets the app state back to defaults."
+  },
+  {
+    "id": "interview_flutter_21",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What is the difference between Stateful and Stateless widgets? (Variant 21)",
+    "idealKeywords": [
+      "state",
+      "stateless",
+      "stateful",
+      "setstate",
+      "lifecycle"
+    ],
+    "suggestedAnswer": "StatelessWidgets are immutable and build once. StatefulWidgets maintain state that can change dynamically and call setState() to trigger rebuilds."
+  },
+  {
+    "id": "interview_flutter_22",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What is BuildContext in Flutter? (Variant 22)",
+    "idealKeywords": [
+      "context",
+      "element",
+      "widget tree",
+      "position"
+    ],
+    "suggestedAnswer": "BuildContext is a reference to the location of a widget within the widget tree. It is used to look up themes, media queries, and locate elements in the tree hierarchy."
+  },
+  {
+    "id": "interview_flutter_23",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "How does state management work in Riverpod? (Variant 23)",
+    "idealKeywords": [
+      "riverpod",
+      "provider",
+      "ref",
+      "state",
+      "notifier"
+    ],
+    "suggestedAnswer": "Riverpod uses Providers that store state. Widgets access provider state using WidgetRef. Changes in provider states automatically notify listening widgets to rebuild."
+  },
+  {
+    "id": "interview_flutter_24",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What are keys in Flutter and when should we use them? (Variant 24)",
+    "idealKeywords": [
+      "keys",
+      "unique",
+      "widget state",
+      "listview",
+      "identity"
+    ],
+    "suggestedAnswer": "Keys preserve a widget's state when it moves in the widget tree. They are commonly used when modifying collections of stateful widgets like lists."
+  },
+  {
+    "id": "interview_flutter_25",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "Explain the difference between hot reload and hot restart. (Variant 25)",
+    "idealKeywords": [
+      "reload",
+      "restart",
+      "state",
+      "virtual machine"
+    ],
+    "suggestedAnswer": "Hot reload loads code changes into the VM and rebuilds the widget tree, preserving state. Hot restart loads changes but resets the app state back to defaults."
+  },
+  {
+    "id": "interview_flutter_26",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What is the difference between Stateful and Stateless widgets? (Variant 26)",
+    "idealKeywords": [
+      "state",
+      "stateless",
+      "stateful",
+      "setstate",
+      "lifecycle"
+    ],
+    "suggestedAnswer": "StatelessWidgets are immutable and build once. StatefulWidgets maintain state that can change dynamically and call setState() to trigger rebuilds."
+  },
+  {
+    "id": "interview_flutter_27",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What is BuildContext in Flutter? (Variant 27)",
+    "idealKeywords": [
+      "context",
+      "element",
+      "widget tree",
+      "position"
+    ],
+    "suggestedAnswer": "BuildContext is a reference to the location of a widget within the widget tree. It is used to look up themes, media queries, and locate elements in the tree hierarchy."
+  },
+  {
+    "id": "interview_flutter_28",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "How does state management work in Riverpod? (Variant 28)",
+    "idealKeywords": [
+      "riverpod",
+      "provider",
+      "ref",
+      "state",
+      "notifier"
+    ],
+    "suggestedAnswer": "Riverpod uses Providers that store state. Widgets access provider state using WidgetRef. Changes in provider states automatically notify listening widgets to rebuild."
+  },
+  {
+    "id": "interview_flutter_29",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What are keys in Flutter and when should we use them? (Variant 29)",
+    "idealKeywords": [
+      "keys",
+      "unique",
+      "widget state",
+      "listview",
+      "identity"
+    ],
+    "suggestedAnswer": "Keys preserve a widget's state when it moves in the widget tree. They are commonly used when modifying collections of stateful widgets like lists."
+  },
+  {
+    "id": "interview_flutter_30",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "Explain the difference between hot reload and hot restart. (Variant 30)",
+    "idealKeywords": [
+      "reload",
+      "restart",
+      "state",
+      "virtual machine"
+    ],
+    "suggestedAnswer": "Hot reload loads code changes into the VM and rebuilds the widget tree, preserving state. Hot restart loads changes but resets the app state back to defaults."
+  },
+  {
+    "id": "interview_flutter_31",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What is the difference between Stateful and Stateless widgets? (Variant 31)",
+    "idealKeywords": [
+      "state",
+      "stateless",
+      "stateful",
+      "setstate",
+      "lifecycle"
+    ],
+    "suggestedAnswer": "StatelessWidgets are immutable and build once. StatefulWidgets maintain state that can change dynamically and call setState() to trigger rebuilds."
+  },
+  {
+    "id": "interview_flutter_32",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What is BuildContext in Flutter? (Variant 32)",
+    "idealKeywords": [
+      "context",
+      "element",
+      "widget tree",
+      "position"
+    ],
+    "suggestedAnswer": "BuildContext is a reference to the location of a widget within the widget tree. It is used to look up themes, media queries, and locate elements in the tree hierarchy."
+  },
+  {
+    "id": "interview_flutter_33",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "How does state management work in Riverpod? (Variant 33)",
+    "idealKeywords": [
+      "riverpod",
+      "provider",
+      "ref",
+      "state",
+      "notifier"
+    ],
+    "suggestedAnswer": "Riverpod uses Providers that store state. Widgets access provider state using WidgetRef. Changes in provider states automatically notify listening widgets to rebuild."
+  },
+  {
+    "id": "interview_flutter_34",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What are keys in Flutter and when should we use them? (Variant 34)",
+    "idealKeywords": [
+      "keys",
+      "unique",
+      "widget state",
+      "listview",
+      "identity"
+    ],
+    "suggestedAnswer": "Keys preserve a widget's state when it moves in the widget tree. They are commonly used when modifying collections of stateful widgets like lists."
+  },
+  {
+    "id": "interview_flutter_35",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "Explain the difference between hot reload and hot restart. (Variant 35)",
+    "idealKeywords": [
+      "reload",
+      "restart",
+      "state",
+      "virtual machine"
+    ],
+    "suggestedAnswer": "Hot reload loads code changes into the VM and rebuilds the widget tree, preserving state. Hot restart loads changes but resets the app state back to defaults."
+  },
+  {
+    "id": "interview_flutter_36",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What is the difference between Stateful and Stateless widgets? (Variant 36)",
+    "idealKeywords": [
+      "state",
+      "stateless",
+      "stateful",
+      "setstate",
+      "lifecycle"
+    ],
+    "suggestedAnswer": "StatelessWidgets are immutable and build once. StatefulWidgets maintain state that can change dynamically and call setState() to trigger rebuilds."
+  },
+  {
+    "id": "interview_flutter_37",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What is BuildContext in Flutter? (Variant 37)",
+    "idealKeywords": [
+      "context",
+      "element",
+      "widget tree",
+      "position"
+    ],
+    "suggestedAnswer": "BuildContext is a reference to the location of a widget within the widget tree. It is used to look up themes, media queries, and locate elements in the tree hierarchy."
+  },
+  {
+    "id": "interview_flutter_38",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "How does state management work in Riverpod? (Variant 38)",
+    "idealKeywords": [
+      "riverpod",
+      "provider",
+      "ref",
+      "state",
+      "notifier"
+    ],
+    "suggestedAnswer": "Riverpod uses Providers that store state. Widgets access provider state using WidgetRef. Changes in provider states automatically notify listening widgets to rebuild."
+  },
+  {
+    "id": "interview_flutter_39",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What are keys in Flutter and when should we use them? (Variant 39)",
+    "idealKeywords": [
+      "keys",
+      "unique",
+      "widget state",
+      "listview",
+      "identity"
+    ],
+    "suggestedAnswer": "Keys preserve a widget's state when it moves in the widget tree. They are commonly used when modifying collections of stateful widgets like lists."
+  },
+  {
+    "id": "interview_flutter_40",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "Explain the difference between hot reload and hot restart. (Variant 40)",
+    "idealKeywords": [
+      "reload",
+      "restart",
+      "state",
+      "virtual machine"
+    ],
+    "suggestedAnswer": "Hot reload loads code changes into the VM and rebuilds the widget tree, preserving state. Hot restart loads changes but resets the app state back to defaults."
+  },
+  {
+    "id": "interview_flutter_41",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What is the difference between Stateful and Stateless widgets? (Variant 41)",
+    "idealKeywords": [
+      "state",
+      "stateless",
+      "stateful",
+      "setstate",
+      "lifecycle"
+    ],
+    "suggestedAnswer": "StatelessWidgets are immutable and build once. StatefulWidgets maintain state that can change dynamically and call setState() to trigger rebuilds."
+  },
+  {
+    "id": "interview_flutter_42",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What is BuildContext in Flutter? (Variant 42)",
+    "idealKeywords": [
+      "context",
+      "element",
+      "widget tree",
+      "position"
+    ],
+    "suggestedAnswer": "BuildContext is a reference to the location of a widget within the widget tree. It is used to look up themes, media queries, and locate elements in the tree hierarchy."
+  },
+  {
+    "id": "interview_flutter_43",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "How does state management work in Riverpod? (Variant 43)",
+    "idealKeywords": [
+      "riverpod",
+      "provider",
+      "ref",
+      "state",
+      "notifier"
+    ],
+    "suggestedAnswer": "Riverpod uses Providers that store state. Widgets access provider state using WidgetRef. Changes in provider states automatically notify listening widgets to rebuild."
+  },
+  {
+    "id": "interview_flutter_44",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What are keys in Flutter and when should we use them? (Variant 44)",
+    "idealKeywords": [
+      "keys",
+      "unique",
+      "widget state",
+      "listview",
+      "identity"
+    ],
+    "suggestedAnswer": "Keys preserve a widget's state when it moves in the widget tree. They are commonly used when modifying collections of stateful widgets like lists."
+  },
+  {
+    "id": "interview_flutter_45",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "Explain the difference between hot reload and hot restart. (Variant 45)",
+    "idealKeywords": [
+      "reload",
+      "restart",
+      "state",
+      "virtual machine"
+    ],
+    "suggestedAnswer": "Hot reload loads code changes into the VM and rebuilds the widget tree, preserving state. Hot restart loads changes but resets the app state back to defaults."
+  },
+  {
+    "id": "interview_flutter_46",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What is the difference between Stateful and Stateless widgets? (Variant 46)",
+    "idealKeywords": [
+      "state",
+      "stateless",
+      "stateful",
+      "setstate",
+      "lifecycle"
+    ],
+    "suggestedAnswer": "StatelessWidgets are immutable and build once. StatefulWidgets maintain state that can change dynamically and call setState() to trigger rebuilds."
+  },
+  {
+    "id": "interview_flutter_47",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What is BuildContext in Flutter? (Variant 47)",
+    "idealKeywords": [
+      "context",
+      "element",
+      "widget tree",
+      "position"
+    ],
+    "suggestedAnswer": "BuildContext is a reference to the location of a widget within the widget tree. It is used to look up themes, media queries, and locate elements in the tree hierarchy."
+  },
+  {
+    "id": "interview_flutter_48",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "How does state management work in Riverpod? (Variant 48)",
+    "idealKeywords": [
+      "riverpod",
+      "provider",
+      "ref",
+      "state",
+      "notifier"
+    ],
+    "suggestedAnswer": "Riverpod uses Providers that store state. Widgets access provider state using WidgetRef. Changes in provider states automatically notify listening widgets to rebuild."
+  },
+  {
+    "id": "interview_flutter_49",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What are keys in Flutter and when should we use them? (Variant 49)",
+    "idealKeywords": [
+      "keys",
+      "unique",
+      "widget state",
+      "listview",
+      "identity"
+    ],
+    "suggestedAnswer": "Keys preserve a widget's state when it moves in the widget tree. They are commonly used when modifying collections of stateful widgets like lists."
+  },
+  {
+    "id": "interview_flutter_50",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "Explain the difference between hot reload and hot restart. (Variant 50)",
+    "idealKeywords": [
+      "reload",
+      "restart",
+      "state",
+      "virtual machine"
+    ],
+    "suggestedAnswer": "Hot reload loads code changes into the VM and rebuilds the widget tree, preserving state. Hot restart loads changes but resets the app state back to defaults."
+  },
+  {
+    "id": "interview_flutter_51",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What is the difference between Stateful and Stateless widgets? (Variant 51)",
+    "idealKeywords": [
+      "state",
+      "stateless",
+      "stateful",
+      "setstate",
+      "lifecycle"
+    ],
+    "suggestedAnswer": "StatelessWidgets are immutable and build once. StatefulWidgets maintain state that can change dynamically and call setState() to trigger rebuilds."
+  },
+  {
+    "id": "interview_flutter_52",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What is BuildContext in Flutter? (Variant 52)",
+    "idealKeywords": [
+      "context",
+      "element",
+      "widget tree",
+      "position"
+    ],
+    "suggestedAnswer": "BuildContext is a reference to the location of a widget within the widget tree. It is used to look up themes, media queries, and locate elements in the tree hierarchy."
+  },
+  {
+    "id": "interview_flutter_53",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "How does state management work in Riverpod? (Variant 53)",
+    "idealKeywords": [
+      "riverpod",
+      "provider",
+      "ref",
+      "state",
+      "notifier"
+    ],
+    "suggestedAnswer": "Riverpod uses Providers that store state. Widgets access provider state using WidgetRef. Changes in provider states automatically notify listening widgets to rebuild."
+  },
+  {
+    "id": "interview_flutter_54",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What are keys in Flutter and when should we use them? (Variant 54)",
+    "idealKeywords": [
+      "keys",
+      "unique",
+      "widget state",
+      "listview",
+      "identity"
+    ],
+    "suggestedAnswer": "Keys preserve a widget's state when it moves in the widget tree. They are commonly used when modifying collections of stateful widgets like lists."
+  },
+  {
+    "id": "interview_flutter_55",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "Explain the difference between hot reload and hot restart. (Variant 55)",
+    "idealKeywords": [
+      "reload",
+      "restart",
+      "state",
+      "virtual machine"
+    ],
+    "suggestedAnswer": "Hot reload loads code changes into the VM and rebuilds the widget tree, preserving state. Hot restart loads changes but resets the app state back to defaults."
+  },
+  {
+    "id": "interview_flutter_56",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What is the difference between Stateful and Stateless widgets? (Variant 56)",
+    "idealKeywords": [
+      "state",
+      "stateless",
+      "stateful",
+      "setstate",
+      "lifecycle"
+    ],
+    "suggestedAnswer": "StatelessWidgets are immutable and build once. StatefulWidgets maintain state that can change dynamically and call setState() to trigger rebuilds."
+  },
+  {
+    "id": "interview_flutter_57",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What is BuildContext in Flutter? (Variant 57)",
+    "idealKeywords": [
+      "context",
+      "element",
+      "widget tree",
+      "position"
+    ],
+    "suggestedAnswer": "BuildContext is a reference to the location of a widget within the widget tree. It is used to look up themes, media queries, and locate elements in the tree hierarchy."
+  },
+  {
+    "id": "interview_flutter_58",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "How does state management work in Riverpod? (Variant 58)",
+    "idealKeywords": [
+      "riverpod",
+      "provider",
+      "ref",
+      "state",
+      "notifier"
+    ],
+    "suggestedAnswer": "Riverpod uses Providers that store state. Widgets access provider state using WidgetRef. Changes in provider states automatically notify listening widgets to rebuild."
+  },
+  {
+    "id": "interview_flutter_59",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What are keys in Flutter and when should we use them? (Variant 59)",
+    "idealKeywords": [
+      "keys",
+      "unique",
+      "widget state",
+      "listview",
+      "identity"
+    ],
+    "suggestedAnswer": "Keys preserve a widget's state when it moves in the widget tree. They are commonly used when modifying collections of stateful widgets like lists."
+  },
+  {
+    "id": "interview_flutter_60",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "Explain the difference between hot reload and hot restart. (Variant 60)",
+    "idealKeywords": [
+      "reload",
+      "restart",
+      "state",
+      "virtual machine"
+    ],
+    "suggestedAnswer": "Hot reload loads code changes into the VM and rebuilds the widget tree, preserving state. Hot restart loads changes but resets the app state back to defaults."
+  },
+  {
+    "id": "interview_flutter_61",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What is the difference between Stateful and Stateless widgets? (Variant 61)",
+    "idealKeywords": [
+      "state",
+      "stateless",
+      "stateful",
+      "setstate",
+      "lifecycle"
+    ],
+    "suggestedAnswer": "StatelessWidgets are immutable and build once. StatefulWidgets maintain state that can change dynamically and call setState() to trigger rebuilds."
+  },
+  {
+    "id": "interview_flutter_62",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What is BuildContext in Flutter? (Variant 62)",
+    "idealKeywords": [
+      "context",
+      "element",
+      "widget tree",
+      "position"
+    ],
+    "suggestedAnswer": "BuildContext is a reference to the location of a widget within the widget tree. It is used to look up themes, media queries, and locate elements in the tree hierarchy."
+  },
+  {
+    "id": "interview_flutter_63",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "How does state management work in Riverpod? (Variant 63)",
+    "idealKeywords": [
+      "riverpod",
+      "provider",
+      "ref",
+      "state",
+      "notifier"
+    ],
+    "suggestedAnswer": "Riverpod uses Providers that store state. Widgets access provider state using WidgetRef. Changes in provider states automatically notify listening widgets to rebuild."
+  },
+  {
+    "id": "interview_flutter_64",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What are keys in Flutter and when should we use them? (Variant 64)",
+    "idealKeywords": [
+      "keys",
+      "unique",
+      "widget state",
+      "listview",
+      "identity"
+    ],
+    "suggestedAnswer": "Keys preserve a widget's state when it moves in the widget tree. They are commonly used when modifying collections of stateful widgets like lists."
+  },
+  {
+    "id": "interview_flutter_65",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "Explain the difference between hot reload and hot restart. (Variant 65)",
+    "idealKeywords": [
+      "reload",
+      "restart",
+      "state",
+      "virtual machine"
+    ],
+    "suggestedAnswer": "Hot reload loads code changes into the VM and rebuilds the widget tree, preserving state. Hot restart loads changes but resets the app state back to defaults."
+  },
+  {
+    "id": "interview_flutter_66",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What is the difference between Stateful and Stateless widgets? (Variant 66)",
+    "idealKeywords": [
+      "state",
+      "stateless",
+      "stateful",
+      "setstate",
+      "lifecycle"
+    ],
+    "suggestedAnswer": "StatelessWidgets are immutable and build once. StatefulWidgets maintain state that can change dynamically and call setState() to trigger rebuilds."
+  },
+  {
+    "id": "interview_flutter_67",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What is BuildContext in Flutter? (Variant 67)",
+    "idealKeywords": [
+      "context",
+      "element",
+      "widget tree",
+      "position"
+    ],
+    "suggestedAnswer": "BuildContext is a reference to the location of a widget within the widget tree. It is used to look up themes, media queries, and locate elements in the tree hierarchy."
+  },
+  {
+    "id": "interview_flutter_68",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "How does state management work in Riverpod? (Variant 68)",
+    "idealKeywords": [
+      "riverpod",
+      "provider",
+      "ref",
+      "state",
+      "notifier"
+    ],
+    "suggestedAnswer": "Riverpod uses Providers that store state. Widgets access provider state using WidgetRef. Changes in provider states automatically notify listening widgets to rebuild."
+  },
+  {
+    "id": "interview_flutter_69",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What are keys in Flutter and when should we use them? (Variant 69)",
+    "idealKeywords": [
+      "keys",
+      "unique",
+      "widget state",
+      "listview",
+      "identity"
+    ],
+    "suggestedAnswer": "Keys preserve a widget's state when it moves in the widget tree. They are commonly used when modifying collections of stateful widgets like lists."
+  },
+  {
+    "id": "interview_flutter_70",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "Explain the difference between hot reload and hot restart. (Variant 70)",
+    "idealKeywords": [
+      "reload",
+      "restart",
+      "state",
+      "virtual machine"
+    ],
+    "suggestedAnswer": "Hot reload loads code changes into the VM and rebuilds the widget tree, preserving state. Hot restart loads changes but resets the app state back to defaults."
+  },
+  {
+    "id": "interview_flutter_71",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What is the difference between Stateful and Stateless widgets? (Variant 71)",
+    "idealKeywords": [
+      "state",
+      "stateless",
+      "stateful",
+      "setstate",
+      "lifecycle"
+    ],
+    "suggestedAnswer": "StatelessWidgets are immutable and build once. StatefulWidgets maintain state that can change dynamically and call setState() to trigger rebuilds."
+  },
+  {
+    "id": "interview_flutter_72",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What is BuildContext in Flutter? (Variant 72)",
+    "idealKeywords": [
+      "context",
+      "element",
+      "widget tree",
+      "position"
+    ],
+    "suggestedAnswer": "BuildContext is a reference to the location of a widget within the widget tree. It is used to look up themes, media queries, and locate elements in the tree hierarchy."
+  },
+  {
+    "id": "interview_flutter_73",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "How does state management work in Riverpod? (Variant 73)",
+    "idealKeywords": [
+      "riverpod",
+      "provider",
+      "ref",
+      "state",
+      "notifier"
+    ],
+    "suggestedAnswer": "Riverpod uses Providers that store state. Widgets access provider state using WidgetRef. Changes in provider states automatically notify listening widgets to rebuild."
+  },
+  {
+    "id": "interview_flutter_74",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What are keys in Flutter and when should we use them? (Variant 74)",
+    "idealKeywords": [
+      "keys",
+      "unique",
+      "widget state",
+      "listview",
+      "identity"
+    ],
+    "suggestedAnswer": "Keys preserve a widget's state when it moves in the widget tree. They are commonly used when modifying collections of stateful widgets like lists."
+  },
+  {
+    "id": "interview_flutter_75",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "Explain the difference between hot reload and hot restart. (Variant 75)",
+    "idealKeywords": [
+      "reload",
+      "restart",
+      "state",
+      "virtual machine"
+    ],
+    "suggestedAnswer": "Hot reload loads code changes into the VM and rebuilds the widget tree, preserving state. Hot restart loads changes but resets the app state back to defaults."
+  },
+  {
+    "id": "interview_flutter_76",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What is the difference between Stateful and Stateless widgets? (Variant 76)",
+    "idealKeywords": [
+      "state",
+      "stateless",
+      "stateful",
+      "setstate",
+      "lifecycle"
+    ],
+    "suggestedAnswer": "StatelessWidgets are immutable and build once. StatefulWidgets maintain state that can change dynamically and call setState() to trigger rebuilds."
+  },
+  {
+    "id": "interview_flutter_77",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What is BuildContext in Flutter? (Variant 77)",
+    "idealKeywords": [
+      "context",
+      "element",
+      "widget tree",
+      "position"
+    ],
+    "suggestedAnswer": "BuildContext is a reference to the location of a widget within the widget tree. It is used to look up themes, media queries, and locate elements in the tree hierarchy."
+  },
+  {
+    "id": "interview_flutter_78",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "How does state management work in Riverpod? (Variant 78)",
+    "idealKeywords": [
+      "riverpod",
+      "provider",
+      "ref",
+      "state",
+      "notifier"
+    ],
+    "suggestedAnswer": "Riverpod uses Providers that store state. Widgets access provider state using WidgetRef. Changes in provider states automatically notify listening widgets to rebuild."
+  },
+  {
+    "id": "interview_flutter_79",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What are keys in Flutter and when should we use them? (Variant 79)",
+    "idealKeywords": [
+      "keys",
+      "unique",
+      "widget state",
+      "listview",
+      "identity"
+    ],
+    "suggestedAnswer": "Keys preserve a widget's state when it moves in the widget tree. They are commonly used when modifying collections of stateful widgets like lists."
+  },
+  {
+    "id": "interview_flutter_80",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "Explain the difference between hot reload and hot restart. (Variant 80)",
+    "idealKeywords": [
+      "reload",
+      "restart",
+      "state",
+      "virtual machine"
+    ],
+    "suggestedAnswer": "Hot reload loads code changes into the VM and rebuilds the widget tree, preserving state. Hot restart loads changes but resets the app state back to defaults."
+  },
+  {
+    "id": "interview_flutter_81",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What is the difference between Stateful and Stateless widgets? (Variant 81)",
+    "idealKeywords": [
+      "state",
+      "stateless",
+      "stateful",
+      "setstate",
+      "lifecycle"
+    ],
+    "suggestedAnswer": "StatelessWidgets are immutable and build once. StatefulWidgets maintain state that can change dynamically and call setState() to trigger rebuilds."
+  },
+  {
+    "id": "interview_flutter_82",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What is BuildContext in Flutter? (Variant 82)",
+    "idealKeywords": [
+      "context",
+      "element",
+      "widget tree",
+      "position"
+    ],
+    "suggestedAnswer": "BuildContext is a reference to the location of a widget within the widget tree. It is used to look up themes, media queries, and locate elements in the tree hierarchy."
+  },
+  {
+    "id": "interview_flutter_83",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "How does state management work in Riverpod? (Variant 83)",
+    "idealKeywords": [
+      "riverpod",
+      "provider",
+      "ref",
+      "state",
+      "notifier"
+    ],
+    "suggestedAnswer": "Riverpod uses Providers that store state. Widgets access provider state using WidgetRef. Changes in provider states automatically notify listening widgets to rebuild."
+  },
+  {
+    "id": "interview_flutter_84",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What are keys in Flutter and when should we use them? (Variant 84)",
+    "idealKeywords": [
+      "keys",
+      "unique",
+      "widget state",
+      "listview",
+      "identity"
+    ],
+    "suggestedAnswer": "Keys preserve a widget's state when it moves in the widget tree. They are commonly used when modifying collections of stateful widgets like lists."
+  },
+  {
+    "id": "interview_flutter_85",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "Explain the difference between hot reload and hot restart. (Variant 85)",
+    "idealKeywords": [
+      "reload",
+      "restart",
+      "state",
+      "virtual machine"
+    ],
+    "suggestedAnswer": "Hot reload loads code changes into the VM and rebuilds the widget tree, preserving state. Hot restart loads changes but resets the app state back to defaults."
+  },
+  {
+    "id": "interview_flutter_86",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What is the difference between Stateful and Stateless widgets? (Variant 86)",
+    "idealKeywords": [
+      "state",
+      "stateless",
+      "stateful",
+      "setstate",
+      "lifecycle"
+    ],
+    "suggestedAnswer": "StatelessWidgets are immutable and build once. StatefulWidgets maintain state that can change dynamically and call setState() to trigger rebuilds."
+  },
+  {
+    "id": "interview_flutter_87",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What is BuildContext in Flutter? (Variant 87)",
+    "idealKeywords": [
+      "context",
+      "element",
+      "widget tree",
+      "position"
+    ],
+    "suggestedAnswer": "BuildContext is a reference to the location of a widget within the widget tree. It is used to look up themes, media queries, and locate elements in the tree hierarchy."
+  },
+  {
+    "id": "interview_flutter_88",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "How does state management work in Riverpod? (Variant 88)",
+    "idealKeywords": [
+      "riverpod",
+      "provider",
+      "ref",
+      "state",
+      "notifier"
+    ],
+    "suggestedAnswer": "Riverpod uses Providers that store state. Widgets access provider state using WidgetRef. Changes in provider states automatically notify listening widgets to rebuild."
+  },
+  {
+    "id": "interview_flutter_89",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What are keys in Flutter and when should we use them? (Variant 89)",
+    "idealKeywords": [
+      "keys",
+      "unique",
+      "widget state",
+      "listview",
+      "identity"
+    ],
+    "suggestedAnswer": "Keys preserve a widget's state when it moves in the widget tree. They are commonly used when modifying collections of stateful widgets like lists."
+  },
+  {
+    "id": "interview_flutter_90",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "Explain the difference between hot reload and hot restart. (Variant 90)",
+    "idealKeywords": [
+      "reload",
+      "restart",
+      "state",
+      "virtual machine"
+    ],
+    "suggestedAnswer": "Hot reload loads code changes into the VM and rebuilds the widget tree, preserving state. Hot restart loads changes but resets the app state back to defaults."
+  },
+  {
+    "id": "interview_flutter_91",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What is the difference between Stateful and Stateless widgets? (Variant 91)",
+    "idealKeywords": [
+      "state",
+      "stateless",
+      "stateful",
+      "setstate",
+      "lifecycle"
+    ],
+    "suggestedAnswer": "StatelessWidgets are immutable and build once. StatefulWidgets maintain state that can change dynamically and call setState() to trigger rebuilds."
+  },
+  {
+    "id": "interview_flutter_92",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What is BuildContext in Flutter? (Variant 92)",
+    "idealKeywords": [
+      "context",
+      "element",
+      "widget tree",
+      "position"
+    ],
+    "suggestedAnswer": "BuildContext is a reference to the location of a widget within the widget tree. It is used to look up themes, media queries, and locate elements in the tree hierarchy."
+  },
+  {
+    "id": "interview_flutter_93",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "How does state management work in Riverpod? (Variant 93)",
+    "idealKeywords": [
+      "riverpod",
+      "provider",
+      "ref",
+      "state",
+      "notifier"
+    ],
+    "suggestedAnswer": "Riverpod uses Providers that store state. Widgets access provider state using WidgetRef. Changes in provider states automatically notify listening widgets to rebuild."
+  },
+  {
+    "id": "interview_flutter_94",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What are keys in Flutter and when should we use them? (Variant 94)",
+    "idealKeywords": [
+      "keys",
+      "unique",
+      "widget state",
+      "listview",
+      "identity"
+    ],
+    "suggestedAnswer": "Keys preserve a widget's state when it moves in the widget tree. They are commonly used when modifying collections of stateful widgets like lists."
+  },
+  {
+    "id": "interview_flutter_95",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "Explain the difference between hot reload and hot restart. (Variant 95)",
+    "idealKeywords": [
+      "reload",
+      "restart",
+      "state",
+      "virtual machine"
+    ],
+    "suggestedAnswer": "Hot reload loads code changes into the VM and rebuilds the widget tree, preserving state. Hot restart loads changes but resets the app state back to defaults."
+  },
+  {
+    "id": "interview_flutter_96",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What is the difference between Stateful and Stateless widgets? (Variant 96)",
+    "idealKeywords": [
+      "state",
+      "stateless",
+      "stateful",
+      "setstate",
+      "lifecycle"
+    ],
+    "suggestedAnswer": "StatelessWidgets are immutable and build once. StatefulWidgets maintain state that can change dynamically and call setState() to trigger rebuilds."
+  },
+  {
+    "id": "interview_flutter_97",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What is BuildContext in Flutter? (Variant 97)",
+    "idealKeywords": [
+      "context",
+      "element",
+      "widget tree",
+      "position"
+    ],
+    "suggestedAnswer": "BuildContext is a reference to the location of a widget within the widget tree. It is used to look up themes, media queries, and locate elements in the tree hierarchy."
+  },
+  {
+    "id": "interview_flutter_98",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "How does state management work in Riverpod? (Variant 98)",
+    "idealKeywords": [
+      "riverpod",
+      "provider",
+      "ref",
+      "state",
+      "notifier"
+    ],
+    "suggestedAnswer": "Riverpod uses Providers that store state. Widgets access provider state using WidgetRef. Changes in provider states automatically notify listening widgets to rebuild."
+  },
+  {
+    "id": "interview_flutter_99",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "What are keys in Flutter and when should we use them? (Variant 99)",
+    "idealKeywords": [
+      "keys",
+      "unique",
+      "widget state",
+      "listview",
+      "identity"
+    ],
+    "suggestedAnswer": "Keys preserve a widget's state when it moves in the widget tree. They are commonly used when modifying collections of stateful widgets like lists."
+  },
+  {
+    "id": "interview_flutter_100",
+    "type": "technical",
+    "role": "Flutter Developer",
+    "questionText": "Explain the difference between hot reload and hot restart. (Variant 100)",
+    "idealKeywords": [
+      "reload",
+      "restart",
+      "state",
+      "virtual machine"
+    ],
+    "suggestedAnswer": "Hot reload loads code changes into the VM and rebuilds the widget tree, preserving state. Hot restart loads changes but resets the app state back to defaults."
+  }
+]

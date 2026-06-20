@@ -1,0 +1,21 @@
+{
+  "targetRole": "Data Analyst",
+  "requiredSkills": [
+    "Python",
+    "SQL",
+    "Pandas",
+    "NumPy",
+    "Matplotlib",
+    "PowerBI / Tableau",
+    "Statistics"
+  ],
+  "missingSkills": [
+    "PowerBI / Tableau",
+    "Pandas"
+  ],
+  "recommendations": [
+    "Understand dataframe manipulation with Pandas",
+    "Build an interactive sales analysis dashboard in PowerBI"
+  ],
+  "estimatedLearningTimeHours": 70
+}

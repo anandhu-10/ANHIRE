@@ -1,0 +1,85 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper: checks if user is logged in
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    // Helper: checks if user is accessing their own data
+    function isOwner(userId) {
+      return request.auth.uid == userId;
+    }
+
+    // Helper: checks if user has admin role in 'users' collection
+    function isAdmin() {
+      return isSignedIn() && 
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+    }
+
+    // 1. Users collection
+    match /users/{userId} {
+      allow read, write: if isOwner(userId) || isAdmin();
+    }
+
+    // 2. Profiles collection
+    match /profiles/{userId} {
+      allow read: if isSignedIn();
+      allow write: if isOwner(userId) || isAdmin();
+    }
+
+    // 3. Resumes collection
+    match /resumes/{resumeId} {
+      allow read, write: if isSignedIn() && (resource == null || resource.data.userId == request.auth.uid) || isAdmin();
+    }
+
+    // 4. Resume Reports collection
+    match /resume_reports/{reportId} {
+      allow read, write: if isSignedIn() && (resource == null || resource.data.userId == request.auth.uid) || isAdmin();
+    }
+
+    // 5. Aptitude Questions
+    match /aptitude_questions/{questionId} {
+      allow read: if isSignedIn();
+      allow write: if isAdmin();
+    }
+
+    // 6. Aptitude Results
+    match /aptitude_results/{resultId} {
+      allow read, write: if isSignedIn() && (resource == null || resource.data.userId == request.auth.uid) || isAdmin();
+    }
+
+    // 7. Mock Interview questions
+    match /interviews/{interviewId} {
+      allow read: if isSignedIn();
+      allow write: if isAdmin();
+    }
+
+    // 8. Interview Results
+    match /interview_results/{resultId} {
+      allow read, write: if isSignedIn() && (resource == null || resource.data.userId == request.auth.uid) || isAdmin();
+    }
+
+    // 9. Skill Gap Analysis
+    match /skill_gap_analysis/{analysisId} {
+      allow read, write: if isSignedIn() && (resource == null || resource.data.userId == request.auth.uid) || isAdmin();
+    }
+
+    // 10. Roadmaps
+    match /roadmaps/{roadmapId} {
+      allow read, write: if isSignedIn() && (resource == null || resource.data.userId == request.auth.uid) || isAdmin();
+    }
+
+    // 11. Leaderboard
+    match /leaderboard/{userId} {
+      allow read: if isSignedIn();
+      allow write: if isOwner(userId) || isAdmin();
+    }
+
+    // 12. Notifications
+    match /notifications/{notificationId} {
+      allow read, write: if isSignedIn() && (resource == null || resource.data.userId == request.auth.uid) || isAdmin();
+    }
+  }
+}

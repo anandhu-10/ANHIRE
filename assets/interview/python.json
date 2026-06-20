@@ -1,0 +1,1362 @@
+[
+  {
+    "id": "interview_python_1",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What are list comprehensions and how do they work? (Variant 1)",
+    "idealKeywords": [
+      "list comprehension",
+      "brackets",
+      "shorter",
+      "syntax"
+    ],
+    "suggestedAnswer": "List comprehensions offer a shorter syntax to create a new list from an existing sequence. Example: [x*x for x in range(5)]."
+  },
+  {
+    "id": "interview_python_2",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is the difference between a list and a tuple? (Variant 2)",
+    "idealKeywords": [
+      "mutable",
+      "immutable",
+      "tuple",
+      "list",
+      "brackets"
+    ],
+    "suggestedAnswer": "Lists are mutable and declared using brackets []. Tuples are immutable and declared using parentheses (). Tuples are generally faster and memory-efficient."
+  },
+  {
+    "id": "interview_python_3",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is a decorator in Python? (Variant 3)",
+    "idealKeywords": [
+      "decorator",
+      "wrapper",
+      "function",
+      "modify",
+      "@"
+    ],
+    "suggestedAnswer": "A decorator is a design pattern in Python that allows a user to add new functionality to an existing object (like a function) without modifying its structure, using @ syntax."
+  },
+  {
+    "id": "interview_python_4",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "How does memory management work in Python? (Variant 4)",
+    "idealKeywords": [
+      "garbage collection",
+      "reference count",
+      "memory",
+      "allocator"
+    ],
+    "suggestedAnswer": "Python uses an automatic memory management system that utilizes reference counting and a generational garbage collector to detect and delete cycles."
+  },
+  {
+    "id": "interview_python_5",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is the Global Interpreter Lock (GIL)? (Variant 5)",
+    "idealKeywords": [
+      "gil",
+      "thread",
+      "interpreter",
+      "cpu",
+      "lock"
+    ],
+    "suggestedAnswer": "The GIL is a mutex that protects access to Python objects, preventing multiple threads from executing Python bytecodes at once, which limits multi-core CPU utilization."
+  },
+  {
+    "id": "interview_python_6",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What are list comprehensions and how do they work? (Variant 6)",
+    "idealKeywords": [
+      "list comprehension",
+      "brackets",
+      "shorter",
+      "syntax"
+    ],
+    "suggestedAnswer": "List comprehensions offer a shorter syntax to create a new list from an existing sequence. Example: [x*x for x in range(5)]."
+  },
+  {
+    "id": "interview_python_7",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is the difference between a list and a tuple? (Variant 7)",
+    "idealKeywords": [
+      "mutable",
+      "immutable",
+      "tuple",
+      "list",
+      "brackets"
+    ],
+    "suggestedAnswer": "Lists are mutable and declared using brackets []. Tuples are immutable and declared using parentheses (). Tuples are generally faster and memory-efficient."
+  },
+  {
+    "id": "interview_python_8",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is a decorator in Python? (Variant 8)",
+    "idealKeywords": [
+      "decorator",
+      "wrapper",
+      "function",
+      "modify",
+      "@"
+    ],
+    "suggestedAnswer": "A decorator is a design pattern in Python that allows a user to add new functionality to an existing object (like a function) without modifying its structure, using @ syntax."
+  },
+  {
+    "id": "interview_python_9",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "How does memory management work in Python? (Variant 9)",
+    "idealKeywords": [
+      "garbage collection",
+      "reference count",
+      "memory",
+      "allocator"
+    ],
+    "suggestedAnswer": "Python uses an automatic memory management system that utilizes reference counting and a generational garbage collector to detect and delete cycles."
+  },
+  {
+    "id": "interview_python_10",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is the Global Interpreter Lock (GIL)? (Variant 10)",
+    "idealKeywords": [
+      "gil",
+      "thread",
+      "interpreter",
+      "cpu",
+      "lock"
+    ],
+    "suggestedAnswer": "The GIL is a mutex that protects access to Python objects, preventing multiple threads from executing Python bytecodes at once, which limits multi-core CPU utilization."
+  },
+  {
+    "id": "interview_python_11",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What are list comprehensions and how do they work? (Variant 11)",
+    "idealKeywords": [
+      "list comprehension",
+      "brackets",
+      "shorter",
+      "syntax"
+    ],
+    "suggestedAnswer": "List comprehensions offer a shorter syntax to create a new list from an existing sequence. Example: [x*x for x in range(5)]."
+  },
+  {
+    "id": "interview_python_12",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is the difference between a list and a tuple? (Variant 12)",
+    "idealKeywords": [
+      "mutable",
+      "immutable",
+      "tuple",
+      "list",
+      "brackets"
+    ],
+    "suggestedAnswer": "Lists are mutable and declared using brackets []. Tuples are immutable and declared using parentheses (). Tuples are generally faster and memory-efficient."
+  },
+  {
+    "id": "interview_python_13",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is a decorator in Python? (Variant 13)",
+    "idealKeywords": [
+      "decorator",
+      "wrapper",
+      "function",
+      "modify",
+      "@"
+    ],
+    "suggestedAnswer": "A decorator is a design pattern in Python that allows a user to add new functionality to an existing object (like a function) without modifying its structure, using @ syntax."
+  },
+  {
+    "id": "interview_python_14",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "How does memory management work in Python? (Variant 14)",
+    "idealKeywords": [
+      "garbage collection",
+      "reference count",
+      "memory",
+      "allocator"
+    ],
+    "suggestedAnswer": "Python uses an automatic memory management system that utilizes reference counting and a generational garbage collector to detect and delete cycles."
+  },
+  {
+    "id": "interview_python_15",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is the Global Interpreter Lock (GIL)? (Variant 15)",
+    "idealKeywords": [
+      "gil",
+      "thread",
+      "interpreter",
+      "cpu",
+      "lock"
+    ],
+    "suggestedAnswer": "The GIL is a mutex that protects access to Python objects, preventing multiple threads from executing Python bytecodes at once, which limits multi-core CPU utilization."
+  },
+  {
+    "id": "interview_python_16",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What are list comprehensions and how do they work? (Variant 16)",
+    "idealKeywords": [
+      "list comprehension",
+      "brackets",
+      "shorter",
+      "syntax"
+    ],
+    "suggestedAnswer": "List comprehensions offer a shorter syntax to create a new list from an existing sequence. Example: [x*x for x in range(5)]."
+  },
+  {
+    "id": "interview_python_17",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is the difference between a list and a tuple? (Variant 17)",
+    "idealKeywords": [
+      "mutable",
+      "immutable",
+      "tuple",
+      "list",
+      "brackets"
+    ],
+    "suggestedAnswer": "Lists are mutable and declared using brackets []. Tuples are immutable and declared using parentheses (). Tuples are generally faster and memory-efficient."
+  },
+  {
+    "id": "interview_python_18",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is a decorator in Python? (Variant 18)",
+    "idealKeywords": [
+      "decorator",
+      "wrapper",
+      "function",
+      "modify",
+      "@"
+    ],
+    "suggestedAnswer": "A decorator is a design pattern in Python that allows a user to add new functionality to an existing object (like a function) without modifying its structure, using @ syntax."
+  },
+  {
+    "id": "interview_python_19",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "How does memory management work in Python? (Variant 19)",
+    "idealKeywords": [
+      "garbage collection",
+      "reference count",
+      "memory",
+      "allocator"
+    ],
+    "suggestedAnswer": "Python uses an automatic memory management system that utilizes reference counting and a generational garbage collector to detect and delete cycles."
+  },
+  {
+    "id": "interview_python_20",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is the Global Interpreter Lock (GIL)? (Variant 20)",
+    "idealKeywords": [
+      "gil",
+      "thread",
+      "interpreter",
+      "cpu",
+      "lock"
+    ],
+    "suggestedAnswer": "The GIL is a mutex that protects access to Python objects, preventing multiple threads from executing Python bytecodes at once, which limits multi-core CPU utilization."
+  },
+  {
+    "id": "interview_python_21",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What are list comprehensions and how do they work? (Variant 21)",
+    "idealKeywords": [
+      "list comprehension",
+      "brackets",
+      "shorter",
+      "syntax"
+    ],
+    "suggestedAnswer": "List comprehensions offer a shorter syntax to create a new list from an existing sequence. Example: [x*x for x in range(5)]."
+  },
+  {
+    "id": "interview_python_22",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is the difference between a list and a tuple? (Variant 22)",
+    "idealKeywords": [
+      "mutable",
+      "immutable",
+      "tuple",
+      "list",
+      "brackets"
+    ],
+    "suggestedAnswer": "Lists are mutable and declared using brackets []. Tuples are immutable and declared using parentheses (). Tuples are generally faster and memory-efficient."
+  },
+  {
+    "id": "interview_python_23",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is a decorator in Python? (Variant 23)",
+    "idealKeywords": [
+      "decorator",
+      "wrapper",
+      "function",
+      "modify",
+      "@"
+    ],
+    "suggestedAnswer": "A decorator is a design pattern in Python that allows a user to add new functionality to an existing object (like a function) without modifying its structure, using @ syntax."
+  },
+  {
+    "id": "interview_python_24",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "How does memory management work in Python? (Variant 24)",
+    "idealKeywords": [
+      "garbage collection",
+      "reference count",
+      "memory",
+      "allocator"
+    ],
+    "suggestedAnswer": "Python uses an automatic memory management system that utilizes reference counting and a generational garbage collector to detect and delete cycles."
+  },
+  {
+    "id": "interview_python_25",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is the Global Interpreter Lock (GIL)? (Variant 25)",
+    "idealKeywords": [
+      "gil",
+      "thread",
+      "interpreter",
+      "cpu",
+      "lock"
+    ],
+    "suggestedAnswer": "The GIL is a mutex that protects access to Python objects, preventing multiple threads from executing Python bytecodes at once, which limits multi-core CPU utilization."
+  },
+  {
+    "id": "interview_python_26",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What are list comprehensions and how do they work? (Variant 26)",
+    "idealKeywords": [
+      "list comprehension",
+      "brackets",
+      "shorter",
+      "syntax"
+    ],
+    "suggestedAnswer": "List comprehensions offer a shorter syntax to create a new list from an existing sequence. Example: [x*x for x in range(5)]."
+  },
+  {
+    "id": "interview_python_27",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is the difference between a list and a tuple? (Variant 27)",
+    "idealKeywords": [
+      "mutable",
+      "immutable",
+      "tuple",
+      "list",
+      "brackets"
+    ],
+    "suggestedAnswer": "Lists are mutable and declared using brackets []. Tuples are immutable and declared using parentheses (). Tuples are generally faster and memory-efficient."
+  },
+  {
+    "id": "interview_python_28",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is a decorator in Python? (Variant 28)",
+    "idealKeywords": [
+      "decorator",
+      "wrapper",
+      "function",
+      "modify",
+      "@"
+    ],
+    "suggestedAnswer": "A decorator is a design pattern in Python that allows a user to add new functionality to an existing object (like a function) without modifying its structure, using @ syntax."
+  },
+  {
+    "id": "interview_python_29",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "How does memory management work in Python? (Variant 29)",
+    "idealKeywords": [
+      "garbage collection",
+      "reference count",
+      "memory",
+      "allocator"
+    ],
+    "suggestedAnswer": "Python uses an automatic memory management system that utilizes reference counting and a generational garbage collector to detect and delete cycles."
+  },
+  {
+    "id": "interview_python_30",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is the Global Interpreter Lock (GIL)? (Variant 30)",
+    "idealKeywords": [
+      "gil",
+      "thread",
+      "interpreter",
+      "cpu",
+      "lock"
+    ],
+    "suggestedAnswer": "The GIL is a mutex that protects access to Python objects, preventing multiple threads from executing Python bytecodes at once, which limits multi-core CPU utilization."
+  },
+  {
+    "id": "interview_python_31",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What are list comprehensions and how do they work? (Variant 31)",
+    "idealKeywords": [
+      "list comprehension",
+      "brackets",
+      "shorter",
+      "syntax"
+    ],
+    "suggestedAnswer": "List comprehensions offer a shorter syntax to create a new list from an existing sequence. Example: [x*x for x in range(5)]."
+  },
+  {
+    "id": "interview_python_32",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is the difference between a list and a tuple? (Variant 32)",
+    "idealKeywords": [
+      "mutable",
+      "immutable",
+      "tuple",
+      "list",
+      "brackets"
+    ],
+    "suggestedAnswer": "Lists are mutable and declared using brackets []. Tuples are immutable and declared using parentheses (). Tuples are generally faster and memory-efficient."
+  },
+  {
+    "id": "interview_python_33",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is a decorator in Python? (Variant 33)",
+    "idealKeywords": [
+      "decorator",
+      "wrapper",
+      "function",
+      "modify",
+      "@"
+    ],
+    "suggestedAnswer": "A decorator is a design pattern in Python that allows a user to add new functionality to an existing object (like a function) without modifying its structure, using @ syntax."
+  },
+  {
+    "id": "interview_python_34",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "How does memory management work in Python? (Variant 34)",
+    "idealKeywords": [
+      "garbage collection",
+      "reference count",
+      "memory",
+      "allocator"
+    ],
+    "suggestedAnswer": "Python uses an automatic memory management system that utilizes reference counting and a generational garbage collector to detect and delete cycles."
+  },
+  {
+    "id": "interview_python_35",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is the Global Interpreter Lock (GIL)? (Variant 35)",
+    "idealKeywords": [
+      "gil",
+      "thread",
+      "interpreter",
+      "cpu",
+      "lock"
+    ],
+    "suggestedAnswer": "The GIL is a mutex that protects access to Python objects, preventing multiple threads from executing Python bytecodes at once, which limits multi-core CPU utilization."
+  },
+  {
+    "id": "interview_python_36",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What are list comprehensions and how do they work? (Variant 36)",
+    "idealKeywords": [
+      "list comprehension",
+      "brackets",
+      "shorter",
+      "syntax"
+    ],
+    "suggestedAnswer": "List comprehensions offer a shorter syntax to create a new list from an existing sequence. Example: [x*x for x in range(5)]."
+  },
+  {
+    "id": "interview_python_37",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is the difference between a list and a tuple? (Variant 37)",
+    "idealKeywords": [
+      "mutable",
+      "immutable",
+      "tuple",
+      "list",
+      "brackets"
+    ],
+    "suggestedAnswer": "Lists are mutable and declared using brackets []. Tuples are immutable and declared using parentheses (). Tuples are generally faster and memory-efficient."
+  },
+  {
+    "id": "interview_python_38",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is a decorator in Python? (Variant 38)",
+    "idealKeywords": [
+      "decorator",
+      "wrapper",
+      "function",
+      "modify",
+      "@"
+    ],
+    "suggestedAnswer": "A decorator is a design pattern in Python that allows a user to add new functionality to an existing object (like a function) without modifying its structure, using @ syntax."
+  },
+  {
+    "id": "interview_python_39",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "How does memory management work in Python? (Variant 39)",
+    "idealKeywords": [
+      "garbage collection",
+      "reference count",
+      "memory",
+      "allocator"
+    ],
+    "suggestedAnswer": "Python uses an automatic memory management system that utilizes reference counting and a generational garbage collector to detect and delete cycles."
+  },
+  {
+    "id": "interview_python_40",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is the Global Interpreter Lock (GIL)? (Variant 40)",
+    "idealKeywords": [
+      "gil",
+      "thread",
+      "interpreter",
+      "cpu",
+      "lock"
+    ],
+    "suggestedAnswer": "The GIL is a mutex that protects access to Python objects, preventing multiple threads from executing Python bytecodes at once, which limits multi-core CPU utilization."
+  },
+  {
+    "id": "interview_python_41",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What are list comprehensions and how do they work? (Variant 41)",
+    "idealKeywords": [
+      "list comprehension",
+      "brackets",
+      "shorter",
+      "syntax"
+    ],
+    "suggestedAnswer": "List comprehensions offer a shorter syntax to create a new list from an existing sequence. Example: [x*x for x in range(5)]."
+  },
+  {
+    "id": "interview_python_42",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is the difference between a list and a tuple? (Variant 42)",
+    "idealKeywords": [
+      "mutable",
+      "immutable",
+      "tuple",
+      "list",
+      "brackets"
+    ],
+    "suggestedAnswer": "Lists are mutable and declared using brackets []. Tuples are immutable and declared using parentheses (). Tuples are generally faster and memory-efficient."
+  },
+  {
+    "id": "interview_python_43",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is a decorator in Python? (Variant 43)",
+    "idealKeywords": [
+      "decorator",
+      "wrapper",
+      "function",
+      "modify",
+      "@"
+    ],
+    "suggestedAnswer": "A decorator is a design pattern in Python that allows a user to add new functionality to an existing object (like a function) without modifying its structure, using @ syntax."
+  },
+  {
+    "id": "interview_python_44",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "How does memory management work in Python? (Variant 44)",
+    "idealKeywords": [
+      "garbage collection",
+      "reference count",
+      "memory",
+      "allocator"
+    ],
+    "suggestedAnswer": "Python uses an automatic memory management system that utilizes reference counting and a generational garbage collector to detect and delete cycles."
+  },
+  {
+    "id": "interview_python_45",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is the Global Interpreter Lock (GIL)? (Variant 45)",
+    "idealKeywords": [
+      "gil",
+      "thread",
+      "interpreter",
+      "cpu",
+      "lock"
+    ],
+    "suggestedAnswer": "The GIL is a mutex that protects access to Python objects, preventing multiple threads from executing Python bytecodes at once, which limits multi-core CPU utilization."
+  },
+  {
+    "id": "interview_python_46",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What are list comprehensions and how do they work? (Variant 46)",
+    "idealKeywords": [
+      "list comprehension",
+      "brackets",
+      "shorter",
+      "syntax"
+    ],
+    "suggestedAnswer": "List comprehensions offer a shorter syntax to create a new list from an existing sequence. Example: [x*x for x in range(5)]."
+  },
+  {
+    "id": "interview_python_47",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is the difference between a list and a tuple? (Variant 47)",
+    "idealKeywords": [
+      "mutable",
+      "immutable",
+      "tuple",
+      "list",
+      "brackets"
+    ],
+    "suggestedAnswer": "Lists are mutable and declared using brackets []. Tuples are immutable and declared using parentheses (). Tuples are generally faster and memory-efficient."
+  },
+  {
+    "id": "interview_python_48",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is a decorator in Python? (Variant 48)",
+    "idealKeywords": [
+      "decorator",
+      "wrapper",
+      "function",
+      "modify",
+      "@"
+    ],
+    "suggestedAnswer": "A decorator is a design pattern in Python that allows a user to add new functionality to an existing object (like a function) without modifying its structure, using @ syntax."
+  },
+  {
+    "id": "interview_python_49",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "How does memory management work in Python? (Variant 49)",
+    "idealKeywords": [
+      "garbage collection",
+      "reference count",
+      "memory",
+      "allocator"
+    ],
+    "suggestedAnswer": "Python uses an automatic memory management system that utilizes reference counting and a generational garbage collector to detect and delete cycles."
+  },
+  {
+    "id": "interview_python_50",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is the Global Interpreter Lock (GIL)? (Variant 50)",
+    "idealKeywords": [
+      "gil",
+      "thread",
+      "interpreter",
+      "cpu",
+      "lock"
+    ],
+    "suggestedAnswer": "The GIL is a mutex that protects access to Python objects, preventing multiple threads from executing Python bytecodes at once, which limits multi-core CPU utilization."
+  },
+  {
+    "id": "interview_python_51",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What are list comprehensions and how do they work? (Variant 51)",
+    "idealKeywords": [
+      "list comprehension",
+      "brackets",
+      "shorter",
+      "syntax"
+    ],
+    "suggestedAnswer": "List comprehensions offer a shorter syntax to create a new list from an existing sequence. Example: [x*x for x in range(5)]."
+  },
+  {
+    "id": "interview_python_52",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is the difference between a list and a tuple? (Variant 52)",
+    "idealKeywords": [
+      "mutable",
+      "immutable",
+      "tuple",
+      "list",
+      "brackets"
+    ],
+    "suggestedAnswer": "Lists are mutable and declared using brackets []. Tuples are immutable and declared using parentheses (). Tuples are generally faster and memory-efficient."
+  },
+  {
+    "id": "interview_python_53",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is a decorator in Python? (Variant 53)",
+    "idealKeywords": [
+      "decorator",
+      "wrapper",
+      "function",
+      "modify",
+      "@"
+    ],
+    "suggestedAnswer": "A decorator is a design pattern in Python that allows a user to add new functionality to an existing object (like a function) without modifying its structure, using @ syntax."
+  },
+  {
+    "id": "interview_python_54",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "How does memory management work in Python? (Variant 54)",
+    "idealKeywords": [
+      "garbage collection",
+      "reference count",
+      "memory",
+      "allocator"
+    ],
+    "suggestedAnswer": "Python uses an automatic memory management system that utilizes reference counting and a generational garbage collector to detect and delete cycles."
+  },
+  {
+    "id": "interview_python_55",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is the Global Interpreter Lock (GIL)? (Variant 55)",
+    "idealKeywords": [
+      "gil",
+      "thread",
+      "interpreter",
+      "cpu",
+      "lock"
+    ],
+    "suggestedAnswer": "The GIL is a mutex that protects access to Python objects, preventing multiple threads from executing Python bytecodes at once, which limits multi-core CPU utilization."
+  },
+  {
+    "id": "interview_python_56",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What are list comprehensions and how do they work? (Variant 56)",
+    "idealKeywords": [
+      "list comprehension",
+      "brackets",
+      "shorter",
+      "syntax"
+    ],
+    "suggestedAnswer": "List comprehensions offer a shorter syntax to create a new list from an existing sequence. Example: [x*x for x in range(5)]."
+  },
+  {
+    "id": "interview_python_57",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is the difference between a list and a tuple? (Variant 57)",
+    "idealKeywords": [
+      "mutable",
+      "immutable",
+      "tuple",
+      "list",
+      "brackets"
+    ],
+    "suggestedAnswer": "Lists are mutable and declared using brackets []. Tuples are immutable and declared using parentheses (). Tuples are generally faster and memory-efficient."
+  },
+  {
+    "id": "interview_python_58",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is a decorator in Python? (Variant 58)",
+    "idealKeywords": [
+      "decorator",
+      "wrapper",
+      "function",
+      "modify",
+      "@"
+    ],
+    "suggestedAnswer": "A decorator is a design pattern in Python that allows a user to add new functionality to an existing object (like a function) without modifying its structure, using @ syntax."
+  },
+  {
+    "id": "interview_python_59",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "How does memory management work in Python? (Variant 59)",
+    "idealKeywords": [
+      "garbage collection",
+      "reference count",
+      "memory",
+      "allocator"
+    ],
+    "suggestedAnswer": "Python uses an automatic memory management system that utilizes reference counting and a generational garbage collector to detect and delete cycles."
+  },
+  {
+    "id": "interview_python_60",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is the Global Interpreter Lock (GIL)? (Variant 60)",
+    "idealKeywords": [
+      "gil",
+      "thread",
+      "interpreter",
+      "cpu",
+      "lock"
+    ],
+    "suggestedAnswer": "The GIL is a mutex that protects access to Python objects, preventing multiple threads from executing Python bytecodes at once, which limits multi-core CPU utilization."
+  },
+  {
+    "id": "interview_python_61",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What are list comprehensions and how do they work? (Variant 61)",
+    "idealKeywords": [
+      "list comprehension",
+      "brackets",
+      "shorter",
+      "syntax"
+    ],
+    "suggestedAnswer": "List comprehensions offer a shorter syntax to create a new list from an existing sequence. Example: [x*x for x in range(5)]."
+  },
+  {
+    "id": "interview_python_62",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is the difference between a list and a tuple? (Variant 62)",
+    "idealKeywords": [
+      "mutable",
+      "immutable",
+      "tuple",
+      "list",
+      "brackets"
+    ],
+    "suggestedAnswer": "Lists are mutable and declared using brackets []. Tuples are immutable and declared using parentheses (). Tuples are generally faster and memory-efficient."
+  },
+  {
+    "id": "interview_python_63",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is a decorator in Python? (Variant 63)",
+    "idealKeywords": [
+      "decorator",
+      "wrapper",
+      "function",
+      "modify",
+      "@"
+    ],
+    "suggestedAnswer": "A decorator is a design pattern in Python that allows a user to add new functionality to an existing object (like a function) without modifying its structure, using @ syntax."
+  },
+  {
+    "id": "interview_python_64",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "How does memory management work in Python? (Variant 64)",
+    "idealKeywords": [
+      "garbage collection",
+      "reference count",
+      "memory",
+      "allocator"
+    ],
+    "suggestedAnswer": "Python uses an automatic memory management system that utilizes reference counting and a generational garbage collector to detect and delete cycles."
+  },
+  {
+    "id": "interview_python_65",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is the Global Interpreter Lock (GIL)? (Variant 65)",
+    "idealKeywords": [
+      "gil",
+      "thread",
+      "interpreter",
+      "cpu",
+      "lock"
+    ],
+    "suggestedAnswer": "The GIL is a mutex that protects access to Python objects, preventing multiple threads from executing Python bytecodes at once, which limits multi-core CPU utilization."
+  },
+  {
+    "id": "interview_python_66",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What are list comprehensions and how do they work? (Variant 66)",
+    "idealKeywords": [
+      "list comprehension",
+      "brackets",
+      "shorter",
+      "syntax"
+    ],
+    "suggestedAnswer": "List comprehensions offer a shorter syntax to create a new list from an existing sequence. Example: [x*x for x in range(5)]."
+  },
+  {
+    "id": "interview_python_67",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is the difference between a list and a tuple? (Variant 67)",
+    "idealKeywords": [
+      "mutable",
+      "immutable",
+      "tuple",
+      "list",
+      "brackets"
+    ],
+    "suggestedAnswer": "Lists are mutable and declared using brackets []. Tuples are immutable and declared using parentheses (). Tuples are generally faster and memory-efficient."
+  },
+  {
+    "id": "interview_python_68",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is a decorator in Python? (Variant 68)",
+    "idealKeywords": [
+      "decorator",
+      "wrapper",
+      "function",
+      "modify",
+      "@"
+    ],
+    "suggestedAnswer": "A decorator is a design pattern in Python that allows a user to add new functionality to an existing object (like a function) without modifying its structure, using @ syntax."
+  },
+  {
+    "id": "interview_python_69",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "How does memory management work in Python? (Variant 69)",
+    "idealKeywords": [
+      "garbage collection",
+      "reference count",
+      "memory",
+      "allocator"
+    ],
+    "suggestedAnswer": "Python uses an automatic memory management system that utilizes reference counting and a generational garbage collector to detect and delete cycles."
+  },
+  {
+    "id": "interview_python_70",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is the Global Interpreter Lock (GIL)? (Variant 70)",
+    "idealKeywords": [
+      "gil",
+      "thread",
+      "interpreter",
+      "cpu",
+      "lock"
+    ],
+    "suggestedAnswer": "The GIL is a mutex that protects access to Python objects, preventing multiple threads from executing Python bytecodes at once, which limits multi-core CPU utilization."
+  },
+  {
+    "id": "interview_python_71",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What are list comprehensions and how do they work? (Variant 71)",
+    "idealKeywords": [
+      "list comprehension",
+      "brackets",
+      "shorter",
+      "syntax"
+    ],
+    "suggestedAnswer": "List comprehensions offer a shorter syntax to create a new list from an existing sequence. Example: [x*x for x in range(5)]."
+  },
+  {
+    "id": "interview_python_72",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is the difference between a list and a tuple? (Variant 72)",
+    "idealKeywords": [
+      "mutable",
+      "immutable",
+      "tuple",
+      "list",
+      "brackets"
+    ],
+    "suggestedAnswer": "Lists are mutable and declared using brackets []. Tuples are immutable and declared using parentheses (). Tuples are generally faster and memory-efficient."
+  },
+  {
+    "id": "interview_python_73",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is a decorator in Python? (Variant 73)",
+    "idealKeywords": [
+      "decorator",
+      "wrapper",
+      "function",
+      "modify",
+      "@"
+    ],
+    "suggestedAnswer": "A decorator is a design pattern in Python that allows a user to add new functionality to an existing object (like a function) without modifying its structure, using @ syntax."
+  },
+  {
+    "id": "interview_python_74",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "How does memory management work in Python? (Variant 74)",
+    "idealKeywords": [
+      "garbage collection",
+      "reference count",
+      "memory",
+      "allocator"
+    ],
+    "suggestedAnswer": "Python uses an automatic memory management system that utilizes reference counting and a generational garbage collector to detect and delete cycles."
+  },
+  {
+    "id": "interview_python_75",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is the Global Interpreter Lock (GIL)? (Variant 75)",
+    "idealKeywords": [
+      "gil",
+      "thread",
+      "interpreter",
+      "cpu",
+      "lock"
+    ],
+    "suggestedAnswer": "The GIL is a mutex that protects access to Python objects, preventing multiple threads from executing Python bytecodes at once, which limits multi-core CPU utilization."
+  },
+  {
+    "id": "interview_python_76",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What are list comprehensions and how do they work? (Variant 76)",
+    "idealKeywords": [
+      "list comprehension",
+      "brackets",
+      "shorter",
+      "syntax"
+    ],
+    "suggestedAnswer": "List comprehensions offer a shorter syntax to create a new list from an existing sequence. Example: [x*x for x in range(5)]."
+  },
+  {
+    "id": "interview_python_77",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is the difference between a list and a tuple? (Variant 77)",
+    "idealKeywords": [
+      "mutable",
+      "immutable",
+      "tuple",
+      "list",
+      "brackets"
+    ],
+    "suggestedAnswer": "Lists are mutable and declared using brackets []. Tuples are immutable and declared using parentheses (). Tuples are generally faster and memory-efficient."
+  },
+  {
+    "id": "interview_python_78",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is a decorator in Python? (Variant 78)",
+    "idealKeywords": [
+      "decorator",
+      "wrapper",
+      "function",
+      "modify",
+      "@"
+    ],
+    "suggestedAnswer": "A decorator is a design pattern in Python that allows a user to add new functionality to an existing object (like a function) without modifying its structure, using @ syntax."
+  },
+  {
+    "id": "interview_python_79",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "How does memory management work in Python? (Variant 79)",
+    "idealKeywords": [
+      "garbage collection",
+      "reference count",
+      "memory",
+      "allocator"
+    ],
+    "suggestedAnswer": "Python uses an automatic memory management system that utilizes reference counting and a generational garbage collector to detect and delete cycles."
+  },
+  {
+    "id": "interview_python_80",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is the Global Interpreter Lock (GIL)? (Variant 80)",
+    "idealKeywords": [
+      "gil",
+      "thread",
+      "interpreter",
+      "cpu",
+      "lock"
+    ],
+    "suggestedAnswer": "The GIL is a mutex that protects access to Python objects, preventing multiple threads from executing Python bytecodes at once, which limits multi-core CPU utilization."
+  },
+  {
+    "id": "interview_python_81",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What are list comprehensions and how do they work? (Variant 81)",
+    "idealKeywords": [
+      "list comprehension",
+      "brackets",
+      "shorter",
+      "syntax"
+    ],
+    "suggestedAnswer": "List comprehensions offer a shorter syntax to create a new list from an existing sequence. Example: [x*x for x in range(5)]."
+  },
+  {
+    "id": "interview_python_82",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is the difference between a list and a tuple? (Variant 82)",
+    "idealKeywords": [
+      "mutable",
+      "immutable",
+      "tuple",
+      "list",
+      "brackets"
+    ],
+    "suggestedAnswer": "Lists are mutable and declared using brackets []. Tuples are immutable and declared using parentheses (). Tuples are generally faster and memory-efficient."
+  },
+  {
+    "id": "interview_python_83",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is a decorator in Python? (Variant 83)",
+    "idealKeywords": [
+      "decorator",
+      "wrapper",
+      "function",
+      "modify",
+      "@"
+    ],
+    "suggestedAnswer": "A decorator is a design pattern in Python that allows a user to add new functionality to an existing object (like a function) without modifying its structure, using @ syntax."
+  },
+  {
+    "id": "interview_python_84",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "How does memory management work in Python? (Variant 84)",
+    "idealKeywords": [
+      "garbage collection",
+      "reference count",
+      "memory",
+      "allocator"
+    ],
+    "suggestedAnswer": "Python uses an automatic memory management system that utilizes reference counting and a generational garbage collector to detect and delete cycles."
+  },
+  {
+    "id": "interview_python_85",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is the Global Interpreter Lock (GIL)? (Variant 85)",
+    "idealKeywords": [
+      "gil",
+      "thread",
+      "interpreter",
+      "cpu",
+      "lock"
+    ],
+    "suggestedAnswer": "The GIL is a mutex that protects access to Python objects, preventing multiple threads from executing Python bytecodes at once, which limits multi-core CPU utilization."
+  },
+  {
+    "id": "interview_python_86",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What are list comprehensions and how do they work? (Variant 86)",
+    "idealKeywords": [
+      "list comprehension",
+      "brackets",
+      "shorter",
+      "syntax"
+    ],
+    "suggestedAnswer": "List comprehensions offer a shorter syntax to create a new list from an existing sequence. Example: [x*x for x in range(5)]."
+  },
+  {
+    "id": "interview_python_87",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is the difference between a list and a tuple? (Variant 87)",
+    "idealKeywords": [
+      "mutable",
+      "immutable",
+      "tuple",
+      "list",
+      "brackets"
+    ],
+    "suggestedAnswer": "Lists are mutable and declared using brackets []. Tuples are immutable and declared using parentheses (). Tuples are generally faster and memory-efficient."
+  },
+  {
+    "id": "interview_python_88",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is a decorator in Python? (Variant 88)",
+    "idealKeywords": [
+      "decorator",
+      "wrapper",
+      "function",
+      "modify",
+      "@"
+    ],
+    "suggestedAnswer": "A decorator is a design pattern in Python that allows a user to add new functionality to an existing object (like a function) without modifying its structure, using @ syntax."
+  },
+  {
+    "id": "interview_python_89",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "How does memory management work in Python? (Variant 89)",
+    "idealKeywords": [
+      "garbage collection",
+      "reference count",
+      "memory",
+      "allocator"
+    ],
+    "suggestedAnswer": "Python uses an automatic memory management system that utilizes reference counting and a generational garbage collector to detect and delete cycles."
+  },
+  {
+    "id": "interview_python_90",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is the Global Interpreter Lock (GIL)? (Variant 90)",
+    "idealKeywords": [
+      "gil",
+      "thread",
+      "interpreter",
+      "cpu",
+      "lock"
+    ],
+    "suggestedAnswer": "The GIL is a mutex that protects access to Python objects, preventing multiple threads from executing Python bytecodes at once, which limits multi-core CPU utilization."
+  },
+  {
+    "id": "interview_python_91",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What are list comprehensions and how do they work? (Variant 91)",
+    "idealKeywords": [
+      "list comprehension",
+      "brackets",
+      "shorter",
+      "syntax"
+    ],
+    "suggestedAnswer": "List comprehensions offer a shorter syntax to create a new list from an existing sequence. Example: [x*x for x in range(5)]."
+  },
+  {
+    "id": "interview_python_92",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is the difference between a list and a tuple? (Variant 92)",
+    "idealKeywords": [
+      "mutable",
+      "immutable",
+      "tuple",
+      "list",
+      "brackets"
+    ],
+    "suggestedAnswer": "Lists are mutable and declared using brackets []. Tuples are immutable and declared using parentheses (). Tuples are generally faster and memory-efficient."
+  },
+  {
+    "id": "interview_python_93",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is a decorator in Python? (Variant 93)",
+    "idealKeywords": [
+      "decorator",
+      "wrapper",
+      "function",
+      "modify",
+      "@"
+    ],
+    "suggestedAnswer": "A decorator is a design pattern in Python that allows a user to add new functionality to an existing object (like a function) without modifying its structure, using @ syntax."
+  },
+  {
+    "id": "interview_python_94",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "How does memory management work in Python? (Variant 94)",
+    "idealKeywords": [
+      "garbage collection",
+      "reference count",
+      "memory",
+      "allocator"
+    ],
+    "suggestedAnswer": "Python uses an automatic memory management system that utilizes reference counting and a generational garbage collector to detect and delete cycles."
+  },
+  {
+    "id": "interview_python_95",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is the Global Interpreter Lock (GIL)? (Variant 95)",
+    "idealKeywords": [
+      "gil",
+      "thread",
+      "interpreter",
+      "cpu",
+      "lock"
+    ],
+    "suggestedAnswer": "The GIL is a mutex that protects access to Python objects, preventing multiple threads from executing Python bytecodes at once, which limits multi-core CPU utilization."
+  },
+  {
+    "id": "interview_python_96",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What are list comprehensions and how do they work? (Variant 96)",
+    "idealKeywords": [
+      "list comprehension",
+      "brackets",
+      "shorter",
+      "syntax"
+    ],
+    "suggestedAnswer": "List comprehensions offer a shorter syntax to create a new list from an existing sequence. Example: [x*x for x in range(5)]."
+  },
+  {
+    "id": "interview_python_97",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is the difference between a list and a tuple? (Variant 97)",
+    "idealKeywords": [
+      "mutable",
+      "immutable",
+      "tuple",
+      "list",
+      "brackets"
+    ],
+    "suggestedAnswer": "Lists are mutable and declared using brackets []. Tuples are immutable and declared using parentheses (). Tuples are generally faster and memory-efficient."
+  },
+  {
+    "id": "interview_python_98",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is a decorator in Python? (Variant 98)",
+    "idealKeywords": [
+      "decorator",
+      "wrapper",
+      "function",
+      "modify",
+      "@"
+    ],
+    "suggestedAnswer": "A decorator is a design pattern in Python that allows a user to add new functionality to an existing object (like a function) without modifying its structure, using @ syntax."
+  },
+  {
+    "id": "interview_python_99",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "How does memory management work in Python? (Variant 99)",
+    "idealKeywords": [
+      "garbage collection",
+      "reference count",
+      "memory",
+      "allocator"
+    ],
+    "suggestedAnswer": "Python uses an automatic memory management system that utilizes reference counting and a generational garbage collector to detect and delete cycles."
+  },
+  {
+    "id": "interview_python_100",
+    "type": "technical",
+    "role": "Python Developer",
+    "questionText": "What is the Global Interpreter Lock (GIL)? (Variant 100)",
+    "idealKeywords": [
+      "gil",
+      "thread",
+      "interpreter",
+      "cpu",
+      "lock"
+    ],
+    "suggestedAnswer": "The GIL is a mutex that protects access to Python objects, preventing multiple threads from executing Python bytecodes at once, which limits multi-core CPU utilization."
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "targetRole": "Full Stack Developer",
+  "requiredSkills": [
+    "HTML/CSS",
+    "ReactJS",
+    "NodeJS",
+    "MongoDB",
+    "Express",
+    "Git",
+    "Hosting Services"
+  ],
+  "missingSkills": [
+    "ReactJS",
+    "MongoDB"
+  ],
+  "recommendations": [
+    "Build a simple MERN stack CRUD project",
+    "Learn React Hooks and context provider states"
+  ],
+  "estimatedLearningTimeHours": 120
+}

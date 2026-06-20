@@ -1,0 +1,1342 @@
+[
+  {
+    "id": "interview_dbms_1",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What are ACID properties in DBMS? (Variant 1)",
+    "idealKeywords": [
+      "acid",
+      "atomicity",
+      "consistency",
+      "isolation",
+      "durability"
+    ],
+    "suggestedAnswer": "ACID stands for Atomicity (all or nothing), Consistency (valid state), Isolation (independent transactions), and Durability (permanent write)."
+  },
+  {
+    "id": "interview_dbms_2",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is normalization and what is 3NF? (Variant 2)",
+    "idealKeywords": [
+      "normalization",
+      "redundancy",
+      "3nf",
+      "transitive dependency"
+    ],
+    "suggestedAnswer": "Normalization is organizing data to reduce redundancy. 3NF requires that the relation is in 2NF and has no transitive dependencies on the primary key."
+  },
+  {
+    "id": "interview_dbms_3",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is the difference between SQL and NoSQL databases? (Variant 3)",
+    "idealKeywords": [
+      "sql",
+      "nosql",
+      "schema",
+      "relational",
+      "document"
+    ],
+    "suggestedAnswer": "SQL is relational, schema-based, and scales vertically. NoSQL is non-relational, schema-less (document, key-value, graph), and scales horizontally."
+  },
+  {
+    "id": "interview_dbms_4",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "Explain Joins in SQL. (Variant 4)",
+    "idealKeywords": [
+      "join",
+      "inner join",
+      "left join",
+      "outer join"
+    ],
+    "suggestedAnswer": "Joins combine records from two or more tables based on a related column. Types include Inner, Left (Outer), Right (Outer), and Full Joins."
+  },
+  {
+    "id": "interview_dbms_5",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is indexing and why is it used? (Variant 5)",
+    "idealKeywords": [
+      "indexing",
+      "b-tree",
+      "search speed",
+      "query performance"
+    ],
+    "suggestedAnswer": "Indexing is a data structure technique used to quickly locate and access data in a database without searching every row, typically structured as B-Trees."
+  },
+  {
+    "id": "interview_dbms_6",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What are ACID properties in DBMS? (Variant 6)",
+    "idealKeywords": [
+      "acid",
+      "atomicity",
+      "consistency",
+      "isolation",
+      "durability"
+    ],
+    "suggestedAnswer": "ACID stands for Atomicity (all or nothing), Consistency (valid state), Isolation (independent transactions), and Durability (permanent write)."
+  },
+  {
+    "id": "interview_dbms_7",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is normalization and what is 3NF? (Variant 7)",
+    "idealKeywords": [
+      "normalization",
+      "redundancy",
+      "3nf",
+      "transitive dependency"
+    ],
+    "suggestedAnswer": "Normalization is organizing data to reduce redundancy. 3NF requires that the relation is in 2NF and has no transitive dependencies on the primary key."
+  },
+  {
+    "id": "interview_dbms_8",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is the difference between SQL and NoSQL databases? (Variant 8)",
+    "idealKeywords": [
+      "sql",
+      "nosql",
+      "schema",
+      "relational",
+      "document"
+    ],
+    "suggestedAnswer": "SQL is relational, schema-based, and scales vertically. NoSQL is non-relational, schema-less (document, key-value, graph), and scales horizontally."
+  },
+  {
+    "id": "interview_dbms_9",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "Explain Joins in SQL. (Variant 9)",
+    "idealKeywords": [
+      "join",
+      "inner join",
+      "left join",
+      "outer join"
+    ],
+    "suggestedAnswer": "Joins combine records from two or more tables based on a related column. Types include Inner, Left (Outer), Right (Outer), and Full Joins."
+  },
+  {
+    "id": "interview_dbms_10",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is indexing and why is it used? (Variant 10)",
+    "idealKeywords": [
+      "indexing",
+      "b-tree",
+      "search speed",
+      "query performance"
+    ],
+    "suggestedAnswer": "Indexing is a data structure technique used to quickly locate and access data in a database without searching every row, typically structured as B-Trees."
+  },
+  {
+    "id": "interview_dbms_11",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What are ACID properties in DBMS? (Variant 11)",
+    "idealKeywords": [
+      "acid",
+      "atomicity",
+      "consistency",
+      "isolation",
+      "durability"
+    ],
+    "suggestedAnswer": "ACID stands for Atomicity (all or nothing), Consistency (valid state), Isolation (independent transactions), and Durability (permanent write)."
+  },
+  {
+    "id": "interview_dbms_12",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is normalization and what is 3NF? (Variant 12)",
+    "idealKeywords": [
+      "normalization",
+      "redundancy",
+      "3nf",
+      "transitive dependency"
+    ],
+    "suggestedAnswer": "Normalization is organizing data to reduce redundancy. 3NF requires that the relation is in 2NF and has no transitive dependencies on the primary key."
+  },
+  {
+    "id": "interview_dbms_13",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is the difference between SQL and NoSQL databases? (Variant 13)",
+    "idealKeywords": [
+      "sql",
+      "nosql",
+      "schema",
+      "relational",
+      "document"
+    ],
+    "suggestedAnswer": "SQL is relational, schema-based, and scales vertically. NoSQL is non-relational, schema-less (document, key-value, graph), and scales horizontally."
+  },
+  {
+    "id": "interview_dbms_14",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "Explain Joins in SQL. (Variant 14)",
+    "idealKeywords": [
+      "join",
+      "inner join",
+      "left join",
+      "outer join"
+    ],
+    "suggestedAnswer": "Joins combine records from two or more tables based on a related column. Types include Inner, Left (Outer), Right (Outer), and Full Joins."
+  },
+  {
+    "id": "interview_dbms_15",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is indexing and why is it used? (Variant 15)",
+    "idealKeywords": [
+      "indexing",
+      "b-tree",
+      "search speed",
+      "query performance"
+    ],
+    "suggestedAnswer": "Indexing is a data structure technique used to quickly locate and access data in a database without searching every row, typically structured as B-Trees."
+  },
+  {
+    "id": "interview_dbms_16",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What are ACID properties in DBMS? (Variant 16)",
+    "idealKeywords": [
+      "acid",
+      "atomicity",
+      "consistency",
+      "isolation",
+      "durability"
+    ],
+    "suggestedAnswer": "ACID stands for Atomicity (all or nothing), Consistency (valid state), Isolation (independent transactions), and Durability (permanent write)."
+  },
+  {
+    "id": "interview_dbms_17",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is normalization and what is 3NF? (Variant 17)",
+    "idealKeywords": [
+      "normalization",
+      "redundancy",
+      "3nf",
+      "transitive dependency"
+    ],
+    "suggestedAnswer": "Normalization is organizing data to reduce redundancy. 3NF requires that the relation is in 2NF and has no transitive dependencies on the primary key."
+  },
+  {
+    "id": "interview_dbms_18",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is the difference between SQL and NoSQL databases? (Variant 18)",
+    "idealKeywords": [
+      "sql",
+      "nosql",
+      "schema",
+      "relational",
+      "document"
+    ],
+    "suggestedAnswer": "SQL is relational, schema-based, and scales vertically. NoSQL is non-relational, schema-less (document, key-value, graph), and scales horizontally."
+  },
+  {
+    "id": "interview_dbms_19",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "Explain Joins in SQL. (Variant 19)",
+    "idealKeywords": [
+      "join",
+      "inner join",
+      "left join",
+      "outer join"
+    ],
+    "suggestedAnswer": "Joins combine records from two or more tables based on a related column. Types include Inner, Left (Outer), Right (Outer), and Full Joins."
+  },
+  {
+    "id": "interview_dbms_20",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is indexing and why is it used? (Variant 20)",
+    "idealKeywords": [
+      "indexing",
+      "b-tree",
+      "search speed",
+      "query performance"
+    ],
+    "suggestedAnswer": "Indexing is a data structure technique used to quickly locate and access data in a database without searching every row, typically structured as B-Trees."
+  },
+  {
+    "id": "interview_dbms_21",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What are ACID properties in DBMS? (Variant 21)",
+    "idealKeywords": [
+      "acid",
+      "atomicity",
+      "consistency",
+      "isolation",
+      "durability"
+    ],
+    "suggestedAnswer": "ACID stands for Atomicity (all or nothing), Consistency (valid state), Isolation (independent transactions), and Durability (permanent write)."
+  },
+  {
+    "id": "interview_dbms_22",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is normalization and what is 3NF? (Variant 22)",
+    "idealKeywords": [
+      "normalization",
+      "redundancy",
+      "3nf",
+      "transitive dependency"
+    ],
+    "suggestedAnswer": "Normalization is organizing data to reduce redundancy. 3NF requires that the relation is in 2NF and has no transitive dependencies on the primary key."
+  },
+  {
+    "id": "interview_dbms_23",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is the difference between SQL and NoSQL databases? (Variant 23)",
+    "idealKeywords": [
+      "sql",
+      "nosql",
+      "schema",
+      "relational",
+      "document"
+    ],
+    "suggestedAnswer": "SQL is relational, schema-based, and scales vertically. NoSQL is non-relational, schema-less (document, key-value, graph), and scales horizontally."
+  },
+  {
+    "id": "interview_dbms_24",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "Explain Joins in SQL. (Variant 24)",
+    "idealKeywords": [
+      "join",
+      "inner join",
+      "left join",
+      "outer join"
+    ],
+    "suggestedAnswer": "Joins combine records from two or more tables based on a related column. Types include Inner, Left (Outer), Right (Outer), and Full Joins."
+  },
+  {
+    "id": "interview_dbms_25",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is indexing and why is it used? (Variant 25)",
+    "idealKeywords": [
+      "indexing",
+      "b-tree",
+      "search speed",
+      "query performance"
+    ],
+    "suggestedAnswer": "Indexing is a data structure technique used to quickly locate and access data in a database without searching every row, typically structured as B-Trees."
+  },
+  {
+    "id": "interview_dbms_26",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What are ACID properties in DBMS? (Variant 26)",
+    "idealKeywords": [
+      "acid",
+      "atomicity",
+      "consistency",
+      "isolation",
+      "durability"
+    ],
+    "suggestedAnswer": "ACID stands for Atomicity (all or nothing), Consistency (valid state), Isolation (independent transactions), and Durability (permanent write)."
+  },
+  {
+    "id": "interview_dbms_27",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is normalization and what is 3NF? (Variant 27)",
+    "idealKeywords": [
+      "normalization",
+      "redundancy",
+      "3nf",
+      "transitive dependency"
+    ],
+    "suggestedAnswer": "Normalization is organizing data to reduce redundancy. 3NF requires that the relation is in 2NF and has no transitive dependencies on the primary key."
+  },
+  {
+    "id": "interview_dbms_28",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is the difference between SQL and NoSQL databases? (Variant 28)",
+    "idealKeywords": [
+      "sql",
+      "nosql",
+      "schema",
+      "relational",
+      "document"
+    ],
+    "suggestedAnswer": "SQL is relational, schema-based, and scales vertically. NoSQL is non-relational, schema-less (document, key-value, graph), and scales horizontally."
+  },
+  {
+    "id": "interview_dbms_29",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "Explain Joins in SQL. (Variant 29)",
+    "idealKeywords": [
+      "join",
+      "inner join",
+      "left join",
+      "outer join"
+    ],
+    "suggestedAnswer": "Joins combine records from two or more tables based on a related column. Types include Inner, Left (Outer), Right (Outer), and Full Joins."
+  },
+  {
+    "id": "interview_dbms_30",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is indexing and why is it used? (Variant 30)",
+    "idealKeywords": [
+      "indexing",
+      "b-tree",
+      "search speed",
+      "query performance"
+    ],
+    "suggestedAnswer": "Indexing is a data structure technique used to quickly locate and access data in a database without searching every row, typically structured as B-Trees."
+  },
+  {
+    "id": "interview_dbms_31",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What are ACID properties in DBMS? (Variant 31)",
+    "idealKeywords": [
+      "acid",
+      "atomicity",
+      "consistency",
+      "isolation",
+      "durability"
+    ],
+    "suggestedAnswer": "ACID stands for Atomicity (all or nothing), Consistency (valid state), Isolation (independent transactions), and Durability (permanent write)."
+  },
+  {
+    "id": "interview_dbms_32",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is normalization and what is 3NF? (Variant 32)",
+    "idealKeywords": [
+      "normalization",
+      "redundancy",
+      "3nf",
+      "transitive dependency"
+    ],
+    "suggestedAnswer": "Normalization is organizing data to reduce redundancy. 3NF requires that the relation is in 2NF and has no transitive dependencies on the primary key."
+  },
+  {
+    "id": "interview_dbms_33",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is the difference between SQL and NoSQL databases? (Variant 33)",
+    "idealKeywords": [
+      "sql",
+      "nosql",
+      "schema",
+      "relational",
+      "document"
+    ],
+    "suggestedAnswer": "SQL is relational, schema-based, and scales vertically. NoSQL is non-relational, schema-less (document, key-value, graph), and scales horizontally."
+  },
+  {
+    "id": "interview_dbms_34",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "Explain Joins in SQL. (Variant 34)",
+    "idealKeywords": [
+      "join",
+      "inner join",
+      "left join",
+      "outer join"
+    ],
+    "suggestedAnswer": "Joins combine records from two or more tables based on a related column. Types include Inner, Left (Outer), Right (Outer), and Full Joins."
+  },
+  {
+    "id": "interview_dbms_35",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is indexing and why is it used? (Variant 35)",
+    "idealKeywords": [
+      "indexing",
+      "b-tree",
+      "search speed",
+      "query performance"
+    ],
+    "suggestedAnswer": "Indexing is a data structure technique used to quickly locate and access data in a database without searching every row, typically structured as B-Trees."
+  },
+  {
+    "id": "interview_dbms_36",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What are ACID properties in DBMS? (Variant 36)",
+    "idealKeywords": [
+      "acid",
+      "atomicity",
+      "consistency",
+      "isolation",
+      "durability"
+    ],
+    "suggestedAnswer": "ACID stands for Atomicity (all or nothing), Consistency (valid state), Isolation (independent transactions), and Durability (permanent write)."
+  },
+  {
+    "id": "interview_dbms_37",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is normalization and what is 3NF? (Variant 37)",
+    "idealKeywords": [
+      "normalization",
+      "redundancy",
+      "3nf",
+      "transitive dependency"
+    ],
+    "suggestedAnswer": "Normalization is organizing data to reduce redundancy. 3NF requires that the relation is in 2NF and has no transitive dependencies on the primary key."
+  },
+  {
+    "id": "interview_dbms_38",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is the difference between SQL and NoSQL databases? (Variant 38)",
+    "idealKeywords": [
+      "sql",
+      "nosql",
+      "schema",
+      "relational",
+      "document"
+    ],
+    "suggestedAnswer": "SQL is relational, schema-based, and scales vertically. NoSQL is non-relational, schema-less (document, key-value, graph), and scales horizontally."
+  },
+  {
+    "id": "interview_dbms_39",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "Explain Joins in SQL. (Variant 39)",
+    "idealKeywords": [
+      "join",
+      "inner join",
+      "left join",
+      "outer join"
+    ],
+    "suggestedAnswer": "Joins combine records from two or more tables based on a related column. Types include Inner, Left (Outer), Right (Outer), and Full Joins."
+  },
+  {
+    "id": "interview_dbms_40",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is indexing and why is it used? (Variant 40)",
+    "idealKeywords": [
+      "indexing",
+      "b-tree",
+      "search speed",
+      "query performance"
+    ],
+    "suggestedAnswer": "Indexing is a data structure technique used to quickly locate and access data in a database without searching every row, typically structured as B-Trees."
+  },
+  {
+    "id": "interview_dbms_41",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What are ACID properties in DBMS? (Variant 41)",
+    "idealKeywords": [
+      "acid",
+      "atomicity",
+      "consistency",
+      "isolation",
+      "durability"
+    ],
+    "suggestedAnswer": "ACID stands for Atomicity (all or nothing), Consistency (valid state), Isolation (independent transactions), and Durability (permanent write)."
+  },
+  {
+    "id": "interview_dbms_42",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is normalization and what is 3NF? (Variant 42)",
+    "idealKeywords": [
+      "normalization",
+      "redundancy",
+      "3nf",
+      "transitive dependency"
+    ],
+    "suggestedAnswer": "Normalization is organizing data to reduce redundancy. 3NF requires that the relation is in 2NF and has no transitive dependencies on the primary key."
+  },
+  {
+    "id": "interview_dbms_43",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is the difference between SQL and NoSQL databases? (Variant 43)",
+    "idealKeywords": [
+      "sql",
+      "nosql",
+      "schema",
+      "relational",
+      "document"
+    ],
+    "suggestedAnswer": "SQL is relational, schema-based, and scales vertically. NoSQL is non-relational, schema-less (document, key-value, graph), and scales horizontally."
+  },
+  {
+    "id": "interview_dbms_44",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "Explain Joins in SQL. (Variant 44)",
+    "idealKeywords": [
+      "join",
+      "inner join",
+      "left join",
+      "outer join"
+    ],
+    "suggestedAnswer": "Joins combine records from two or more tables based on a related column. Types include Inner, Left (Outer), Right (Outer), and Full Joins."
+  },
+  {
+    "id": "interview_dbms_45",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is indexing and why is it used? (Variant 45)",
+    "idealKeywords": [
+      "indexing",
+      "b-tree",
+      "search speed",
+      "query performance"
+    ],
+    "suggestedAnswer": "Indexing is a data structure technique used to quickly locate and access data in a database without searching every row, typically structured as B-Trees."
+  },
+  {
+    "id": "interview_dbms_46",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What are ACID properties in DBMS? (Variant 46)",
+    "idealKeywords": [
+      "acid",
+      "atomicity",
+      "consistency",
+      "isolation",
+      "durability"
+    ],
+    "suggestedAnswer": "ACID stands for Atomicity (all or nothing), Consistency (valid state), Isolation (independent transactions), and Durability (permanent write)."
+  },
+  {
+    "id": "interview_dbms_47",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is normalization and what is 3NF? (Variant 47)",
+    "idealKeywords": [
+      "normalization",
+      "redundancy",
+      "3nf",
+      "transitive dependency"
+    ],
+    "suggestedAnswer": "Normalization is organizing data to reduce redundancy. 3NF requires that the relation is in 2NF and has no transitive dependencies on the primary key."
+  },
+  {
+    "id": "interview_dbms_48",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is the difference between SQL and NoSQL databases? (Variant 48)",
+    "idealKeywords": [
+      "sql",
+      "nosql",
+      "schema",
+      "relational",
+      "document"
+    ],
+    "suggestedAnswer": "SQL is relational, schema-based, and scales vertically. NoSQL is non-relational, schema-less (document, key-value, graph), and scales horizontally."
+  },
+  {
+    "id": "interview_dbms_49",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "Explain Joins in SQL. (Variant 49)",
+    "idealKeywords": [
+      "join",
+      "inner join",
+      "left join",
+      "outer join"
+    ],
+    "suggestedAnswer": "Joins combine records from two or more tables based on a related column. Types include Inner, Left (Outer), Right (Outer), and Full Joins."
+  },
+  {
+    "id": "interview_dbms_50",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is indexing and why is it used? (Variant 50)",
+    "idealKeywords": [
+      "indexing",
+      "b-tree",
+      "search speed",
+      "query performance"
+    ],
+    "suggestedAnswer": "Indexing is a data structure technique used to quickly locate and access data in a database without searching every row, typically structured as B-Trees."
+  },
+  {
+    "id": "interview_dbms_51",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What are ACID properties in DBMS? (Variant 51)",
+    "idealKeywords": [
+      "acid",
+      "atomicity",
+      "consistency",
+      "isolation",
+      "durability"
+    ],
+    "suggestedAnswer": "ACID stands for Atomicity (all or nothing), Consistency (valid state), Isolation (independent transactions), and Durability (permanent write)."
+  },
+  {
+    "id": "interview_dbms_52",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is normalization and what is 3NF? (Variant 52)",
+    "idealKeywords": [
+      "normalization",
+      "redundancy",
+      "3nf",
+      "transitive dependency"
+    ],
+    "suggestedAnswer": "Normalization is organizing data to reduce redundancy. 3NF requires that the relation is in 2NF and has no transitive dependencies on the primary key."
+  },
+  {
+    "id": "interview_dbms_53",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is the difference between SQL and NoSQL databases? (Variant 53)",
+    "idealKeywords": [
+      "sql",
+      "nosql",
+      "schema",
+      "relational",
+      "document"
+    ],
+    "suggestedAnswer": "SQL is relational, schema-based, and scales vertically. NoSQL is non-relational, schema-less (document, key-value, graph), and scales horizontally."
+  },
+  {
+    "id": "interview_dbms_54",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "Explain Joins in SQL. (Variant 54)",
+    "idealKeywords": [
+      "join",
+      "inner join",
+      "left join",
+      "outer join"
+    ],
+    "suggestedAnswer": "Joins combine records from two or more tables based on a related column. Types include Inner, Left (Outer), Right (Outer), and Full Joins."
+  },
+  {
+    "id": "interview_dbms_55",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is indexing and why is it used? (Variant 55)",
+    "idealKeywords": [
+      "indexing",
+      "b-tree",
+      "search speed",
+      "query performance"
+    ],
+    "suggestedAnswer": "Indexing is a data structure technique used to quickly locate and access data in a database without searching every row, typically structured as B-Trees."
+  },
+  {
+    "id": "interview_dbms_56",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What are ACID properties in DBMS? (Variant 56)",
+    "idealKeywords": [
+      "acid",
+      "atomicity",
+      "consistency",
+      "isolation",
+      "durability"
+    ],
+    "suggestedAnswer": "ACID stands for Atomicity (all or nothing), Consistency (valid state), Isolation (independent transactions), and Durability (permanent write)."
+  },
+  {
+    "id": "interview_dbms_57",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is normalization and what is 3NF? (Variant 57)",
+    "idealKeywords": [
+      "normalization",
+      "redundancy",
+      "3nf",
+      "transitive dependency"
+    ],
+    "suggestedAnswer": "Normalization is organizing data to reduce redundancy. 3NF requires that the relation is in 2NF and has no transitive dependencies on the primary key."
+  },
+  {
+    "id": "interview_dbms_58",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is the difference between SQL and NoSQL databases? (Variant 58)",
+    "idealKeywords": [
+      "sql",
+      "nosql",
+      "schema",
+      "relational",
+      "document"
+    ],
+    "suggestedAnswer": "SQL is relational, schema-based, and scales vertically. NoSQL is non-relational, schema-less (document, key-value, graph), and scales horizontally."
+  },
+  {
+    "id": "interview_dbms_59",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "Explain Joins in SQL. (Variant 59)",
+    "idealKeywords": [
+      "join",
+      "inner join",
+      "left join",
+      "outer join"
+    ],
+    "suggestedAnswer": "Joins combine records from two or more tables based on a related column. Types include Inner, Left (Outer), Right (Outer), and Full Joins."
+  },
+  {
+    "id": "interview_dbms_60",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is indexing and why is it used? (Variant 60)",
+    "idealKeywords": [
+      "indexing",
+      "b-tree",
+      "search speed",
+      "query performance"
+    ],
+    "suggestedAnswer": "Indexing is a data structure technique used to quickly locate and access data in a database without searching every row, typically structured as B-Trees."
+  },
+  {
+    "id": "interview_dbms_61",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What are ACID properties in DBMS? (Variant 61)",
+    "idealKeywords": [
+      "acid",
+      "atomicity",
+      "consistency",
+      "isolation",
+      "durability"
+    ],
+    "suggestedAnswer": "ACID stands for Atomicity (all or nothing), Consistency (valid state), Isolation (independent transactions), and Durability (permanent write)."
+  },
+  {
+    "id": "interview_dbms_62",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is normalization and what is 3NF? (Variant 62)",
+    "idealKeywords": [
+      "normalization",
+      "redundancy",
+      "3nf",
+      "transitive dependency"
+    ],
+    "suggestedAnswer": "Normalization is organizing data to reduce redundancy. 3NF requires that the relation is in 2NF and has no transitive dependencies on the primary key."
+  },
+  {
+    "id": "interview_dbms_63",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is the difference between SQL and NoSQL databases? (Variant 63)",
+    "idealKeywords": [
+      "sql",
+      "nosql",
+      "schema",
+      "relational",
+      "document"
+    ],
+    "suggestedAnswer": "SQL is relational, schema-based, and scales vertically. NoSQL is non-relational, schema-less (document, key-value, graph), and scales horizontally."
+  },
+  {
+    "id": "interview_dbms_64",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "Explain Joins in SQL. (Variant 64)",
+    "idealKeywords": [
+      "join",
+      "inner join",
+      "left join",
+      "outer join"
+    ],
+    "suggestedAnswer": "Joins combine records from two or more tables based on a related column. Types include Inner, Left (Outer), Right (Outer), and Full Joins."
+  },
+  {
+    "id": "interview_dbms_65",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is indexing and why is it used? (Variant 65)",
+    "idealKeywords": [
+      "indexing",
+      "b-tree",
+      "search speed",
+      "query performance"
+    ],
+    "suggestedAnswer": "Indexing is a data structure technique used to quickly locate and access data in a database without searching every row, typically structured as B-Trees."
+  },
+  {
+    "id": "interview_dbms_66",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What are ACID properties in DBMS? (Variant 66)",
+    "idealKeywords": [
+      "acid",
+      "atomicity",
+      "consistency",
+      "isolation",
+      "durability"
+    ],
+    "suggestedAnswer": "ACID stands for Atomicity (all or nothing), Consistency (valid state), Isolation (independent transactions), and Durability (permanent write)."
+  },
+  {
+    "id": "interview_dbms_67",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is normalization and what is 3NF? (Variant 67)",
+    "idealKeywords": [
+      "normalization",
+      "redundancy",
+      "3nf",
+      "transitive dependency"
+    ],
+    "suggestedAnswer": "Normalization is organizing data to reduce redundancy. 3NF requires that the relation is in 2NF and has no transitive dependencies on the primary key."
+  },
+  {
+    "id": "interview_dbms_68",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is the difference between SQL and NoSQL databases? (Variant 68)",
+    "idealKeywords": [
+      "sql",
+      "nosql",
+      "schema",
+      "relational",
+      "document"
+    ],
+    "suggestedAnswer": "SQL is relational, schema-based, and scales vertically. NoSQL is non-relational, schema-less (document, key-value, graph), and scales horizontally."
+  },
+  {
+    "id": "interview_dbms_69",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "Explain Joins in SQL. (Variant 69)",
+    "idealKeywords": [
+      "join",
+      "inner join",
+      "left join",
+      "outer join"
+    ],
+    "suggestedAnswer": "Joins combine records from two or more tables based on a related column. Types include Inner, Left (Outer), Right (Outer), and Full Joins."
+  },
+  {
+    "id": "interview_dbms_70",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is indexing and why is it used? (Variant 70)",
+    "idealKeywords": [
+      "indexing",
+      "b-tree",
+      "search speed",
+      "query performance"
+    ],
+    "suggestedAnswer": "Indexing is a data structure technique used to quickly locate and access data in a database without searching every row, typically structured as B-Trees."
+  },
+  {
+    "id": "interview_dbms_71",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What are ACID properties in DBMS? (Variant 71)",
+    "idealKeywords": [
+      "acid",
+      "atomicity",
+      "consistency",
+      "isolation",
+      "durability"
+    ],
+    "suggestedAnswer": "ACID stands for Atomicity (all or nothing), Consistency (valid state), Isolation (independent transactions), and Durability (permanent write)."
+  },
+  {
+    "id": "interview_dbms_72",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is normalization and what is 3NF? (Variant 72)",
+    "idealKeywords": [
+      "normalization",
+      "redundancy",
+      "3nf",
+      "transitive dependency"
+    ],
+    "suggestedAnswer": "Normalization is organizing data to reduce redundancy. 3NF requires that the relation is in 2NF and has no transitive dependencies on the primary key."
+  },
+  {
+    "id": "interview_dbms_73",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is the difference between SQL and NoSQL databases? (Variant 73)",
+    "idealKeywords": [
+      "sql",
+      "nosql",
+      "schema",
+      "relational",
+      "document"
+    ],
+    "suggestedAnswer": "SQL is relational, schema-based, and scales vertically. NoSQL is non-relational, schema-less (document, key-value, graph), and scales horizontally."
+  },
+  {
+    "id": "interview_dbms_74",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "Explain Joins in SQL. (Variant 74)",
+    "idealKeywords": [
+      "join",
+      "inner join",
+      "left join",
+      "outer join"
+    ],
+    "suggestedAnswer": "Joins combine records from two or more tables based on a related column. Types include Inner, Left (Outer), Right (Outer), and Full Joins."
+  },
+  {
+    "id": "interview_dbms_75",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is indexing and why is it used? (Variant 75)",
+    "idealKeywords": [
+      "indexing",
+      "b-tree",
+      "search speed",
+      "query performance"
+    ],
+    "suggestedAnswer": "Indexing is a data structure technique used to quickly locate and access data in a database without searching every row, typically structured as B-Trees."
+  },
+  {
+    "id": "interview_dbms_76",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What are ACID properties in DBMS? (Variant 76)",
+    "idealKeywords": [
+      "acid",
+      "atomicity",
+      "consistency",
+      "isolation",
+      "durability"
+    ],
+    "suggestedAnswer": "ACID stands for Atomicity (all or nothing), Consistency (valid state), Isolation (independent transactions), and Durability (permanent write)."
+  },
+  {
+    "id": "interview_dbms_77",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is normalization and what is 3NF? (Variant 77)",
+    "idealKeywords": [
+      "normalization",
+      "redundancy",
+      "3nf",
+      "transitive dependency"
+    ],
+    "suggestedAnswer": "Normalization is organizing data to reduce redundancy. 3NF requires that the relation is in 2NF and has no transitive dependencies on the primary key."
+  },
+  {
+    "id": "interview_dbms_78",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is the difference between SQL and NoSQL databases? (Variant 78)",
+    "idealKeywords": [
+      "sql",
+      "nosql",
+      "schema",
+      "relational",
+      "document"
+    ],
+    "suggestedAnswer": "SQL is relational, schema-based, and scales vertically. NoSQL is non-relational, schema-less (document, key-value, graph), and scales horizontally."
+  },
+  {
+    "id": "interview_dbms_79",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "Explain Joins in SQL. (Variant 79)",
+    "idealKeywords": [
+      "join",
+      "inner join",
+      "left join",
+      "outer join"
+    ],
+    "suggestedAnswer": "Joins combine records from two or more tables based on a related column. Types include Inner, Left (Outer), Right (Outer), and Full Joins."
+  },
+  {
+    "id": "interview_dbms_80",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is indexing and why is it used? (Variant 80)",
+    "idealKeywords": [
+      "indexing",
+      "b-tree",
+      "search speed",
+      "query performance"
+    ],
+    "suggestedAnswer": "Indexing is a data structure technique used to quickly locate and access data in a database without searching every row, typically structured as B-Trees."
+  },
+  {
+    "id": "interview_dbms_81",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What are ACID properties in DBMS? (Variant 81)",
+    "idealKeywords": [
+      "acid",
+      "atomicity",
+      "consistency",
+      "isolation",
+      "durability"
+    ],
+    "suggestedAnswer": "ACID stands for Atomicity (all or nothing), Consistency (valid state), Isolation (independent transactions), and Durability (permanent write)."
+  },
+  {
+    "id": "interview_dbms_82",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is normalization and what is 3NF? (Variant 82)",
+    "idealKeywords": [
+      "normalization",
+      "redundancy",
+      "3nf",
+      "transitive dependency"
+    ],
+    "suggestedAnswer": "Normalization is organizing data to reduce redundancy. 3NF requires that the relation is in 2NF and has no transitive dependencies on the primary key."
+  },
+  {
+    "id": "interview_dbms_83",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is the difference between SQL and NoSQL databases? (Variant 83)",
+    "idealKeywords": [
+      "sql",
+      "nosql",
+      "schema",
+      "relational",
+      "document"
+    ],
+    "suggestedAnswer": "SQL is relational, schema-based, and scales vertically. NoSQL is non-relational, schema-less (document, key-value, graph), and scales horizontally."
+  },
+  {
+    "id": "interview_dbms_84",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "Explain Joins in SQL. (Variant 84)",
+    "idealKeywords": [
+      "join",
+      "inner join",
+      "left join",
+      "outer join"
+    ],
+    "suggestedAnswer": "Joins combine records from two or more tables based on a related column. Types include Inner, Left (Outer), Right (Outer), and Full Joins."
+  },
+  {
+    "id": "interview_dbms_85",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is indexing and why is it used? (Variant 85)",
+    "idealKeywords": [
+      "indexing",
+      "b-tree",
+      "search speed",
+      "query performance"
+    ],
+    "suggestedAnswer": "Indexing is a data structure technique used to quickly locate and access data in a database without searching every row, typically structured as B-Trees."
+  },
+  {
+    "id": "interview_dbms_86",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What are ACID properties in DBMS? (Variant 86)",
+    "idealKeywords": [
+      "acid",
+      "atomicity",
+      "consistency",
+      "isolation",
+      "durability"
+    ],
+    "suggestedAnswer": "ACID stands for Atomicity (all or nothing), Consistency (valid state), Isolation (independent transactions), and Durability (permanent write)."
+  },
+  {
+    "id": "interview_dbms_87",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is normalization and what is 3NF? (Variant 87)",
+    "idealKeywords": [
+      "normalization",
+      "redundancy",
+      "3nf",
+      "transitive dependency"
+    ],
+    "suggestedAnswer": "Normalization is organizing data to reduce redundancy. 3NF requires that the relation is in 2NF and has no transitive dependencies on the primary key."
+  },
+  {
+    "id": "interview_dbms_88",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is the difference between SQL and NoSQL databases? (Variant 88)",
+    "idealKeywords": [
+      "sql",
+      "nosql",
+      "schema",
+      "relational",
+      "document"
+    ],
+    "suggestedAnswer": "SQL is relational, schema-based, and scales vertically. NoSQL is non-relational, schema-less (document, key-value, graph), and scales horizontally."
+  },
+  {
+    "id": "interview_dbms_89",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "Explain Joins in SQL. (Variant 89)",
+    "idealKeywords": [
+      "join",
+      "inner join",
+      "left join",
+      "outer join"
+    ],
+    "suggestedAnswer": "Joins combine records from two or more tables based on a related column. Types include Inner, Left (Outer), Right (Outer), and Full Joins."
+  },
+  {
+    "id": "interview_dbms_90",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is indexing and why is it used? (Variant 90)",
+    "idealKeywords": [
+      "indexing",
+      "b-tree",
+      "search speed",
+      "query performance"
+    ],
+    "suggestedAnswer": "Indexing is a data structure technique used to quickly locate and access data in a database without searching every row, typically structured as B-Trees."
+  },
+  {
+    "id": "interview_dbms_91",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What are ACID properties in DBMS? (Variant 91)",
+    "idealKeywords": [
+      "acid",
+      "atomicity",
+      "consistency",
+      "isolation",
+      "durability"
+    ],
+    "suggestedAnswer": "ACID stands for Atomicity (all or nothing), Consistency (valid state), Isolation (independent transactions), and Durability (permanent write)."
+  },
+  {
+    "id": "interview_dbms_92",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is normalization and what is 3NF? (Variant 92)",
+    "idealKeywords": [
+      "normalization",
+      "redundancy",
+      "3nf",
+      "transitive dependency"
+    ],
+    "suggestedAnswer": "Normalization is organizing data to reduce redundancy. 3NF requires that the relation is in 2NF and has no transitive dependencies on the primary key."
+  },
+  {
+    "id": "interview_dbms_93",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is the difference between SQL and NoSQL databases? (Variant 93)",
+    "idealKeywords": [
+      "sql",
+      "nosql",
+      "schema",
+      "relational",
+      "document"
+    ],
+    "suggestedAnswer": "SQL is relational, schema-based, and scales vertically. NoSQL is non-relational, schema-less (document, key-value, graph), and scales horizontally."
+  },
+  {
+    "id": "interview_dbms_94",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "Explain Joins in SQL. (Variant 94)",
+    "idealKeywords": [
+      "join",
+      "inner join",
+      "left join",
+      "outer join"
+    ],
+    "suggestedAnswer": "Joins combine records from two or more tables based on a related column. Types include Inner, Left (Outer), Right (Outer), and Full Joins."
+  },
+  {
+    "id": "interview_dbms_95",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is indexing and why is it used? (Variant 95)",
+    "idealKeywords": [
+      "indexing",
+      "b-tree",
+      "search speed",
+      "query performance"
+    ],
+    "suggestedAnswer": "Indexing is a data structure technique used to quickly locate and access data in a database without searching every row, typically structured as B-Trees."
+  },
+  {
+    "id": "interview_dbms_96",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What are ACID properties in DBMS? (Variant 96)",
+    "idealKeywords": [
+      "acid",
+      "atomicity",
+      "consistency",
+      "isolation",
+      "durability"
+    ],
+    "suggestedAnswer": "ACID stands for Atomicity (all or nothing), Consistency (valid state), Isolation (independent transactions), and Durability (permanent write)."
+  },
+  {
+    "id": "interview_dbms_97",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is normalization and what is 3NF? (Variant 97)",
+    "idealKeywords": [
+      "normalization",
+      "redundancy",
+      "3nf",
+      "transitive dependency"
+    ],
+    "suggestedAnswer": "Normalization is organizing data to reduce redundancy. 3NF requires that the relation is in 2NF and has no transitive dependencies on the primary key."
+  },
+  {
+    "id": "interview_dbms_98",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is the difference between SQL and NoSQL databases? (Variant 98)",
+    "idealKeywords": [
+      "sql",
+      "nosql",
+      "schema",
+      "relational",
+      "document"
+    ],
+    "suggestedAnswer": "SQL is relational, schema-based, and scales vertically. NoSQL is non-relational, schema-less (document, key-value, graph), and scales horizontally."
+  },
+  {
+    "id": "interview_dbms_99",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "Explain Joins in SQL. (Variant 99)",
+    "idealKeywords": [
+      "join",
+      "inner join",
+      "left join",
+      "outer join"
+    ],
+    "suggestedAnswer": "Joins combine records from two or more tables based on a related column. Types include Inner, Left (Outer), Right (Outer), and Full Joins."
+  },
+  {
+    "id": "interview_dbms_100",
+    "type": "technical",
+    "role": "Dbms Developer",
+    "questionText": "What is indexing and why is it used? (Variant 100)",
+    "idealKeywords": [
+      "indexing",
+      "b-tree",
+      "search speed",
+      "query performance"
+    ],
+    "suggestedAnswer": "Indexing is a data structure technique used to quickly locate and access data in a database without searching every row, typically structured as B-Trees."
+  }
+]
