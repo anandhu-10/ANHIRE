@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
+import '../../firebase_options.dart';
 
 class FirebaseService {
   static bool _initialized = false;
@@ -13,7 +14,9 @@ class FirebaseService {
 
     try {
       // In web/desktop or if configuration files are missing, this might throw
-      await Firebase.initializeApp();
+      await Firebase.initializeApp(
+        options: DefaultFirebaseOptions.currentPlatform,
+      );
       _initialized = true;
       _fallbackMode = false;
       debugPrint("Firebase successfully initialized.");
