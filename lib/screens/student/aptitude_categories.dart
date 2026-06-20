@@ -5,6 +5,7 @@ import 'package:intl/intl.dart';
 import '../../providers/auth_provider.dart';
 import '../../providers/assessment_provider.dart';
 import '../../widgets/app_drawer.dart';
+import '../../widgets/responsive_scaffold.dart';
 
 class AptitudeCategoriesScreen extends ConsumerStatefulWidget {
   const AptitudeCategoriesScreen({super.key});
@@ -45,21 +46,25 @@ class _AptitudeCategoriesScreenState extends ConsumerState<AptitudeCategoriesScr
       },
     ];
 
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("Aptitude Preparation"),
-      ),
-      drawer: const AppDrawer(),
+    return ResponsiveScaffold(
+      title: "Aptitude Preparation",
       body: SingleChildScrollView(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            const Text(
-              "Choose Category & Difficulty",
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Color(0xFF1E293B)),
-            ),
-            const SizedBox(height: 12),
+        padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 20.0),
+        child: Center(
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 800),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Text(
+                  "Choose Category & Difficulty",
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    color: Theme.of(context).colorScheme.onSurface,
+                  ),
+                ),
+                const SizedBox(height: 12),
 
             // Difficulty selector buttons
             Row(
@@ -97,10 +102,17 @@ class _AptitudeCategoriesScreenState extends ConsumerState<AptitudeCategoriesScr
                       padding: const EdgeInsets.only(top: 4.0),
                       child: Text(
                         cat['desc'] as String,
-                        style: const TextStyle(fontSize: 11, color: Color(0xFF64748B)),
+                        style: TextStyle(
+                          fontSize: 11,
+                          color: Theme.of(context).colorScheme.onSurface.withOpacity(0.55),
+                        ),
                       ),
                     ),
-                    trailing: const Icon(Icons.arrow_forward_ios, size: 16, color: Color(0xFF64748B)),
+                    trailing: Icon(
+                      Icons.arrow_forward_ios,
+                      size: 16,
+                      color: Theme.of(context).colorScheme.onSurface.withOpacity(0.55),
+                    ),
                     onTap: () {
                       context.push(
                         '/aptitude-test/${cat['id']}/${_selectedDifficulty}',
@@ -112,9 +124,13 @@ class _AptitudeCategoriesScreenState extends ConsumerState<AptitudeCategoriesScr
             ),
             const SizedBox(height: 24),
 
-            const Text(
+            Text(
               "Attempt History",
-              style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Color(0xFF1E293B)),
+              style: TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.bold,
+                color: Theme.of(context).colorScheme.onSurface,
+              ),
             ),
             const SizedBox(height: 12),
 
@@ -127,12 +143,15 @@ class _AptitudeCategoriesScreenState extends ConsumerState<AptitudeCategoriesScr
                 }
                 final list = snapshot.data ?? [];
                 if (list.isEmpty) {
-                  return const Card(
+                  return Card(
                     child: Padding(
-                      padding: EdgeInsets.all(24.0),
+                      padding: const EdgeInsets.all(24.0),
                       child: Text(
                         "No test attempts yet. Select a category above to start your practice!",
-                        style: TextStyle(fontSize: 12, color: Color(0xFF64748B)),
+                        style: TextStyle(
+                          fontSize: 12,
+                          color: Theme.of(context).colorScheme.onSurface.withOpacity(0.6),
+                        ),
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -155,7 +174,10 @@ class _AptitudeCategoriesScreenState extends ConsumerState<AptitudeCategoriesScr
                         ),
                         subtitle: Text(
                           "Date: ${DateFormat('dd-MMM-yyyy kk:mm').format(item.attemptedAt)} | Time: ${item.timeTakenSeconds}s",
-                          style: const TextStyle(fontSize: 11, color: Color(0xFF64748B)),
+                          style: TextStyle(
+                            fontSize: 11,
+                            color: Theme.of(context).colorScheme.onSurface.withOpacity(0.55),
+                          ),
                         ),
                         trailing: CircleAvatar(
                           backgroundColor: item.score >= 70 ? Colors.green.shade50 : Colors.orange.shade50,
@@ -179,7 +201,9 @@ class _AptitudeCategoriesScreenState extends ConsumerState<AptitudeCategoriesScr
           ],
         ),
       ),
-    );
+    ),
+  ),
+);
   }
 
   Widget _buildDifficultyChip(String difficulty, String label, Color activeColor) {
@@ -188,9 +212,9 @@ class _AptitudeCategoriesScreenState extends ConsumerState<AptitudeCategoriesScr
       child: OutlinedButton(
         style: OutlinedButton.styleFrom(
           backgroundColor: isSelected ? activeColor.withOpacity(0.1) : Colors.transparent,
-          foregroundColor: isSelected ? activeColor : const Color(0xFF64748B),
+          foregroundColor: isSelected ? activeColor : Theme.of(context).colorScheme.onSurface.withOpacity(0.6),
           side: BorderSide(
-            color: isSelected ? activeColor : const Color(0xFFE2E8F0),
+            color: isSelected ? activeColor : Theme.of(context).dividerColor,
             width: isSelected ? 1.5 : 1,
           ),
           shape: const RoundedRectangleBorder(

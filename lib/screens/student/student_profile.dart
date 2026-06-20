@@ -5,6 +5,7 @@ import 'package:file_picker/file_picker.dart';
 import '../../models/profile_model.dart';
 import '../../providers/user_provider.dart';
 import '../../widgets/app_drawer.dart';
+import '../../widgets/responsive_scaffold.dart';
 
 class StudentProfileScreen extends ConsumerStatefulWidget {
   const StudentProfileScreen({super.key});
@@ -150,65 +151,72 @@ class _StudentProfileScreenState extends ConsumerState<StudentProfileScreen> {
       "Data Analyst"
     ];
 
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("Student Profile"),
-      ),
-      drawer: const AppDrawer(),
+    return ResponsiveScaffold(
+      title: "Student Profile",
       body: profileState.isLoading || profile == null
           ? const Center(child: CircularProgressIndicator())
           : SingleChildScrollView(
-              padding: const EdgeInsets.all(16.0),
-              child: Form(
-                key: _formKey,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    // Avatar Block
-                    Center(
-                      child: Column(
-                        children: [
-                          Stack(
+              padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 20.0),
+              child: Center(
+                child: ConstrainedBox(
+                  constraints: const BoxConstraints(maxWidth: 800),
+                  child: Form(
+                    key: _formKey,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        // Avatar Block
+                        Center(
+                          child: Column(
                             children: [
-                              CircleAvatar(
-                                radius: 50,
-                                backgroundColor: Colors.blue.shade100,
-                                backgroundImage: profile.profileImageUrl.isNotEmpty
-                                    ? NetworkImage(profile.profileImageUrl)
-                                    : null,
-                                child: profile.profileImageUrl.isEmpty
-                                    ? const Icon(Icons.person, size: 50, color: Color(0xFF2563EB))
-                                    : null,
-                              ),
-                              Positioned(
-                                bottom: 0,
-                                right: 0,
-                                child: InkWell(
-                                  onTap: _selectProfileImage,
-                                  child: const CircleAvatar(
-                                    radius: 16,
-                                    backgroundColor: Color(0xFF2563EB),
-                                    child: Icon(Icons.camera_alt_outlined, size: 16, color: Colors.white),
+                              Stack(
+                                children: [
+                                  CircleAvatar(
+                                    radius: 50,
+                                    backgroundColor: Theme.of(context).colorScheme.primary.withOpacity(0.1),
+                                    backgroundImage: profile.profileImageUrl.isNotEmpty
+                                        ? NetworkImage(profile.profileImageUrl)
+                                        : null,
+                                    child: profile.profileImageUrl.isEmpty
+                                        ? Icon(Icons.person, size: 50, color: Theme.of(context).colorScheme.primary)
+                                        : null,
                                   ),
+                                  Positioned(
+                                    bottom: 0,
+                                    right: 0,
+                                    child: InkWell(
+                                      onTap: _selectProfileImage,
+                                      child: CircleAvatar(
+                                        radius: 16,
+                                        backgroundColor: Theme.of(context).colorScheme.primary,
+                                        child: const Icon(Icons.camera_alt_outlined, size: 16, color: Colors.white),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              const SizedBox(height: 8),
+                              Text(
+                                profile.email,
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  color: Theme.of(context).colorScheme.onSurface.withOpacity(0.6),
                                 ),
                               ),
                             ],
                           ),
-                          const SizedBox(height: 8),
-                          Text(
-                            profile.email,
-                            style: const TextStyle(fontSize: 12, color: Color(0xFF64748B)),
-                          ),
-                        ],
-                      ),
-                    ),
-                    const SizedBox(height: 24),
+                        ),
+                        const SizedBox(height: 24),
 
-                    const Text(
-                      "Personal Information",
-                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Color(0xFF1E293B)),
-                    ),
-                    const SizedBox(height: 12),
+                        Text(
+                          "Personal Information",
+                          style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                            color: Theme.of(context).colorScheme.onSurface,
+                          ),
+                        ),
+                        const SizedBox(height: 12),
 
                     TextFormField(
                       controller: _nameController,
@@ -231,9 +239,13 @@ class _StudentProfileScreenState extends ConsumerState<StudentProfileScreen> {
                     ),
                     const SizedBox(height: 24),
 
-                    const Text(
+                    Text(
                       "Academic Details",
-                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Color(0xFF1E293B)),
+                      style: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                        color: Theme.of(context).colorScheme.onSurface,
+                      ),
                     ),
                     const SizedBox(height: 12),
 
@@ -313,9 +325,13 @@ class _StudentProfileScreenState extends ConsumerState<StudentProfileScreen> {
                     ),
                     const SizedBox(height: 24),
 
-                    const Text(
+                    Text(
                       "Target Placement Preferences",
-                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Color(0xFF1E293B)),
+                      style: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                        color: Theme.of(context).colorScheme.onSurface,
+                      ),
                     ),
                     const SizedBox(height: 12),
 
@@ -341,13 +357,16 @@ class _StudentProfileScreenState extends ConsumerState<StudentProfileScreen> {
                     ),
                     const SizedBox(height: 24),
 
-                    const Text(
+                    Text(
                       "Skills & Portfolio Links",
-                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Color(0xFF1E293B)),
+                      style: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                        color: Theme.of(context).colorScheme.onSurface,
+                      ),
                     ),
                     const SizedBox(height: 12),
 
-                    // Skill Inputs
                     Row(
                       children: [
                         Expanded(
@@ -362,7 +381,7 @@ class _StudentProfileScreenState extends ConsumerState<StudentProfileScreen> {
                         ),
                         const SizedBox(width: 8),
                         IconButton(
-                          icon: const Icon(Icons.add_circle, size: 40, color: Color(0xFF2563EB)),
+                          icon: Icon(Icons.add_circle, size: 40, color: Theme.of(context).colorScheme.primary),
                           onPressed: _addSkill,
                         )
                       ],
@@ -376,8 +395,9 @@ class _StudentProfileScreenState extends ConsumerState<StudentProfileScreen> {
                           label: Text(skill),
                           onDeleted: () => _removeSkill(skill),
                           deleteIconColor: Colors.redAccent,
-                          backgroundColor: Colors.blue.shade50,
-                          labelStyle: const TextStyle(fontSize: 12, color: Color(0xFF1E293B)),
+                          backgroundColor: Theme.of(context).colorScheme.primary.withOpacity(0.08),
+                          labelStyle: TextStyle(fontSize: 12, color: Theme.of(context).colorScheme.onSurface),
+                          side: BorderSide(color: Theme.of(context).colorScheme.primary.withOpacity(0.2)),
                         );
                       }).toList(),
                     ),
@@ -410,6 +430,8 @@ class _StudentProfileScreenState extends ConsumerState<StudentProfileScreen> {
                 ),
               ),
             ),
-    );
+          ),
+        ),
+      );
   }
 }

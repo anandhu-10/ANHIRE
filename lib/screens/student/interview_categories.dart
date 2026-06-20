@@ -5,6 +5,7 @@ import 'package:intl/intl.dart';
 import '../../providers/auth_provider.dart';
 import '../../providers/assessment_provider.dart';
 import '../../widgets/app_drawer.dart';
+import '../../widgets/responsive_scaffold.dart';
 
 class InterviewCategoriesScreen extends ConsumerWidget {
   const InterviewCategoriesScreen({super.key});
@@ -22,21 +23,25 @@ class InterviewCategoriesScreen extends ConsumerWidget {
       {"id": "dbms", "title": "DBMS Technical Interview", "desc": "ACID properties, B-Tree indices, SQL normalization, Joins.", "icon": Icons.storage_outlined, "color": Colors.teal},
     ];
 
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("Mock Interviews"),
-      ),
-      drawer: const AppDrawer(),
+    return ResponsiveScaffold(
+      title: "Mock Interviews",
       body: SingleChildScrollView(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            const Text(
-              "Select Interview Topic",
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Color(0xFF1E293B)),
-            ),
-            const SizedBox(height: 12),
+        padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 20.0),
+        child: Center(
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 800),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Text(
+                  "Select Interview Topic",
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    color: Theme.of(context).colorScheme.onSurface,
+                  ),
+                ),
+                const SizedBox(height: 12),
 
             ListView.builder(
               shrinkWrap: true,
@@ -61,10 +66,17 @@ class InterviewCategoriesScreen extends ConsumerWidget {
                       padding: const EdgeInsets.only(top: 4.0),
                       child: Text(
                         str['desc'] as String,
-                        style: const TextStyle(fontSize: 11, color: Color(0xFF64748B)),
+                        style: TextStyle(
+                          fontSize: 11,
+                          color: Theme.of(context).colorScheme.onSurface.withOpacity(0.55),
+                        ),
                       ),
                     ),
-                    trailing: const Icon(Icons.play_circle_outline, size: 24, color: Color(0xFF2563EB)),
+                    trailing: Icon(
+                      Icons.play_circle_outline,
+                      size: 24,
+                      color: Theme.of(context).colorScheme.primary,
+                    ),
                     onTap: () {
                       context.push('/mock-interview-session/${str['id']}');
                     },
@@ -74,9 +86,13 @@ class InterviewCategoriesScreen extends ConsumerWidget {
             ),
             const SizedBox(height: 24),
 
-            const Text(
+            Text(
               "Interview History",
-              style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Color(0xFF1E293B)),
+              style: TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.bold,
+                color: Theme.of(context).colorScheme.onSurface,
+              ),
             ),
             const SizedBox(height: 12),
 
@@ -89,12 +105,15 @@ class InterviewCategoriesScreen extends ConsumerWidget {
                 }
                 final list = snapshot.data ?? [];
                 if (list.isEmpty) {
-                  return const Card(
+                  return Card(
                     child: Padding(
-                      padding: EdgeInsets.all(24.0),
+                      padding: const EdgeInsets.all(24.0),
                       child: Text(
                         "No mock interviews taken yet. Select a stream above to practice your viva answers!",
-                        style: TextStyle(fontSize: 12, color: Color(0xFF64748B)),
+                        style: TextStyle(
+                          fontSize: 12,
+                          color: Theme.of(context).colorScheme.onSurface.withOpacity(0.6),
+                        ),
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -117,7 +136,11 @@ class InterviewCategoriesScreen extends ConsumerWidget {
                         ),
                         subtitle: Text(
                           "Date: ${DateFormat('dd-MMM-yyyy kk:mm').format(item.attemptedAt)}\nFeedback: ${item.feedback}",
-                          style: const TextStyle(fontSize: 11, color: Color(0xFF64748B), height: 1.3),
+                          style: TextStyle(
+                            fontSize: 11,
+                            color: Theme.of(context).colorScheme.onSurface.withOpacity(0.55),
+                            height: 1.3,
+                          ),
                         ),
                         trailing: CircleAvatar(
                           backgroundColor: item.score >= 80 ? Colors.green.shade50 : Colors.orange.shade50,
@@ -142,6 +165,8 @@ class InterviewCategoriesScreen extends ConsumerWidget {
           ],
         ),
       ),
-    );
+    ),
+  ),
+);
   }
 }

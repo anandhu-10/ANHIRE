@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../providers/leaderboard_provider.dart';
 import '../../providers/user_provider.dart';
 import '../../widgets/app_drawer.dart';
+import '../../widgets/responsive_scaffold.dart';
 
 class LeaderboardScreen extends ConsumerStatefulWidget {
   const LeaderboardScreen({super.key});
@@ -58,41 +59,41 @@ class _LeaderboardScreenState extends ConsumerState<LeaderboardScreen> {
       collegeRank = globalRank == 1 ? 1 : 2; // Mock fallback
     }
 
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("Student Leaderboard"),
-      ),
-      drawer: const AppDrawer(),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            // Current User Rank Dashboard Widget
-            if (profile != null) ...[
-              Card(
-                color: const Color(0xFFF8FAFC),
-                shape: RoundedRectangleBorder(
-                  borderRadius: const BorderRadius.all(Radius.circular(12)),
-                  side: BorderSide(color: const Color(0xFFE2E8F0)),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      _buildRankBadge("Global Rank", "#$globalRank", Icons.public, Colors.blue),
-                      const SizedBox(
-                        height: 40,
-                        child: VerticalDivider(color: Color(0xFFE2E8F0), width: 2),
+    return ResponsiveScaffold(
+      title: "Student Leaderboard",
+      body: Center(
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 800),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 20.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                // Current User Rank Dashboard Widget
+                if (profile != null) ...[
+                  Card(
+                    color: Theme.of(context).colorScheme.primary.withOpacity(0.05),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: const BorderRadius.all(Radius.circular(12)),
+                      side: BorderSide(color: Theme.of(context).colorScheme.primary.withOpacity(0.15)),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          _buildRankBadge(context, "Global Rank", "#$globalRank", Icons.public, Theme.of(context).colorScheme.primary),
+                          SizedBox(
+                            height: 40,
+                            child: VerticalDivider(color: Theme.of(context).dividerColor, width: 2),
+                          ),
+                          _buildRankBadge(context, "College Rank", "#$collegeRank", Icons.school, Colors.green),
+                        ],
                       ),
-                      _buildRankBadge("College Rank", "#$collegeRank", Icons.school, Colors.green),
-                    ],
+                    ),
                   ),
-                ),
-              ),
-              const SizedBox(height: 20),
-            ],
+                  const SizedBox(height: 20),
+                ],
 
             // Search Filter Block
             Row(
@@ -141,11 +142,15 @@ class _LeaderboardScreenState extends ConsumerState<LeaderboardScreen> {
 
                             return Card(
                               margin: const EdgeInsets.only(bottom: 10),
-                              color: isMe ? const Color(0xFFEFF6FF) : Colors.white,
+                              color: isMe 
+                                  ? Theme.of(context).colorScheme.primary.withOpacity(0.08) 
+                                  : Theme.of(context).cardTheme.color ?? Theme.of(context).colorScheme.surface,
                               shape: RoundedRectangleBorder(
                                 borderRadius: const BorderRadius.all(Radius.circular(8)),
                                 side: BorderSide(
-                                  color: isMe ? const Color(0xFF2563EB) : const Color(0xFFE2E8F0),
+                                  color: isMe 
+                                      ? Theme.of(context).colorScheme.primary 
+                                      : Theme.of(context).dividerColor.withOpacity(0.08),
                                   width: isMe ? 1.5 : 1,
                                 ),
                               ),
@@ -156,17 +161,20 @@ class _LeaderboardScreenState extends ConsumerState<LeaderboardScreen> {
                                     child: _getRankLeading(index + 1),
                                   ),
                                 ),
-                                title: Text(
+                                 title: Text(
                                   entry.name,
                                   style: TextStyle(
                                     fontWeight: isMe ? FontWeight.bold : FontWeight.normal,
-                                    color: const Color(0xFF1E293B),
+                                    color: Theme.of(context).colorScheme.onSurface,
                                     fontSize: 13.5,
                                   ),
                                 ),
                                 subtitle: Text(
                                   entry.collegeName,
-                                  style: const TextStyle(fontSize: 11, color: Color(0xFF64748B)),
+                                  style: TextStyle(
+                                    fontSize: 11,
+                                    color: Theme.of(context).colorScheme.onSurface.withOpacity(0.55),
+                                  ),
                                 ),
                                 trailing: Row(
                                   mainAxisSize: MainAxisSize.min,
@@ -177,15 +185,18 @@ class _LeaderboardScreenState extends ConsumerState<LeaderboardScreen> {
                                       children: [
                                         Text(
                                           "${entry.readinessScore.round()}%",
-                                          style: const TextStyle(
+                                          style: TextStyle(
                                             fontWeight: FontWeight.bold,
                                             fontSize: 14,
-                                            color: Color(0xFF2563EB),
+                                            color: Theme.of(context).colorScheme.primary,
                                           ),
                                         ),
-                                        const Text(
+                                        Text(
                                           "Readiness Score",
-                                          style: TextStyle(fontSize: 8, color: Color(0xFF64748B)),
+                                          style: TextStyle(
+                                            fontSize: 8,
+                                            color: Theme.of(context).colorScheme.onSurface.withOpacity(0.55),
+                                          ),
                                         ),
                                       ],
                                     ),
@@ -196,13 +207,15 @@ class _LeaderboardScreenState extends ConsumerState<LeaderboardScreen> {
                           },
                         ),
             ),
-          ],
+              ],
+            ),
+          ),
         ),
       ),
     );
   }
 
-  Widget _buildRankBadge(String label, String value, IconData icon, Color color) {
+  Widget _buildRankBadge(BuildContext context, String label, String value, IconData icon, Color color) {
     return Row(
       children: [
         CircleAvatar(
@@ -216,7 +229,10 @@ class _LeaderboardScreenState extends ConsumerState<LeaderboardScreen> {
           children: [
             Text(
               label,
-              style: const TextStyle(fontSize: 11, color: Color(0xFF64748B)),
+              style: TextStyle(
+                fontSize: 11,
+                color: Theme.of(context).colorScheme.onSurface.withOpacity(0.55),
+              ),
             ),
             Text(
               value,
@@ -240,7 +256,11 @@ class _LeaderboardScreenState extends ConsumerState<LeaderboardScreen> {
     }
     return Text(
       "$rank",
-      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Color(0xFF64748B)),
+      style: TextStyle(
+        fontWeight: FontWeight.bold,
+        fontSize: 13,
+        color: Theme.of(context).colorScheme.onSurface.withOpacity(0.6),
+      ),
     );
   }
 }

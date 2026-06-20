@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../providers/assessment_provider.dart';
 import '../../providers/user_provider.dart';
 import '../../widgets/app_drawer.dart';
+import '../../widgets/responsive_scaffold.dart';
 
 class RoadmapScreen extends ConsumerStatefulWidget {
   const RoadmapScreen({super.key});
@@ -35,63 +36,85 @@ class _RoadmapScreenState extends ConsumerState<RoadmapScreen> {
     final roadmapState = ref.watch(roadmapProvider);
     final roadmap = roadmapState.roadmap;
 
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("Weekly Roadmap"),
-      ),
-      drawer: const AppDrawer(),
+    return ResponsiveScaffold(
+      title: "Weekly Roadmap",
       body: profileState.isLoading || roadmapState.isLoading || roadmap == null
           ? const Center(child: CircularProgressIndicator())
           : SingleChildScrollView(
-              padding: const EdgeInsets.all(16.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  // Roadmap info header
-                  Text(
-                    "Syllabus for ${roadmap.targetRole}",
-                    style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Color(0xFF1E293B)),
-                  ),
-                  const SizedBox(height: 6),
-                  const Text(
-                    "This structured 4-week plan focuses on key competencies identified as missing or critical for your target role.",
-                    style: TextStyle(fontSize: 12, color: Color(0xFF64748B), height: 1.4),
-                  ),
-                  const SizedBox(height: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 20.0),
+              child: Center(
+                child: ConstrainedBox(
+                  constraints: const BoxConstraints(maxWidth: 800),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      // Roadmap info header
+                      Text(
+                        "Syllabus for ${roadmap.targetRole}",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Theme.of(context).colorScheme.onSurface,
+                        ),
+                      ),
+                      const SizedBox(height: 6),
+                      Text(
+                        "This structured 4-week plan focuses on key competencies identified as missing or critical for your target role.",
+                        style: TextStyle(
+                          fontSize: 12,
+                          color: Theme.of(context).colorScheme.onSurface.withOpacity(0.6),
+                          height: 1.4,
+                        ),
+                      ),
+                      const SizedBox(height: 20),
 
-                  // Progress Card
-                  Card(
-                    color: const Color(0xFFEFF6FF),
-                    child: Padding(
-                      padding: const EdgeInsets.all(16.0),
-                      child: Column(
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Theme.of(context).colorScheme.primary.withOpacity(0.08),
+                          borderRadius: BorderRadius.circular(16),
+                          border: Border.all(
+                            color: Theme.of(context).colorScheme.primary.withOpacity(0.15),
+                            width: 1.5,
+                          ),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(16.0),
+                          child: Column(
                             children: [
-                              const Text(
-                                "Roadmap Completion",
-                                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Color(0xFF1E293B)),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    "Roadmap Completion",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 13,
+                                      color: Theme.of(context).colorScheme.onSurface,
+                                    ),
+                                  ),
+                                  Text(
+                                    "${(roadmap.completionPercentage * 100).toInt()}%",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 14,
+                                      color: Theme.of(context).colorScheme.primary,
+                                    ),
+                                  ),
+                                ],
                               ),
-                              Text(
-                                "${(roadmap.completionPercentage * 100).toInt()}%",
-                                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: Color(0xFF2563EB)),
+                              const SizedBox(height: 8),
+                              LinearProgressIndicator(
+                                value: roadmap.completionPercentage,
+                                color: Theme.of(context).colorScheme.primary,
+                                backgroundColor: Theme.of(context).colorScheme.primary.withOpacity(0.2),
+                                minHeight: 8,
+                                borderRadius: const BorderRadius.all(Radius.circular(4)),
                               ),
                             ],
                           ),
-                          const SizedBox(height: 8),
-                          LinearProgressIndicator(
-                            value: roadmap.completionPercentage,
-                            color: const Color(0xFF2563EB),
-                            backgroundColor: const Color(0xFFDBEAFE),
-                            minHeight: 8,
-                            borderRadius: const BorderRadius.all(Radius.circular(4)),
-                          ),
-                        ],
+                        ),
                       ),
-                    ),
-                  ),
-                  const SizedBox(height: 24),
+                      const SizedBox(height: 24),
 
                   // 4 Weeks list
                   ...roadmap.weeks.map((week) {
@@ -104,10 +127,10 @@ class _RoadmapScreenState extends ConsumerState<RoadmapScreen> {
                       elevation: 1,
                       child: ExpansionTile(
                         leading: CircleAvatar(
-                          backgroundColor: weekProgress == 1.0 ? Colors.green.shade50 : const Color(0xFFF1F5F9),
+                          backgroundColor: weekProgress == 1.0 ? Colors.green.withOpacity(0.12) : Theme.of(context).dividerColor.withOpacity(0.08),
                           child: Icon(
                             weekProgress == 1.0 ? Icons.check : Icons.lock_open_outlined,
-                            color: weekProgress == 1.0 ? Colors.green : const Color(0xFF2563EB),
+                            color: weekProgress == 1.0 ? Colors.green : Theme.of(context).colorScheme.primary,
                           ),
                         ),
                         title: Text(
@@ -116,7 +139,10 @@ class _RoadmapScreenState extends ConsumerState<RoadmapScreen> {
                         ),
                         subtitle: Text(
                           "$completedCount of $totalCount topics completed (${(weekProgress * 100).toInt()}%)",
-                          style: const TextStyle(fontSize: 11, color: Color(0xFF64748B)),
+                          style: TextStyle(
+                            fontSize: 11,
+                            color: Theme.of(context).colorScheme.onSurface.withOpacity(0.55),
+                          ),
                         ),
                         children: week.topics.map((topic) {
                           return CheckboxListTile(
@@ -125,11 +151,13 @@ class _RoadmapScreenState extends ConsumerState<RoadmapScreen> {
                               style: TextStyle(
                                 fontSize: 13,
                                 decoration: topic.isCompleted ? TextDecoration.lineThrough : null,
-                                color: topic.isCompleted ? const Color(0xFF94A3B8) : const Color(0xFF1E293B),
+                                color: topic.isCompleted 
+                                    ? Theme.of(context).colorScheme.onSurface.withOpacity(0.4) 
+                                    : Theme.of(context).colorScheme.onSurface,
                               ),
                             ),
                             value: topic.isCompleted,
-                            activeColor: const Color(0xFF2563EB),
+                            activeColor: Theme.of(context).colorScheme.primary,
                             controlAffinity: ListTileControlAffinity.leading,
                             onChanged: (val) {
                               ref.read(roadmapProvider.notifier).toggleTopic(
@@ -142,8 +170,10 @@ class _RoadmapScreenState extends ConsumerState<RoadmapScreen> {
                       ),
                     );
                   }).toList(),
-                  const SizedBox(height: 40),
-                ],
+                      const SizedBox(height: 40),
+                    ],
+                  ),
+                ),
               ),
             ),
     );
