@@ -26,46 +26,79 @@ class AppDrawer extends ConsumerWidget {
       child: Column(
         children: [
           // Drawer Header
-          UserAccountsDrawerHeader(
-            decoration: const BoxDecoration(
-              color: Color(0xFF2563EB),
+          Container(
+            padding: const EdgeInsets.only(top: 50, bottom: 24, left: 24, right: 24),
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: [
+                  Theme.of(context).colorScheme.primary,
+                  Theme.of(context).colorScheme.secondary,
+                ],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+              ),
             ),
-            currentAccountPicture: CircleAvatar(
-              backgroundColor: Colors.white,
-              backgroundImage: profile != null && profile.profileImageUrl.isNotEmpty
-                  ? NetworkImage(profile.profileImageUrl)
-                  : null,
-              child: profile == null || profile.profileImageUrl.isEmpty
-                  ? const Icon(Icons.person, size: 40, color: Color(0xFF2563EB))
-                  : null,
-            ),
-            accountName: Text(
-              profile?.fullName.isNotEmpty == true ? profile!.fullName : "Student Account",
-              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-            ),
-            accountEmail: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+            child: Row(
               children: [
-                Text(profile?.email ?? ref.read(authProvider).email ?? ""),
-                const SizedBox(height: 4),
-                if (profile != null)
-                  Row(
+                CircleAvatar(
+                  radius: 30,
+                  backgroundColor: Colors.white.withOpacity(0.9),
+                  backgroundImage: profile != null && profile.profileImageUrl.isNotEmpty
+                      ? NetworkImage(profile.profileImageUrl)
+                      : null,
+                  child: profile == null || profile.profileImageUrl.isEmpty
+                      ? Icon(Icons.person, size: 36, color: Theme.of(context).colorScheme.primary)
+                      : null,
+                ),
+                const SizedBox(width: 16),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Icon(Icons.local_fire_department, color: Colors.orange, size: 16),
-                      const SizedBox(width: 4),
                       Text(
-                        "${profile.dailyStreak} Day Streak",
-                        style: const TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 12,
-                        ),
+                        profile?.fullName.isNotEmpty == true ? profile!.fullName : "Student Account",
+                        style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: Colors.white),
+                        overflow: TextOverflow.ellipsis,
                       ),
+                      const SizedBox(height: 2),
+                      Text(
+                        profile?.email ?? ref.read(authProvider).email ?? "",
+                        style: TextStyle(color: Colors.white.withOpacity(0.8), fontSize: 12),
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                      if (profile != null) ...[
+                        const SizedBox(height: 6),
+                        Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                          decoration: BoxDecoration(
+                            color: Colors.white.withOpacity(0.2),
+                            borderRadius: const BorderRadius.all(Radius.circular(20)),
+                          ),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              const Icon(Icons.local_fire_department, color: Colors.amberAccent, size: 14),
+                              const SizedBox(width: 3),
+                              Text(
+                                "${profile.dailyStreak} Days",
+                                style: const TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 10,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
                     ],
                   ),
+                ),
               ],
             ),
           ),
+
+          const SizedBox(height: 8),
 
           // Drawer Navigation Items
           Expanded(
@@ -76,24 +109,34 @@ class AppDrawer extends ConsumerWidget {
                 final item = drawerItems[index];
                 final isSelected = GoRouterState.of(context).matchedLocation == item.route;
 
-                return ListTile(
-                  leading: Icon(
-                    item.icon,
-                    color: isSelected ? const Color(0xFF2563EB) : const Color(0xFF64748B),
-                  ),
-                  title: Text(
-                    item.label,
-                    style: TextStyle(
-                      fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
-                      color: isSelected ? const Color(0xFF2563EB) : const Color(0xFF1E293B),
+                return Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 4.0),
+                  child: ClipRRect(
+                    borderRadius: const BorderRadius.all(Radius.circular(12)),
+                    child: ListTile(
+                      leading: Icon(
+                        item.icon,
+                        color: isSelected
+                            ? Theme.of(context).colorScheme.primary
+                            : Theme.of(context).colorScheme.onSurface.withOpacity(0.6),
+                      ),
+                      title: Text(
+                        item.label,
+                        style: TextStyle(
+                          fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
+                          color: isSelected
+                              ? Theme.of(context).colorScheme.primary
+                              : Theme.of(context).colorScheme.onSurface,
+                        ),
+                      ),
+                      selected: isSelected,
+                      selectedTileColor: Theme.of(context).colorScheme.primary.withOpacity(0.12),
+                      onTap: () {
+                        context.pop(); // Close drawer
+                        context.go(item.route); // Navigate
+                      },
                     ),
                   ),
-                  selected: isSelected,
-                  selectedTileColor: const Color(0xFFEFF6FF),
-                  onTap: () {
-                    context.pop(); // Close drawer
-                    context.go(item.route); // Navigate
-                  },
                 );
               },
             ),
@@ -102,17 +145,23 @@ class AppDrawer extends ConsumerWidget {
           const Divider(),
 
           // Logout Action
-          ListTile(
-            leading: const Icon(Icons.logout, color: Colors.redAccent),
-            title: const Text(
-              "Logout",
-              style: TextStyle(color: Colors.redAccent, fontWeight: FontWeight.bold),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 4.0),
+            child: ClipRRect(
+              borderRadius: const BorderRadius.all(Radius.circular(12)),
+              child: ListTile(
+                leading: const Icon(Icons.logout, color: Colors.redAccent),
+                title: const Text(
+                  "Logout",
+                  style: TextStyle(color: Colors.redAccent, fontWeight: FontWeight.bold),
+                ),
+                onTap: () async {
+                  context.pop(); // Close drawer
+                  await ref.read(authProvider.notifier).logout();
+                  context.go("/login"); // Redirect
+                },
+              ),
             ),
-            onTap: () async {
-              context.pop(); // Close drawer
-              await ref.read(authProvider.notifier).logout();
-              context.go("/login"); // Redirect
-            },
           ),
           const SizedBox(height: 12),
         ],

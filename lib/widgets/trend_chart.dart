@@ -10,7 +10,7 @@ class TrendChart extends StatelessWidget {
     super.key,
     required this.dataPoints,
     required this.title,
-    this.lineColor = const Color(0xFF2563EB),
+    this.lineColor = const Color(0xFF6366F1),
   });
 
   @override
@@ -28,6 +28,9 @@ class TrendChart extends StatelessWidget {
       spots.add(FlSpot(i.toDouble(), dataPoints[i]));
     }
 
+    final onSurfaceColor = Theme.of(context).colorScheme.onSurface;
+    final gridLineColor = Theme.of(context).colorScheme.onSurface.withOpacity(0.08);
+
     return Card(
       elevation: 2,
       child: Padding(
@@ -37,10 +40,10 @@ class TrendChart extends StatelessWidget {
           children: [
             Text(
               title,
-              style: const TextStyle(
+              style: TextStyle(
                 fontSize: 14,
                 fontWeight: FontWeight.bold,
-                color: Color(0xFF1E293B),
+                color: onSurfaceColor,
               ),
             ),
             const SizedBox(height: 18),
@@ -53,8 +56,8 @@ class TrendChart extends StatelessWidget {
                     drawVerticalLine: false,
                     horizontalInterval: 25,
                     getDrawingHorizontalLine: (value) => FlLine(
-                      color: const Color(0xFFE2E8F0),
-                      strokeWidth: 1,
+                      color: gridLineColor,
+                      strokeWidth: 1.2,
                     ),
                   ),
                   titlesData: FlTitlesData(
@@ -72,9 +75,9 @@ class TrendChart extends StatelessWidget {
                         interval: 1,
                         getTitlesWidget: (value, meta) {
                           final style = TextStyle(
-                            color: const Color(0xFF64748B),
+                            color: onSurfaceColor.withOpacity(0.5),
                             fontSize: 10,
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                           );
                           switch (value.toInt()) {
                             case 0:
@@ -96,10 +99,10 @@ class TrendChart extends StatelessWidget {
                         getTitlesWidget: (value, meta) {
                           return Text(
                             '${value.toInt()}%',
-                            style: const TextStyle(
-                              color: Color(0xFF64748B),
+                            style: TextStyle(
+                              color: onSurfaceColor.withOpacity(0.5),
                               fontSize: 9,
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w600,
                             ),
                           );
                         },
@@ -116,22 +119,34 @@ class TrendChart extends StatelessWidget {
                     LineChartBarData(
                       spots: spots,
                       isCurved: true,
-                      color: lineColor,
-                      barWidth: 3,
+                      gradient: LinearGradient(
+                        colors: [
+                          Theme.of(context).colorScheme.primary,
+                          Theme.of(context).colorScheme.secondary,
+                        ],
+                      ),
+                      barWidth: 4,
                       isStrokeCapRound: true,
                       dotData: FlDotData(
                         show: true,
                         getDotPainter: (spot, percent, barData, index) =>
                             FlDotCirclePainter(
-                          radius: 4,
-                          color: lineColor,
-                          strokeWidth: 1.5,
-                          strokeColor: Colors.white,
+                          radius: 5,
+                          color: Theme.of(context).colorScheme.primary,
+                          strokeWidth: 2,
+                          strokeColor: Theme.of(context).colorScheme.surface,
                         ),
                       ),
                       belowBarData: BarAreaData(
                         show: true,
-                        color: lineColor.withOpacity(0.12),
+                        gradient: LinearGradient(
+                          colors: [
+                            Theme.of(context).colorScheme.primary.withOpacity(0.24),
+                            Theme.of(context).colorScheme.primary.withOpacity(0.02),
+                          ],
+                          begin: Alignment.topCenter,
+                          end: Alignment.bottomCenter,
+                        ),
                       ),
                     ),
                   ],
