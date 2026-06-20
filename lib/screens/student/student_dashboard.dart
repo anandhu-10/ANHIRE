@@ -6,6 +6,7 @@ import '../../providers/user_provider.dart';
 import '../../widgets/app_drawer.dart';
 import '../../widgets/trend_chart.dart';
 import '../../widgets/responsive_scaffold.dart';
+import '../../widgets/semi_circular_progress.dart';
 import '../../core/services/pdf_report_service.dart';
 
 class StudentDashboardScreen extends ConsumerWidget {
@@ -135,89 +136,94 @@ class StudentDashboardScreen extends ConsumerWidget {
                     // Overall Placement Readiness Score Card
                     Container(
                       decoration: BoxDecoration(
-                        gradient: LinearGradient(
+                        gradient: const LinearGradient(
                           colors: [
-                            Theme.of(context).colorScheme.primary,
-                            Theme.of(context).colorScheme.secondary,
+                            Color(0xFF2E26D9), // Royal Indigo
+                            Color(0xFF7C3AED), // Violet Purple
+                            Color(0xFFDB2777), // Hot Pink
                           ],
                           begin: Alignment.topLeft,
                           end: Alignment.bottomRight,
                         ),
-                        borderRadius: const BorderRadius.all(Radius.circular(16)),
+                        borderRadius: const BorderRadius.all(Radius.circular(20)),
                         boxShadow: [
                           BoxShadow(
-                            color: Theme.of(context).colorScheme.primary.withOpacity(0.2),
-                            blurRadius: 15,
-                            offset: const Offset(0, 6),
+                            color: const Color(0xFF7C3AED).withOpacity(0.35),
+                            blurRadius: 20,
+                            offset: const Offset(0, 8),
                           ),
                         ],
                       ),
                       child: Padding(
-                        padding: const EdgeInsets.all(22.0),
+                        padding: const EdgeInsets.symmetric(horizontal: 32.0, vertical: 28.0),
                         child: Row(
                           children: [
-                            // Circular Progress
-                            SizedBox(
-                              width: 80,
-                              height: 80,
-                              child: Stack(
-                                fit: StackFit.expand,
-                                children: [
-                                  CircularProgressIndicator(
-                                    value: progressPercent,
-                                    strokeWidth: 8,
-                                    backgroundColor: Colors.white.withOpacity(0.2),
-                                    valueColor: const AlwaysStoppedAnimation<Color>(Colors.white),
-                                  ),
-                                  Center(
-                                    child: Text(
-                                      "${dashboard.readinessScore}",
-                                      style: const TextStyle(
-                                        fontSize: 24,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.white,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
+                            // Glowing gauge indicator
+                            SemiCircularProgress(
+                              percentage: dashboard.readinessScore.toDouble(),
+                              size: 130,
                             ),
-                            const SizedBox(width: 20),
+                            const SizedBox(width: 32),
                             // Score text info
                             Expanded(
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  const Text(
-                                    "Placement Readiness Score",
-                                    style: TextStyle(
+                                  Text(
+                                    "${profile?.fullName.split(' ').first ?? 'Student'}, You're ${dashboard.readinessScore}% Career Ready!",
+                                    style: const TextStyle(
                                       color: Colors.white,
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 16,
+                                      fontSize: 22,
                                       letterSpacing: 0.5,
-                                    ),
-                                  ),
-                                  const SizedBox(height: 6),
-                                  Container(
-                                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
-                                    decoration: BoxDecoration(
-                                      color: Colors.white.withOpacity(0.24),
-                                      borderRadius: const BorderRadius.all(Radius.circular(6)),
-                                    ),
-                                    child: Text(
-                                      dashboard.readinessLevel.toUpperCase(),
-                                      style: const TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 10,
-                                        fontWeight: FontWeight.bold,
-                                        letterSpacing: 0.8,
-                                      ),
                                     ),
                                   ),
                                   const SizedBox(height: 8),
                                   Text(
-                                    "Target: 86+ to be Placement Ready",
-                                    style: TextStyle(color: Colors.white.withOpacity(0.85), fontSize: 11),
+                                    "Based on your ATS resume score, mock aptitude tests, and roadmap tasks. Boost your odds!",
+                                    style: TextStyle(
+                                      color: Colors.white.withOpacity(0.85),
+                                      fontSize: 13.5,
+                                      height: 1.4,
+                                    ),
+                                  ),
+                                  const SizedBox(height: 18),
+                                  Row(
+                                    children: [
+                                      ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                          backgroundColor: Colors.white,
+                                          foregroundColor: Colors.black,
+                                          minimumSize: const Size(165, 42),
+                                          elevation: 0,
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.circular(20),
+                                          ),
+                                        ),
+                                        onPressed: () => context.go("/roadmap"),
+                                        child: const Text(
+                                          "Review Weak Areas",
+                                          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
+                                        ),
+                                      ),
+                                      const SizedBox(width: 12),
+                                      OutlinedButton(
+                                        style: OutlinedButton.styleFrom(
+                                          foregroundColor: Colors.white,
+                                          side: const BorderSide(color: Colors.white, width: 1.5),
+                                          minimumSize: const Size(140, 42),
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.circular(20),
+                                          ),
+                                        ),
+                                        onPressed: () => context.go("/mock-interview"),
+                                        child: const Text(
+                                          "Practice Mock",
+                                          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
+                                        ),
+                                      ),
+                                    ],
                                   ),
                                 ],
                               ),
@@ -243,46 +249,58 @@ class StudentDashboardScreen extends ConsumerWidget {
                       physics: const NeverScrollableScrollPhysics(),
                       gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
                         maxCrossAxisExtent: 280,
-                        mainAxisExtent: 140,
+                        mainAxisExtent: 165,
                         crossAxisSpacing: 16,
                         mainAxisSpacing: 16,
                       ),
                       children: [
                         _buildModuleCard(
                           context: context,
-                          title: "Resume Score",
-                          value: "${dashboard.resumeScore}",
-                          subtitle: "ATS Compatibility",
+                          title: "Resume",
+                          value: "${dashboard.resumeScore}%",
+                          subtitle: dashboard.resumeScore >= 80 
+                              ? "Strong, High Impact" 
+                              : (dashboard.resumeScore >= 50 ? "Good, Minor Edits" : "Needs Revision"),
                           icon: Icons.description_outlined,
-                          color: Theme.of(context).colorScheme.primary,
+                          color: const Color(0xFF00F2FE), // Bright Cyan
                           route: "/resume-analyzer",
+                          progress: dashboard.resumeScore / 100.0,
                         ),
                         _buildModuleCard(
                           context: context,
-                          title: "Aptitude Score",
-                          value: "${dashboard.aptitudeScore}",
-                          subtitle: "Mock Tests",
+                          title: "Aptitude",
+                          value: "${dashboard.aptitudeScore}%",
+                          subtitle: dashboard.aptitudeScore >= 80 
+                              ? "Excellent Analytics" 
+                              : (dashboard.aptitudeScore >= 50 ? "Good Progress" : "Practice More"),
                           icon: Icons.quiz_outlined,
-                          color: Colors.teal,
+                          color: const Color(0xFF10B981), // Emerald Green
                           route: "/aptitude",
+                          progress: dashboard.aptitudeScore / 100.0,
                         ),
                         _buildModuleCard(
                           context: context,
-                          title: "Interview Score",
-                          value: "${dashboard.interviewScore}",
-                          subtitle: "Evaluation",
+                          title: "Interview",
+                          value: "${dashboard.interviewScore}%",
+                          subtitle: dashboard.interviewScore >= 80 
+                              ? "Strong Performance" 
+                              : (dashboard.interviewScore >= 60 ? "Good Potential" : "Needs Practice"),
                           icon: Icons.forum_outlined,
-                          color: Theme.of(context).colorScheme.secondary,
+                          color: const Color(0xFF8B5CF6), // Royal Purple
                           route: "/mock-interview",
+                          progress: dashboard.interviewScore / 100.0,
                         ),
                         _buildModuleCard(
                           context: context,
-                          title: "Roadmap Done",
+                          title: "Roadmap",
                           value: "${(dashboard.roadmapCompletion * 100).toInt()}%",
-                          subtitle: "4-Week Tracker",
+                          subtitle: dashboard.roadmapCompletion == 1.0 
+                              ? "Ready to Apply" 
+                              : "${(4 - dashboard.roadmapCompletion * 4).round()} Weeks Pending",
                           icon: Icons.map_outlined,
-                          color: Theme.of(context).colorScheme.tertiary,
+                          color: const Color(0xFFF59E0B), // Amber Accent
                           route: "/roadmap",
+                          progress: dashboard.roadmapCompletion,
                         ),
                       ],
                     ),
@@ -414,14 +432,15 @@ class StudentDashboardScreen extends ConsumerWidget {
     required IconData icon,
     required Color color,
     required String route,
+    required double progress,
   }) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
     return Container(
       decoration: BoxDecoration(
-        color: isDark ? const Color(0xFF1E293B) : Colors.white,
+        color: isDark ? const Color(0xFF161922) : Colors.white,
         borderRadius: const BorderRadius.all(Radius.circular(16)),
         border: Border.all(
-          color: color.withOpacity(0.15),
+          color: color.withOpacity(0.2),
           width: 1.5,
         ),
         boxShadow: [
@@ -444,44 +463,56 @@ class StudentDashboardScreen extends ConsumerWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
+                // Top Row: Icon container & uppercase title side-by-side
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
-                      padding: const EdgeInsets.all(8),
+                      padding: const EdgeInsets.all(6),
                       decoration: BoxDecoration(
-                        color: color.withOpacity(0.1),
-                        borderRadius: BorderRadius.circular(10),
+                        color: color.withOpacity(0.12),
+                        borderRadius: BorderRadius.circular(8),
                       ),
-                      child: Icon(icon, size: 20, color: color),
+                      child: Icon(icon, size: 18, color: color),
                     ),
+                    const SizedBox(width: 8),
                     Text(
-                      value,
+                      title.toUpperCase(),
                       style: TextStyle(
-                        fontSize: 22,
+                        fontSize: 11,
                         fontWeight: FontWeight.bold,
                         color: color,
+                        letterSpacing: 0.8,
                       ),
                     ),
                   ],
                 ),
+                // Middle: Score percentage
+                Text(
+                  value,
+                  style: TextStyle(
+                    fontSize: 26,
+                    fontWeight: FontWeight.bold,
+                    color: isDark ? Colors.white : Colors.black,
+                  ),
+                ),
+                // Linear Progress Bar
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      title,
-                      style: TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.bold,
-                        color: Theme.of(context).colorScheme.onSurface,
-                      ),
+                    LinearProgressIndicator(
+                      value: progress,
+                      color: color,
+                      backgroundColor: color.withOpacity(0.12),
+                      minHeight: 4,
+                      borderRadius: const BorderRadius.all(Radius.circular(2)),
                     ),
-                    const SizedBox(height: 2),
+                    const SizedBox(height: 6),
                     Text(
                       subtitle,
                       style: TextStyle(
                         fontSize: 11,
-                        color: Theme.of(context).colorScheme.onSurface.withOpacity(0.55),
+                        fontWeight: FontWeight.bold,
+                        color: isDark ? color.withOpacity(0.85) : color,
                       ),
                     ),
                   ],

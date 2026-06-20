@@ -48,44 +48,38 @@ class ResponsiveScaffold extends ConsumerWidget {
       _NavRouteItem(
         label: "Dashboard",
         route: "/student-dashboard",
-        icon: Icons.dashboard_outlined,
-        activeIcon: Icons.dashboard,
+        icon: Icons.grid_view_outlined,
+        activeIcon: Icons.grid_view_rounded,
       ),
       _NavRouteItem(
-        label: "Resume Analyzer",
-        route: "/resume-analyzer",
-        icon: Icons.description_outlined,
-        activeIcon: Icons.description,
-      ),
-      _NavRouteItem(
-        label: "Aptitude Tests",
-        route: "/aptitude",
-        icon: Icons.quiz_outlined,
-        activeIcon: Icons.quiz,
-      ),
-      _NavRouteItem(
-        label: "Mock Interviews",
-        route: "/mock-interview",
-        icon: Icons.forum_outlined,
-        activeIcon: Icons.forum,
-      ),
-      _NavRouteItem(
-        label: "Learning Roadmap",
+        label: "Modules",
         route: "/roadmap",
-        icon: Icons.map_outlined,
-        activeIcon: Icons.map,
+        icon: Icons.view_module_outlined,
+        activeIcon: Icons.view_module,
       ),
       _NavRouteItem(
-        label: "Leaderboard",
-        route: "/leaderboard",
-        icon: Icons.leaderboard_outlined,
-        activeIcon: Icons.leaderboard,
-      ),
-      _NavRouteItem(
-        label: "My Profile",
+        label: "Profile",
         route: "/profile",
         icon: Icons.person_outline,
         activeIcon: Icons.person,
+      ),
+      _NavRouteItem(
+        label: "Mentors",
+        route: "/mock-interview",
+        icon: Icons.people_outline,
+        activeIcon: Icons.people,
+      ),
+      _NavRouteItem(
+        label: "Job Alerts",
+        route: "/resume-analyzer",
+        icon: Icons.notifications_none_outlined,
+        activeIcon: Icons.notifications,
+      ),
+      _NavRouteItem(
+        label: "Settings",
+        route: "/profile",
+        icon: Icons.settings_outlined,
+        activeIcon: Icons.settings,
       ),
     ];
 
@@ -100,7 +94,7 @@ class ResponsiveScaffold extends ConsumerWidget {
           Container(
             width: 270,
             decoration: BoxDecoration(
-              color: sidebarBgColor,
+              color: Theme.of(context).brightness == Brightness.dark ? const Color(0xFF111217) : sidebarBgColor,
               border: Border(
                 right: BorderSide(
                   color: Theme.of(context).dividerColor.withOpacity(0.08),
@@ -173,7 +167,9 @@ class ResponsiveScaffold extends ConsumerWidget {
                           child: ListTile(
                             leading: Icon(
                               isSelected ? item.activeIcon : item.icon,
-                              color: isSelected ? primaryColor : onSurfaceColor.withOpacity(0.6),
+                              color: isSelected 
+                                  ? (Theme.of(context).brightness == Brightness.dark ? Colors.white : primaryColor)
+                                  : onSurfaceColor.withOpacity(0.55),
                               size: 22,
                             ),
                             title: Text(
@@ -181,11 +177,15 @@ class ResponsiveScaffold extends ConsumerWidget {
                               style: TextStyle(
                                 fontSize: 13.5,
                                 fontWeight: isSelected ? FontWeight.bold : FontWeight.w500,
-                                color: isSelected ? primaryColor : onSurfaceColor,
+                                color: isSelected 
+                                    ? (Theme.of(context).brightness == Brightness.dark ? Colors.white : primaryColor)
+                                    : onSurfaceColor.withOpacity(0.7),
                               ),
                             ),
                             selected: isSelected,
-                            selectedTileColor: primaryColor.withOpacity(0.08),
+                            selectedTileColor: Theme.of(context).brightness == Brightness.dark 
+                                ? const Color(0xFF20222B) 
+                                : primaryColor.withOpacity(0.08),
                             onTap: () => context.go(item.route),
                           ),
                         ),
@@ -278,13 +278,54 @@ class ResponsiveScaffold extends ConsumerWidget {
                         Text(
                           title,
                           style: TextStyle(
-                            fontSize: 18,
+                            fontSize: 20,
                             fontWeight: FontWeight.bold,
                             color: Theme.of(context).appBarTheme.titleTextStyle?.color ?? onSurfaceColor,
                           ),
                         ),
                         const Spacer(),
-                        if (actions != null) ...actions!,
+                        if (actions != null && actions!.isNotEmpty) ...actions!,
+                        if (actions == null || actions!.isEmpty) ...[
+                          IconButton(
+                            icon: const Icon(Icons.search, size: 20),
+                            tooltip: "Search",
+                            onPressed: () {},
+                          ),
+                          const SizedBox(width: 4),
+                          Stack(
+                            alignment: Alignment.center,
+                            children: [
+                              IconButton(
+                                icon: const Icon(Icons.notifications_none_outlined, size: 22),
+                                tooltip: "Notifications",
+                                onPressed: () {},
+                              ),
+                              Positioned(
+                                right: 12,
+                                top: 12,
+                                child: Container(
+                                  width: 7,
+                                  height: 7,
+                                  decoration: const BoxDecoration(
+                                    color: Colors.redAccent,
+                                    shape: BoxShape.circle,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(width: 12),
+                          CircleAvatar(
+                            radius: 16,
+                            backgroundColor: primaryColor.withOpacity(0.1),
+                            backgroundImage: profile != null && profile.profileImageUrl.isNotEmpty
+                                ? NetworkImage(profile.profileImageUrl)
+                                : null,
+                            child: profile == null || profile.profileImageUrl.isEmpty
+                                ? Icon(Icons.person, size: 16, color: primaryColor)
+                                : null,
+                          ),
+                        ],
                       ],
                     ),
                   ),

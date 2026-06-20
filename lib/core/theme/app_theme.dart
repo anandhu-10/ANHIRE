@@ -29,8 +29,8 @@ class AppTheme {
     primary: primaryColor,
     secondary: const Color(0xFFA78BFA), // Light Purple
     tertiary: const Color(0xFFFBBF24), // Light Amber
-    background: const Color(0xFF0F172A), // Midnight Dark
-    surface: const Color(0xFF1E293B), // Card Dark Slate
+    background: const Color(0xFF0F1015), // Midnight Dark
+    surface: const Color(0xFF161922), // Card Dark Space-Grey
     onPrimary: Colors.white,
     onSecondary: Colors.white,
     onBackground: const Color(0xFFF1F5F9),
@@ -130,10 +130,10 @@ class AppTheme {
     return ThemeData(
       useMaterial3: true,
       colorScheme: darkColorScheme,
-      scaffoldBackgroundColor: const Color(0xFF0F172A),
+      scaffoldBackgroundColor: const Color(0xFF0F1015),
       textTheme: GoogleFonts.poppinsTextTheme(base.textTheme),
       appBarTheme: const AppBarTheme(
-        backgroundColor: Color(0xFF1E293B),
+        backgroundColor: Color(0xFF0F1015),
         foregroundColor: Color(0xFFF1F5F9),
         elevation: 0,
         centerTitle: true,
@@ -145,13 +145,13 @@ class AppTheme {
         ),
       ),
       cardTheme: CardThemeData(
-        color: const Color(0xFF1E293B),
+        color: const Color(0xFF161922),
         elevation: 2,
         shadowColor: Colors.black.withOpacity(0.12),
         margin: EdgeInsets.zero,
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(16)),
-          side: BorderSide(color: Color(0xFF334155), width: 1),
+          side: BorderSide(color: Color(0xFF232835), width: 1),
         ),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(

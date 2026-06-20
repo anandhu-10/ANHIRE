@@ -53,11 +53,12 @@ class TrendChart extends StatelessWidget {
                 LineChartData(
                   gridData: FlGridData(
                     show: true,
-                    drawVerticalLine: false,
-                    horizontalInterval: 25,
-                    getDrawingHorizontalLine: (value) => FlLine(
-                      color: gridLineColor,
+                    drawHorizontalLine: false,
+                    drawVerticalLine: true,
+                    getDrawingVerticalLine: (value) => FlLine(
+                      color: Theme.of(context).dividerColor.withOpacity(0.08),
                       strokeWidth: 1.2,
+                      dashArray: [4, 4],
                     ),
                   ),
                   titlesData: FlTitlesData(
@@ -81,38 +82,30 @@ class TrendChart extends StatelessWidget {
                           );
                           switch (value.toInt()) {
                             case 0:
-                              return Text('Attempt 1', style: style);
+                              return Text('JAN', style: style);
+                            case 1:
+                              return Text('FEB', style: style);
                             case 2:
-                              return Text('Attempt 3', style: style);
+                              return Text('MAR', style: style);
+                            case 3:
+                              return Text('APR', style: style);
                             case 4:
-                              return Text('Latest', style: style);
+                              return Text('MAY', style: style);
+                            case 5:
+                              return Text('JUN', style: style);
                             default:
                               return const SizedBox();
                           }
                         },
                       ),
                     ),
-                    leftTitles: AxisTitles(
-                      sideTitles: SideTitles(
-                        showTitles: true,
-                        interval: 25,
-                        getTitlesWidget: (value, meta) {
-                          return Text(
-                            '${value.toInt()}%',
-                            style: TextStyle(
-                              color: onSurfaceColor.withOpacity(0.5),
-                              fontSize: 9,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          );
-                        },
-                        reservedSize: 28,
-                      ),
+                    leftTitles: const AxisTitles(
+                      sideTitles: SideTitles(showTitles: false), // Hide left Y-axis labels like the mockup
                     ),
                   ),
                   borderData: FlBorderData(show: false),
                   minX: 0,
-                  maxX: 4,
+                  maxX: 5,
                   minY: 0,
                   maxY: 100,
                   lineBarsData: [
@@ -129,13 +122,15 @@ class TrendChart extends StatelessWidget {
                       isStrokeCapRound: true,
                       dotData: FlDotData(
                         show: true,
-                        getDotPainter: (spot, percent, barData, index) =>
-                            FlDotCirclePainter(
-                          radius: 5,
-                          color: Theme.of(context).colorScheme.primary,
-                          strokeWidth: 2,
-                          strokeColor: Theme.of(context).colorScheme.surface,
-                        ),
+                        getDotPainter: (spot, percent, barData, index) {
+                          final isLatest = index == barData.spots.length - 1;
+                          return FlDotCirclePainter(
+                            radius: isLatest ? 6 : 4,
+                            color: Colors.white,
+                            strokeWidth: isLatest ? 4 : 2,
+                            strokeColor: isLatest ? const Color(0xFF8B5CF6) : Theme.of(context).colorScheme.primary,
+                          );
+                        },
                       ),
                       belowBarData: BarAreaData(
                         show: true,
