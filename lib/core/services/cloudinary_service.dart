@@ -1,5 +1,7 @@
 import 'dart:convert';
-import 'dart:io';
+import 'dart:io' show File;
+import 'dart:typed_data';
+import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 
 class CloudinaryService {
@@ -8,13 +10,17 @@ class CloudinaryService {
   static String uploadPreset = "anhire_unsigned";
 
   static bool get isConfigured =>
-      cloudName != "demo-cloud-anhire" && uploadPreset != "anhire_unsigned";
+      cloudName.isNotEmpty &&
+      cloudName != "demo-cloud-anhire" &&
+      uploadPreset.isNotEmpty;
 
   /// Uploads a file (PDF/Image) directly to Cloudinary.
   /// If credentials are the default demo values, it simulates the upload
   /// and returns a mock successful URL so the app runs without setup.
   Future<String> uploadFile({
-    required File file,
+    File? file,
+    Uint8List? bytes,
+    required String fileName,
     required String folder,
     bool isImage = false,
   }) async {
@@ -36,8 +42,27 @@ class CloudinaryService {
 
       final request = http.MultipartRequest("POST", uri)
         ..fields['upload_preset'] = uploadPreset
-        ..fields['folder'] = folder
-        ..files.add(await http.MultipartFile.fromPath('file', file.path));
+        ..fields['folder'] = folder;
+
+      if (kIsWeb) {
+        if (bytes == null) {
+          throw Exception("File bytes must be provided on Web");
+        }
+        request.files.add(
+          http.MultipartFile.fromBytes(
+            'file',
+            bytes,
+            filename: fileName,
+          ),
+        );
+      } else {
+        if (file == null) {
+          throw Exception("File object must be provided on Mobile/Desktop");
+        }
+        request.files.add(
+          await http.MultipartFile.fromPath('file', file.path),
+        );
+      }
 
       final response = await request.send();
       final responseBody = await response.stream.bytesToString();

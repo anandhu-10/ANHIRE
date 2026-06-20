@@ -1,5 +1,6 @@
 import 'dart:async';
-import 'dart:io';
+import 'dart:io' show File;
+import 'dart:typed_data';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:uuid/uuid.dart';
 import '../core/services/cloudinary_service.dart';
@@ -349,14 +350,18 @@ class ResumeNotifier extends StateNotifier<ResumeState> {
     required String text,
     required String targetRole,
     File? pdfFile,
+    Uint8List? pdfBytes,
+    String? fileName,
   }) async {
     state = ResumeState(isLoading: true);
     try {
       String fileUrl = "";
-      if (pdfFile != null) {
+      if (pdfFile != null || pdfBytes != null) {
         // Upload file to Cloudinary for storage
         fileUrl = await _cloudinaryService.uploadFile(
           file: pdfFile,
+          bytes: pdfBytes,
+          fileName: fileName ?? "resume.pdf",
           folder: "resumes",
           isImage: false,
         );

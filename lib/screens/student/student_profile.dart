@@ -1,4 +1,6 @@
-import 'dart:io';
+import 'dart:io' show File;
+import 'dart:typed_data';
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:file_picker/file_picker.dart';
@@ -94,14 +96,45 @@ class _StudentProfileScreenState extends ConsumerState<StudentProfileScreen> {
   }
 
   void _selectProfileImage() async {
-    final result = await FilePicker.platform.pickFiles(
-      type: FileType.image,
-      allowMultiple: false,
-    );
+    try {
+      final result = await FilePicker.platform.pickFiles(
+        type: FileType.image,
+        allowMultiple: false,
+      );
 
-    if (result != null && result.files.single.path != null) {
-      final file = File(result.files.single.path!);
-      ref.read(profileProvider.notifier).uploadProfileImage(file);
+      if (result == null || result.files.isEmpty) return;
+
+      if (kIsWeb) {
+        final bytes = result.files.single.bytes;
+        final name = result.files.single.name;
+        if (bytes != null) {
+          ref.read(profileProvider.notifier).uploadProfileImage(
+            bytes: bytes,
+            fileName: name,
+          );
+        } else {
+          throw Exception("Could not read image file bytes.");
+        }
+      } else {
+        final path = result.files.single.path;
+        final name = result.files.single.name;
+        if (path != null) {
+          final file = File(path);
+          ref.read(profileProvider.notifier).uploadProfileImage(
+            file: file,
+            fileName: name,
+          );
+        } else {
+          throw Exception("Could not retrieve image file path.");
+        }
+      }
+    } catch (e) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text("Failed to select image: $e"),
+          backgroundColor: Colors.redAccent,
+        ),
+      );
     }
   }
 

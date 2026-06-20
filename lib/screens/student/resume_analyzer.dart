@@ -1,4 +1,6 @@
-import 'dart:io';
+import 'dart:io' show File;
+import 'dart:typed_data';
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:file_picker/file_picker.dart';
@@ -17,6 +19,7 @@ class ResumeAnalyzerScreen extends ConsumerStatefulWidget {
 class _ResumeAnalyzerScreenState extends ConsumerState<ResumeAnalyzerScreen> {
   final _textController = TextEditingController();
   File? _pickedFile;
+  Uint8List? _pickedBytes;
   String _fileName = "";
 
   @override
@@ -26,28 +29,68 @@ class _ResumeAnalyzerScreenState extends ConsumerState<ResumeAnalyzerScreen> {
   }
 
   void _pickResumeFile() async {
-    final result = await FilePicker.platform.pickFiles(
-      type: FileType.custom,
-      allowedExtensions: ['pdf', 'docx'],
-      allowMultiple: false,
-    );
+    try {
+      final result = await FilePicker.platform.pickFiles(
+        type: FileType.custom,
+        allowedExtensions: ['pdf', 'docx'],
+        allowMultiple: false,
+      );
 
-    if (result != null && result.files.single.path != null) {
-      final file = File(result.files.single.path!);
-      final sizeMb = file.lengthSync() / (1024 * 1024);
-      if (sizeMb > 5) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text("File size exceeds 5 MB limit. Please compress!"),
-            backgroundColor: Colors.redAccent,
-          ),
-        );
-        return;
+      if (result == null || result.files.isEmpty) return;
+
+      if (kIsWeb) {
+        final bytes = result.files.single.bytes;
+        final name = result.files.single.name;
+        if (bytes != null) {
+          final sizeMb = bytes.length / (1024 * 1024);
+          if (sizeMb > 5) {
+            ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(
+                content: Text("File size exceeds 5 MB limit. Please compress!"),
+                backgroundColor: Colors.redAccent,
+              ),
+            );
+            return;
+          }
+          setState(() {
+            _pickedBytes = bytes;
+            _pickedFile = null;
+            _fileName = name;
+          });
+        } else {
+          throw Exception("Could not read resume file bytes.");
+        }
+      } else {
+        final path = result.files.single.path;
+        final name = result.files.single.name;
+        if (path != null) {
+          final file = File(path);
+          final sizeMb = file.lengthSync() / (1024 * 1024);
+          if (sizeMb > 5) {
+            ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(
+                content: Text("File size exceeds 5 MB limit. Please compress!"),
+                backgroundColor: Colors.redAccent,
+              ),
+            );
+            return;
+          }
+          setState(() {
+            _pickedFile = file;
+            _pickedBytes = null;
+            _fileName = name;
+          });
+        } else {
+          throw Exception("Could not retrieve resume file path.");
+        }
       }
-      setState(() {
-        _pickedFile = file;
-        _fileName = result.files.single.name;
-      });
+    } catch (e) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text("Failed to select resume: $e"),
+          backgroundColor: Colors.redAccent,
+        ),
+      );
     }
   }
 
@@ -70,6 +113,8 @@ class _ResumeAnalyzerScreenState extends ConsumerState<ResumeAnalyzerScreen> {
           text: text,
           targetRole: role,
           pdfFile: _pickedFile,
+          pdfBytes: _pickedBytes,
+          fileName: _fileName,
         );
 
     final state = ref.read(resumeReportProvider);

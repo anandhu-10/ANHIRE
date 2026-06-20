@@ -1,4 +1,5 @@
-import 'dart:io';
+import 'dart:io' show File;
+import 'dart:typed_data';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../core/services/cloudinary_service.dart';
 import '../models/profile_model.dart';
@@ -71,12 +72,18 @@ class ProfileNotifier extends StateNotifier<ProfileState> {
     }
   }
 
-  Future<void> uploadProfileImage(File file) async {
+  Future<void> uploadProfileImage({
+    File? file,
+    Uint8List? bytes,
+    required String fileName,
+  }) async {
     if (state.profile == null) return;
     state = state.copyWith(isLoading: true);
     try {
       final imageUrl = await _cloudinaryService.uploadFile(
         file: file,
+        bytes: bytes,
+        fileName: fileName,
         folder: "profiles",
         isImage: true,
       );
