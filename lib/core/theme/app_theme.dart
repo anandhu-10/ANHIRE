@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme {
   // Theme Color Constants (Modern Premium Palette)
@@ -39,10 +40,12 @@ class AppTheme {
 
   // Light Theme Data
   static ThemeData get lightTheme {
+    final base = ThemeData.light(useMaterial3: true);
     return ThemeData(
       useMaterial3: true,
       colorScheme: lightColorScheme,
       scaffoldBackgroundColor: backgroundColor,
+      textTheme: GoogleFonts.poppinsTextTheme(base.textTheme),
       appBarTheme: const AppBarTheme(
         backgroundColor: Colors.white,
         foregroundColor: Color(0xFF0F172A),
@@ -123,10 +126,12 @@ class AppTheme {
 
   // Dark Theme Data
   static ThemeData get darkTheme {
+    final base = ThemeData.dark(useMaterial3: true);
     return ThemeData(
       useMaterial3: true,
       colorScheme: darkColorScheme,
       scaffoldBackgroundColor: const Color(0xFF0F172A),
+      textTheme: GoogleFonts.poppinsTextTheme(base.textTheme),
       appBarTheme: const AppBarTheme(
         backgroundColor: Color(0xFF1E293B),
         foregroundColor: Color(0xFFF1F5F9),

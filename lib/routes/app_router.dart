@@ -3,6 +3,8 @@ import 'package:go_router/go_router.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../providers/auth_provider.dart';
+import '../screens/intro/splash_screen.dart';
+import '../screens/intro/onboarding_screen.dart';
 import '../screens/auth/login_screen.dart';
 import '../screens/auth/register_screen.dart';
 import '../screens/auth/forgot_password_screen.dart';
@@ -26,7 +28,7 @@ final routerProvider = Provider<GoRouter>((ref) {
 
   return GoRouter(
     navigatorKey: goRouterKey,
-    initialLocation: '/login',
+    initialLocation: '/splash',
     redirect: (context, state) {
       final isLoggedIn = authState.status == AuthStatus.authenticated;
       final isAuthenticating = authState.status == AuthStatus.authenticating;
@@ -39,11 +41,15 @@ final routerProvider = Provider<GoRouter>((ref) {
           state.matchedLocation == registerLoc ||
           state.matchedLocation == forgotLoc;
 
+      final goingToSplashOrOnboarding = state.matchedLocation == '/splash' ||
+          state.matchedLocation == '/onboarding';
+
       if (isAuthenticating) return null;
 
       // 1. Not logged in -> force login
       if (!isLoggedIn) {
-        return goingToAuth ? null : '/login';
+        if (goingToSplashOrOnboarding || goingToAuth) return null;
+        return '/login';
       }
 
       // 2. Logged in -> redirect if on Auth pages
@@ -71,6 +77,18 @@ final routerProvider = Provider<GoRouter>((ref) {
       return null;
     },
     routes: [
+      // Splash and Onboarding
+      GoRoute(
+        name: 'splash',
+        path: '/splash',
+        builder: (context, state) => const SplashScreen(),
+      ),
+      GoRoute(
+        name: 'onboarding',
+        path: '/onboarding',
+        builder: (context, state) => const OnboardingScreen(),
+      ),
+
       // Authentication Routes
       GoRoute(
         name: 'login',
