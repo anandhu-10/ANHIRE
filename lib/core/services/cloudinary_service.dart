@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 
 class CloudinaryService {
   // Free-tier cloud settings (User can edit these in settings/profile)
-  static String cloudName = "demo-cloud-anhire";
+  static String cloudName = "dtywpkwy0";
   static String uploadPreset = "anhire_unsigned";
 
   static bool get isConfigured =>
