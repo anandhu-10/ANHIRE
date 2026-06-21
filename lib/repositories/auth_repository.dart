@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:hive/hive.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import '../core/services/firebase_service.dart';
 
 abstract class AuthRepository {
@@ -167,6 +168,12 @@ class AuthRepositoryImpl implements AuthRepository {
       final box = Hive.box(_authBoxName);
       return box.get("role_$uid", defaultValue: "student") as String;
     }
+    try {
+      final doc = await FirebaseFirestore.instance.collection("users").doc(uid).get();
+      if (doc.exists && doc.data() != null) {
+        return doc.data()!["role"] as String? ?? "student";
+      }
+    } catch (_) {}
     return "student";
   }
 

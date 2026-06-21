@@ -24,12 +24,14 @@ import '../screens/admin/admin_questions.dart';
 final goRouterKey = GlobalKey<NavigatorState>();
 
 final routerProvider = Provider<GoRouter>((ref) {
-  final authState = ref.watch(authProvider);
+  final refreshListenable = ref.watch(authRefreshListenableProvider);
 
   return GoRouter(
     navigatorKey: goRouterKey,
     initialLocation: '/splash',
+    refreshListenable: refreshListenable,
     redirect: (context, state) {
+      final authState = ref.read(authProvider);
       final isLoggedIn = authState.status == AuthStatus.authenticated;
       final isAuthenticating = authState.status == AuthStatus.authenticating;
 
@@ -52,8 +54,8 @@ final routerProvider = Provider<GoRouter>((ref) {
         return '/login';
       }
 
-      // 2. Logged in -> redirect if on Auth pages
-      if (goingToAuth) {
+      // 2. Logged in -> redirect if on Auth pages or Splash/Onboarding
+      if (goingToAuth || goingToSplashOrOnboarding) {
         return authState.role == 'admin' ? '/admin-dashboard' : '/student-dashboard';
       }
 

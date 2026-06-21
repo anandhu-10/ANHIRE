@@ -1,6 +1,10 @@
 import 'dart:async';
+import 'package:flutter/foundation.dart' show ChangeNotifier, Listenable;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../repositories/auth_repository.dart';
+import '../repositories/user_repository.dart';
+import '../models/profile_model.dart';
+import 'user_provider.dart';
 
 // Abstract contract provider
 final authRepositoryProvider = Provider<AuthRepository>((ref) {
@@ -43,9 +47,10 @@ class AuthState {
 
 class AuthNotifier extends StateNotifier<AuthState> {
   final AuthRepository _authRepository;
+  final UserRepository _userRepository;
   StreamSubscription<String?>? _authSubscription;
 
-  AuthNotifier(this._authRepository)
+  AuthNotifier(this._authRepository, this._userRepository)
       : super(AuthState(status: AuthStatus.unauthenticated)) {
     _listenToAuthChanges();
   }
@@ -101,6 +106,10 @@ class AuthNotifier extends StateNotifier<AuthState> {
       await _authRepository.signUp(email, password);
       final uid = _authRepository.getCurrentUserUid()!;
       
+      // Save initial profile & user to Firestore
+      final initialProfile = StudentProfile.empty(uid, email);
+      await _userRepository.saveProfile(initialProfile);
+
       state = AuthState(
         status: AuthStatus.authenticated,
         uid: uid,
@@ -121,6 +130,14 @@ class AuthNotifier extends StateNotifier<AuthState> {
       await _authRepository.signInWithGoogle();
       final uid = _authRepository.getCurrentUserUid()!;
       final email = _authRepository.getCurrentUserEmail()!;
+      
+      // Check if profile exists, if not, create it
+      final existingProfile = await _userRepository.getProfile(uid);
+      if (existingProfile == null) {
+        final initialProfile = StudentProfile.empty(uid, email);
+        await _userRepository.saveProfile(initialProfile);
+      }
+
       final role = await _authRepository.getUserRole(uid);
 
       state = AuthState(
@@ -153,5 +170,18 @@ class AuthNotifier extends StateNotifier<AuthState> {
 
 final authProvider = StateNotifierProvider<AuthNotifier, AuthState>((ref) {
   final repo = ref.watch(authRepositoryProvider);
-  return AuthNotifier(repo);
+  final userRepo = ref.watch(userRepositoryProvider);
+  return AuthNotifier(repo, userRepo);
+});
+
+class RefListenable extends ChangeNotifier {
+  RefListenable(Ref ref) {
+    ref.listen<AuthState>(authProvider, (previous, next) {
+      notifyListeners();
+    });
+  }
+}
+
+final authRefreshListenableProvider = Provider<Listenable>((ref) {
+  return RefListenable(ref);
 });
