@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../repositories/auth_repository.dart';
 
@@ -42,24 +43,35 @@ class AuthState {
 
 class AuthNotifier extends StateNotifier<AuthState> {
   final AuthRepository _authRepository;
+  StreamSubscription<String?>? _authSubscription;
 
   AuthNotifier(this._authRepository)
       : super(AuthState(status: AuthStatus.unauthenticated)) {
-    _autoLogin();
+    _listenToAuthChanges();
   }
 
-  void _autoLogin() async {
-    final uid = _authRepository.getCurrentUserUid();
-    final email = _authRepository.getCurrentUserEmail();
-    if (uid != null && email != null) {
-      final role = await _authRepository.getUserRole(uid);
-      state = AuthState(
-        status: AuthStatus.authenticated,
-        uid: uid,
-        email: email,
-        role: role,
-      );
-    }
+  void _listenToAuthChanges() {
+    _authSubscription?.cancel();
+    _authSubscription = _authRepository.authStateChanges().listen((uid) async {
+      if (uid != null) {
+        final email = _authRepository.getCurrentUserEmail();
+        final role = await _authRepository.getUserRole(uid);
+        state = AuthState(
+          status: AuthStatus.authenticated,
+          uid: uid,
+          email: email,
+          role: role,
+        );
+      } else {
+        state = AuthState(status: AuthStatus.unauthenticated);
+      }
+    });
+  }
+
+  @override
+  void dispose() {
+    _authSubscription?.cancel();
+    super.dispose();
   }
 
   Future<void> login(String email, String password) async {

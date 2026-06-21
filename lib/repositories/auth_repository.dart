@@ -1,3 +1,5 @@
+import 'dart:async';
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:hive/hive.dart';
@@ -13,6 +15,7 @@ abstract class AuthRepository {
   String? getCurrentUserUid();
   String? getCurrentUserEmail();
   Future<String> getUserRole(String uid);
+  Stream<String?> authStateChanges();
 }
 
 class AuthRepositoryImpl implements AuthRepository {
@@ -20,6 +23,9 @@ class AuthRepositoryImpl implements AuthRepository {
   GoogleSignIn get _googleSignIn => GoogleSignIn();
 
   static const String _authBoxName = "auth_session_box";
+  
+  // Stream controller for mock auth changes
+  final _mockAuthStreamController = StreamController<String?>.broadcast();
 
   AuthRepositoryImpl() {
     if (!FirebaseService.isFirebaseAvailable) {
@@ -38,6 +44,7 @@ class AuthRepositoryImpl implements AuthRepository {
       await box.put("current_uid", uid);
       await box.put("current_email", email);
       await box.put("role_$uid", "student"); // Default signup role is student
+      _mockAuthStreamController.add(uid);
       return null;
     }
     return await _auth.createUserWithEmailAndPassword(email: email, password: password);
@@ -69,6 +76,7 @@ class AuthRepositoryImpl implements AuthRepository {
       await box.put("current_uid", uid);
       await box.put("current_email", cleanEmail);
       await box.put("role_$uid", role);
+      _mockAuthStreamController.add(uid);
       return null;
     }
     return await _auth.signInWithEmailAndPassword(email: email, password: password);
@@ -80,10 +88,15 @@ class AuthRepositoryImpl implements AuthRepository {
       final box = Hive.box(_authBoxName);
       await box.delete("current_uid");
       await box.delete("current_email");
+      _mockAuthStreamController.add(null);
       return;
     }
-    await _auth.signOut();
-    await _googleSignIn.signOut();
+    try {
+      await _auth.signOut();
+    } catch (_) {}
+    try {
+      await _googleSignIn.signOut();
+    } catch (_) {}
   }
 
   @override
@@ -94,19 +107,25 @@ class AuthRepositoryImpl implements AuthRepository {
       await box.put("current_uid", uid);
       await box.put("current_email", "google.student@placementpro.com");
       await box.put("role_$uid", "student");
+      _mockAuthStreamController.add(uid);
       return null;
     }
 
-    final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
-    if (googleUser == null) return null;
+    if (kIsWeb) {
+      final provider = GoogleAuthProvider();
+      return await _auth.signInWithPopup(provider);
+    } else {
+      final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
+      if (googleUser == null) return null;
 
-    final GoogleSignInAuthentication googleAuth = await googleUser.authentication;
-    final AuthCredential credential = GoogleAuthProvider.credential(
-      accessToken: googleAuth.accessToken,
-      idToken: googleAuth.idToken,
-    );
+      final GoogleSignInAuthentication googleAuth = await googleUser.authentication;
+      final AuthCredential credential = GoogleAuthProvider.credential(
+        accessToken: googleAuth.accessToken,
+        idToken: googleAuth.idToken,
+      );
 
-    return await _auth.signInWithCredential(credential);
+      return await _auth.signInWithCredential(credential);
+    }
   }
 
   @override
@@ -149,5 +168,22 @@ class AuthRepositoryImpl implements AuthRepository {
       return box.get("role_$uid", defaultValue: "student") as String;
     }
     return "student";
+  }
+
+  @override
+  Stream<String?> authStateChanges() {
+    if (!_useFirebase) {
+      Timer.run(() {
+        if (Hive.isBoxOpen(_authBoxName)) {
+          final box = Hive.box(_authBoxName);
+          final currentUid = box.get("current_uid") as String?;
+          _mockAuthStreamController.add(currentUid);
+        } else {
+          _mockAuthStreamController.add(null);
+        }
+      });
+      return _mockAuthStreamController.stream;
+    }
+    return _auth.authStateChanges().map((user) => user?.uid);
   }
 }
