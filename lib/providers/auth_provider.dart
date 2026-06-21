@@ -51,7 +51,7 @@ class AuthNotifier extends StateNotifier<AuthState> {
   StreamSubscription<String?>? _authSubscription;
 
   AuthNotifier(this._authRepository, this._userRepository)
-      : super(AuthState(status: AuthStatus.unauthenticated)) {
+      : super(AuthState(status: AuthStatus.authenticating)) {
     _listenToAuthChanges();
   }
 
