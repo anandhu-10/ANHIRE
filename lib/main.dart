@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_web_plugins/url_strategy.dart';
 import 'core/services/firebase_service.dart';
 import 'core/services/local_cache_service.dart';
 import 'core/theme/app_theme.dart';
@@ -7,6 +8,9 @@ import 'routes/app_router.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  // Configure clean path-based URLs instead of hash-based (#) URLs on Web
+  usePathUrlStrategy();
 
   // 1. Initialize local cache boxes (Hive offline database)
   await LocalCacheService.init();
